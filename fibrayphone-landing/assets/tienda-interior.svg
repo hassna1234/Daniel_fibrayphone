@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Interior Fibrayphone">
+  <rect width="800" height="600" fill="#f8fafb"/>
+  <rect x="0" y="380" width="800" height="220" fill="#e8dfd0"/>
+  <rect x="60" y="280" width="680" height="120" rx="4" fill="#d4b896"/>
+  <rect x="80" y="300" width="640" height="80" fill="#ffffff"/>
+  <rect x="120" y="180" width="560" height="90" fill="#1a1a1a"/>
+  <text x="400" y="235" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="700" letter-spacing="0.08em">FIBRA &amp; PHONE</text>
+  <circle cx="200" cy="420" r="28" fill="#ffffff" stroke="#d4b896" stroke-width="3"/>
+  <circle cx="280" cy="420" r="28" fill="#ffffff" stroke="#d4b896" stroke-width="3"/>
+  <rect x="480" y="160" width="120" height="200" rx="6" fill="#2d2d2d"/>
+  <text x="400" y="520" text-anchor="middle" fill="#5a6b7d" font-family="Segoe UI, system-ui, sans-serif" font-size="16">Atenci�n personalizada en tienda</text>
+</svg>

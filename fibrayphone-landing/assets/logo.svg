@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Fibrayphone">
+  <rect width="400" height="400" fill="#00A9C6"/>
+  <text x="200" y="155" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="72" font-weight="700" letter-spacing="-1">Fibray</text>
+  <text x="200" y="235" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="72" font-weight="700" letter-spacing="-1">phone</text>
+  <text x="200" y="295" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="16" font-weight="600" letter-spacing="0.06em">FIBRA · MÓVIL — ENERGÍA · ALARMA</text>
+</svg>
