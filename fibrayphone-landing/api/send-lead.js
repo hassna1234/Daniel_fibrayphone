@@ -53,7 +53,7 @@ module.exports = async function handler(req, res) {
 
   try {
     await resend.emails.send({
-      from: "Fibrayphone Web <onboarding@resend.dev>",
+      from: "Fibrayphone Web <web@fibrayphone.es>",
       to: "info@fibrayphone.es",
       subject: `Nueva solicitud web — ${servicio} — ${nombre}`,
       html: htmlBody,
