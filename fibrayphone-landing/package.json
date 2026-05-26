@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "name": "fibrayphone-landing",
+  "dependencies": {
+    "resend": "^4.0.0"
+  }
+}

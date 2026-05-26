@@ -1,0 +1,15 @@
+# Instrucciones internas (no subir a producción)
+*.txt
+*.bat
+_git_check.txt
+
+# Dependencias
+node_modules/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Variables de entorno locales
+.env
+.env.local
