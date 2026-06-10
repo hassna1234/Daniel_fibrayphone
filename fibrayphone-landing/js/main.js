@@ -200,6 +200,34 @@
   });
 
   const form = document.getElementById("lead-form");
+  form?.querySelectorAll("input, select, textarea").forEach((el) => {
+    el.addEventListener("input", () => {
+      el.classList.remove("field--error");
+      const container = el.closest(".form-group") || el.parentNode;
+      container.querySelector(".field-error")?.remove();
+    });
+  });
+
+  function clearFieldErrors() {
+    form.querySelectorAll(".field-error").forEach((el) => el.remove());
+    form.querySelectorAll(".field--error").forEach((el) => el.classList.remove("field--error"));
+    form.querySelectorAll(".form-check--error").forEach((el) => el.classList.remove("form-check--error"));
+  }
+
+  function showFieldError(fieldId, msg) {
+    const field = document.getElementById(fieldId);
+    if (!field) return;
+    field.classList.add("field--error");
+    field.focus();
+    const container = field.closest(".form-group") || field.parentNode;
+    let err = container.querySelector(".field-error");
+    if (!err) {
+      err = document.createElement("p");
+      err.className = "field-error";
+      container.appendChild(err);
+    }
+    err.textContent = msg;
+  }
 
   function sendLeadEmail(data) {
     return fetch("/api/send-lead", {
@@ -235,18 +263,37 @@
     const mensaje = document.getElementById("mensaje").value.trim();
     const privacidad = document.getElementById("privacidad").checked;
 
-    if (!nombre || !telefono) {
-      alert("Completa nombre y teléfono.");
-      return;
+    clearFieldErrors();
+    let hasError = false;
+    if (!nombre) {
+      showFieldError("nombre", "Escribe tu nombre.");
+      hasError = true;
+    }
+    if (!telefono) {
+      showFieldError("telefono", "Escribe tu teléfono.");
+      hasError = true;
     }
     if (!servicio) {
-      alert("Selecciona qué servicio te interesa.");
-      return;
+      showFieldError("servicio", "Selecciona qué servicio te interesa.");
+      hasError = true;
     }
     if (!privacidad) {
-      alert("Acepta la política de privacidad para continuar.");
-      return;
+      const checkEl = document.getElementById("privacidad");
+      const checkWrap = checkEl?.closest(".form-check");
+      if (checkWrap) {
+        checkWrap.classList.add("form-check--error");
+        let err = checkWrap.querySelector(".field-error");
+        if (!err) {
+          err = document.createElement("p");
+          err.className = "field-error";
+          checkWrap.after(err);
+        }
+        err.textContent = "Acepta la política de privacidad para continuar.";
+        checkEl.focus();
+      }
+      hasError = true;
     }
+    if (hasError) return;
 
     const data = { nombre, telefono, servicio, mensaje };
     const submitBtn = form.querySelector('button[type="submit"]');
