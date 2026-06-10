@@ -1256,6 +1256,44 @@ a {
   }
 }
 
+/* Indicador abierto/cerrado */
+.store-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.store-status::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.store-status--open {
+  background: #e8faf0;
+  color: #0a6640;
+}
+
+.store-status--open::before {
+  background: #25d366;
+}
+
+.store-status--closed {
+  background: #f3f4f6;
+  color: var(--muted);
+}
+
+.store-status--closed::before {
+  background: #9ca3af;
+}
+
 /* Estadísticas */
 .stats-row {
   display: flex;

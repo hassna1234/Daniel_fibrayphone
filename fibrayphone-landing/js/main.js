@@ -405,10 +405,51 @@
     });
   }
 
+  const WA_SERVICE_TEXTS = {
+    fibra:  "Hola, me interesa comparar tarifas de fibra e internet en Córdoba. ¿Podéis ayudarme?",
+    pack:   "Hola, me interesa el pack de fibra + móvil + TV. ¿Podéis hacer una comparativa para mi caso?",
+    luz:    "Hola, quiero comparar mi factura de luz para ver si puedo ahorrar. ¿Podéis ayudarme?",
+    alarma: "Hola, me interesa comparar sistemas de alarma para mi hogar. ¿Podéis hacer un estudio gratuito?",
+  };
+
+  document.querySelectorAll("[data-wa-service]").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+      const service = el.getAttribute("data-wa-service");
+      const text = WA_SERVICE_TEXTS[service] || defaultWaText();
+      track("generate_lead", { method: "whatsapp_offer", service });
+      window.location.href = buildWhatsAppUrl({ text });
+    });
+  });
+
+  function updateStoreStatus() {
+    const el = document.getElementById("store-status");
+    if (!el) return;
+    try {
+      const now = new Date();
+      const spain = new Date(now.toLocaleString("en-US", { timeZone: "Europe/Madrid" }));
+      const day = spain.getDay();
+      const t = spain.getHours() * 60 + spain.getMinutes();
+      const T = (h, m) => h * 60 + m;
+      let open = false;
+      if (day >= 1 && day <= 4) {
+        open = (t >= T(9, 30) && t < T(14, 0)) || (t >= T(18, 0) && t < T(20, 30));
+      } else if (day === 5) {
+        open = t >= T(9, 30) && t < T(14, 0);
+      } else if (day === 6) {
+        open = t >= T(10, 0) && t < T(13, 30);
+      }
+      el.textContent = open ? "Abierto ahora" : "Ahora cerrado";
+      el.className = "store-status " + (open ? "store-status--open" : "store-status--closed");
+      el.hidden = false;
+    } catch (_) {}
+  }
+
   setWaLinks();
   applyContact();
   renderBrands();
   renderReviews();
   setupMobileMenu();
   setupStorePhotos();
+  updateStoreStatus();
 })();
