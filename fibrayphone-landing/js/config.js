@@ -47,19 +47,19 @@ window.FIBRAYPHONE = {
     {
       text: "He contratado aquí el WiFi y móvil y me han atendido muy bien, me han recomendado la mejor opción para mi casa y han ayudado en todo, contratación y después con la baja de mi otra compañía.",
       author: "Felipa Susana",
-      date: "Hace 4 meses · Google",
+      date: "Google · Fibra y móvil",
     },
 
     {
       text: "Daniel fue quien me atendió: excelente atención, trato muy amable y mucha eficiencia. Son unos profesionales. Por segunda vez me atendió Daniel, y fenomenal: muy resolutivo y con un trato estupendo.",
       author: "Raquel",
-      date: "Hace un mes · Google",
+      date: "Google",
     },
 
     {
       text: "En esta asesoría me llevan la telefonía, el wifi y la luz, siempre me recomiendan la tarifa más económica, muy buenos en su trabajo Daniel y Hassna.",
       author: "Rafael",
-      date: "Hace 2 meses · Google",
+      date: "Google · Fibra y luz",
     },
 
   ],
