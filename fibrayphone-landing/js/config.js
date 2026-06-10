@@ -62,9 +62,31 @@ window.FIBRAYPHONE = {
       date: "Google · Fibra y luz",
     },
 
+    {
+      text: "He contratado O2 aquí y muy contento, nos han ayudado con la baja de mi anterior compañía y cambiar las tarjetas.",
+      author: "Alfonso Reyes",
+      date: "Google · Móvil",
+    },
+
+    {
+      text: "En esta asesoría me llevan la telefonía, el wifi y la luz, siempre me recomiendan la tarifa más económica, muy buenos en su trabajo Daniel y Hassna.",
+      author: "Rafael Espartero",
+      date: "Google · Luz y gas",
+    },
+
+    {
+      text: "He contratado la fibra y móvil y muy contentos, nos han ayudado cambiando las tarjetas, la baja y devolución de los aparatos.",
+      author: "Ana María Alcalá",
+      date: "Google · Fibra y móvil",
+    },
+
+    {
+      text: "Tengo varios contratos de fibra y luz con ellos, super resolutivos Daniel y Hassna..",
+      author: "Juan Antonio García",
+      date: "Google · Fibra y luz",
+    },
+
   ],
-
-
 
   formspreeId: "",
 
