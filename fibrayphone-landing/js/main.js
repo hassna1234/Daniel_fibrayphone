@@ -148,28 +148,42 @@
 
   function trackClick(id, el) {
     if (id.startsWith("wa-")) {
-      track("contact", { method: "whatsapp", contact_point: id });
+      track("clic_whatsapp", { punto: id });
       return;
     }
     if (id.startsWith("call-")) {
-      track("contact", { method: "phone", contact_point: id });
+      track("clic_llamar", { punto: id });
       return;
     }
     if (id === "maps-hero") {
-      track("click", { link_text: "como_llegar" });
+      track("clic_como_llegar", { punto: "hero" });
       return;
     }
     if (id === "google-reviews") {
-      track("click", { link_text: "google_reviews" });
+      track("clic_ver_reseñas", { punto: "opiniones" });
       return;
     }
     if (id.startsWith("cta-")) {
-      track("select_content", {
-        content_type: "cta",
-        item_id: id,
-        link_url: el?.getAttribute("href") || "",
-      });
+      track("clic_cta", { cta_id: id });
     }
+  }
+
+  function setupExtraTracking() {
+    // Email links
+    document.querySelectorAll('a[href^="mailto:"]').forEach((el) => {
+      el.addEventListener("click", () => {
+        track("clic_email", { destino: el.href.replace("mailto:", "") });
+      });
+    });
+
+    // Google Maps links sin data-track (sección Nosotros y Contacto)
+    document.querySelectorAll('a[href*="maps.google.com"]').forEach((el) => {
+      if (!el.hasAttribute("data-track")) {
+        el.addEventListener("click", () => {
+          track("clic_como_llegar", { punto: "pagina" });
+        });
+      }
+    });
   }
 
   initAnalytics();
@@ -304,10 +318,12 @@
     const waSuccess = document.getElementById("wa-success");
     if (waSuccess) waSuccess.href = waUrl;
 
+    track("clic_whatsapp", { punto: "formulario", servicio });
     track("generate_lead", { method: "whatsapp", service: servicio });
 
     sendLeadEmail(data)
       .then(() => {
+        track("formulario_enviado", { servicio });
         showFormStatus("✓ Datos enviados. Se abre WhatsApp…", false);
       })
       .catch((err) => {
@@ -417,6 +433,7 @@
       e.preventDefault();
       const service = el.getAttribute("data-wa-service");
       const text = WA_SERVICE_TEXTS[service] || defaultWaText();
+      track("clic_whatsapp", { punto: "oferta_" + service });
       track("generate_lead", { method: "whatsapp_offer", service });
       window.location.href = buildWhatsAppUrl({ text });
     });
@@ -452,4 +469,5 @@
   setupMobileMenu();
   setupStorePhotos();
   updateStoreStatus();
+  setupExtraTracking();
 })();
