@@ -29,7 +29,7 @@
   function setWaLinks() {
     const url = buildWhatsAppUrl();
     document
-      .querySelectorAll("#wa-header, #wa-hero, #wa-contact, #wa-fab, #wa-mobile-bar")
+      .querySelectorAll("#wa-header, #wa-hero, #wa-contact, #wa-fab, #wa-mobile-bar, #wa-vs")
       .forEach((el) => {
         el.href = url;
       });
