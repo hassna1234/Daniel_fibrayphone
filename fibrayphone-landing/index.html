@@ -115,6 +115,7 @@
         <a href="#contacto">Contacto</a>
       </nav>
       <div class="header__actions header__actions--top">
+        <a class="btn btn--primary hide-mobile" href="#formulario" data-track="cta-header-comparativa">Comparativa gratis</a>
         <a class="btn btn--outline" href="tel:+34696785471" data-tel data-track="call-header"><span class="hide-desktop">📞 </span>Llamar</a>
         <a class="btn btn--whatsapp" href="#" id="wa-header" data-track="wa-header"><span class="hide-desktop">💬 </span>WhatsApp</a>
       </div>
@@ -133,7 +134,7 @@
   <main>
     <section class="hero" id="inicio">
       <div class="container hero__grid">
-        <div>
+        <div class="hero__content">
           <span class="badge badge--free">Te hacemos estudio gratuito y sin compromiso</span>
           <h1>Comparativa gratuita de <span>fibra, móvil, luz, gas y alarmas</span> en Córdoba</h1>
           <p class="hero__lead">
@@ -141,8 +142,9 @@
             <strong>La comparativa no te cuesta nada</strong> — en tienda o por WhatsApp, con asesor dedicado.
           </p>
           <div class="hero__ctas">
-            <a class="btn btn--primary btn--lg" href="tel:+34696785471" data-tel data-track="call-hero">Llamar ahora</a>
+            <a class="btn btn--primary btn--lg" href="#formulario" data-track="cta-hero-comparativa">Solicitar comparativa gratis</a>
             <a class="btn btn--whatsapp btn--lg" href="#" id="wa-hero" data-track="wa-hero">WhatsApp</a>
+            <a class="btn btn--outline" href="tel:+34696785471" data-tel data-track="call-hero">Llamar ahora</a>
             <a class="btn btn--outline hero__btn--maps" href="https://maps.google.com/?q=Fibrayphone+Calle+Diego+Serrano+13+Cordoba" target="_blank" rel="noopener" data-track="maps-hero">Cómo llegar</a>
           </div>
           <div class="trust-row">
@@ -154,7 +156,7 @@
           </div>
         </div>
 
-        <div class="card card--form" id="formulario">
+        <div class="card card--form hero__form-col" id="formulario">
           <p class="card__ribbon">Te hacemos estudio gratuito y sin compromiso</p>
           <h2>Solicita tu comparativa gratis</h2>
           <p class="card__sub">Solemos responder el mismo día en horario de tienda. También puedes pasarte sin cita previa.</p>
@@ -191,6 +193,11 @@
             </label>
             <p class="form-note">Se abrirá WhatsApp con tus datos ya escritos; solo pulsa <strong>Enviar</strong> en la app y te respondemos.</p>
             <button type="submit" class="btn btn--whatsapp btn--block btn--lg">Enviar por WhatsApp</button>
+            <ul class="form-trust" aria-label="Garantías del formulario">
+              <li>Sin spam ni llamadas molestas</li>
+              <li>Sin compromiso de contratación</li>
+              <li>Respuesta el mismo día en horario de tienda</li>
+            </ul>
           </form>
           <div class="form-success" id="form-success" hidden>
             <h3>Abre WhatsApp</h3>
@@ -568,6 +575,18 @@
               allowfullscreen>
             </iframe>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta-band" aria-label="Solicitar comparativa">
+      <div class="container cta-band__inner">
+        <div class="cta-band__copy">
+          <h2>¿Listo para comparar y ahorrar?</h2>
+          <p>Estudio gratuito y sin compromiso. Te respondemos hoy en horario de tienda o puedes pasarte sin cita en C/ Diego Serrano 13.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a class="btn btn--primary btn--lg" href="#formulario" data-track="cta-final-comparativa">Solicitar comparativa</a>
+          <a class="btn btn--whatsapp btn--lg" href="#" id="wa-cta-band" data-track="wa-cta-band">WhatsApp</a>
         </div>
       </div>
     </section>
