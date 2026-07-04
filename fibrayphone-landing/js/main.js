@@ -29,7 +29,7 @@
   function setWaLinks() {
     const url = buildWhatsAppUrl();
     document
-      .querySelectorAll("#wa-header, #wa-hero, #wa-contact, #wa-fab, #wa-mobile-bar, #wa-vs")
+      .querySelectorAll("#wa-header, #wa-hero, #wa-contact, #wa-fab, #wa-mobile-bar, #wa-vs, #wa-cta-band")
       .forEach((el) => {
         el.href = url;
       });
@@ -462,6 +462,21 @@
     } catch (_) {}
   }
 
+  function setupFormScroll() {
+    document.querySelectorAll('a[href="#formulario"]').forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const target = document.getElementById("formulario");
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        const nombre = document.getElementById("nombre");
+        if (nombre && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          setTimeout(() => nombre.focus({ preventScroll: true }), 400);
+        }
+      });
+    });
+  }
+
   setWaLinks();
   applyContact();
   renderBrands();
@@ -470,4 +485,5 @@
   setupStorePhotos();
   updateStoreStatus();
   setupExtraTracking();
+  setupFormScroll();
 })();

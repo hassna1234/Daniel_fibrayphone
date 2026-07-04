@@ -5,6 +5,7 @@
   --brand-darker: #006f84;
   --brand-light: #e5f7fa;
   --brand-muted: #7fd4e4;
+  --accent: #00a9c6;
   /* Texto y UI */
   --navy: #0f2744;
   --navy-dark: #0a1c33;
@@ -307,6 +308,29 @@ a {
   text-align: center;
   margin-bottom: 0.5rem;
   margin-top: 0;
+}
+
+.form-trust {
+  list-style: none;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.form-trust li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.form-trust li::before {
+  content: '✓';
+  color: var(--success);
+  font-weight: 700;
+  flex-shrink: 0;
 }
 
 .form-transparency {
@@ -681,6 +705,17 @@ a {
 .card--form {
   position: relative;
   overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .hero__form-col {
+    order: -1;
+  }
+
+  .card--form {
+    box-shadow: 0 16px 48px rgba(0, 109, 132, 0.18);
+    border-color: var(--brand-muted);
+  }
 }
 
 .card__ribbon {
@@ -1501,6 +1536,86 @@ a {
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.65;
+}
+
+/* Banda final de conversión */
+.cta-band {
+  background: linear-gradient(135deg, var(--brand-darker) 0%, var(--brand-dark) 100%);
+  color: var(--white);
+  padding: 2.5rem 0;
+}
+
+.cta-band__inner {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.cta-band__copy h2 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.35rem, 4vw, 1.75rem);
+  color: var(--white);
+}
+
+.cta-band__copy p {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.92;
+  max-width: 52ch;
+  line-height: 1.55;
+}
+
+.cta-band__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.cta-band__actions .btn--outline {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--white);
+  background: transparent;
+}
+
+.cta-band__actions .btn--outline:hover {
+  border-color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 768px) {
+  .cta-band__inner {
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+  }
+
+  .cta-band__actions {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .cta-band {
+    padding: 2rem 0 2.5rem;
+  }
+
+  .cta-band__actions {
+    flex-direction: column;
+  }
+
+  .cta-band__actions .btn {
+    width: 100%;
+    min-height: 48px;
+  }
+}
+
+.hide-mobile {
+  display: inline-flex;
+}
+
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none;
+  }
 }
 
 /* Validación inline en formulario */
