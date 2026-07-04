@@ -237,6 +237,12 @@ a {
   color: var(--navy);
 }
 
+.hero__microcopy {
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
 /* Form card */
 .card {
   background: var(--white);
@@ -321,6 +327,13 @@ a {
 
 .form-transparency::before {
   content: '✓';
+}
+
+.form-trust-micro {
+  margin: 0.5rem 0 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-align: center;
 }
 
 .hero__btn--maps {
@@ -456,7 +469,7 @@ a {
 .features {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .feature {
@@ -464,6 +477,13 @@ a {
   border-radius: var(--radius);
   padding: 1.25rem;
   border: 1px solid var(--border);
+}
+
+.feature__icon {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  display: block;
 }
 
 .feature h3 {
@@ -1057,6 +1077,15 @@ a {
     flex-direction: column;
     gap: 0.5rem;
     font-size: 0.82rem;
+  }
+
+  .trust-item--secondary {
+    display: none;
+  }
+
+  .hero__microcopy {
+    font-size: 0.78rem;
+    text-align: center;
   }
 
   .card {
