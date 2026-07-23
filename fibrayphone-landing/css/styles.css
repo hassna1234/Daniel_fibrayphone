@@ -243,6 +243,33 @@ a {
   color: var(--muted);
 }
 
+.hero__diferenciador {
+  font-size: 0.95rem;
+  color: var(--navy);
+  font-style: italic;
+  margin: 0 0 1.25rem;
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--brand);
+  line-height: 1.5;
+}
+
+.hero__trust-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  font-size: 0.85rem;
+  color: var(--navy);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.hero__garantias {
+  margin: 0.6rem 0 0;
+  font-size: 0.78rem;
+  color: var(--success);
+  font-weight: 600;
+}
+
 /* Form card */
 .card {
   background: var(--white);
@@ -1086,6 +1113,23 @@ a {
   .hero__microcopy {
     font-size: 0.78rem;
     text-align: center;
+  }
+
+  .hero__diferenciador {
+    font-size: 0.88rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero__trust-icons {
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.82rem;
+  }
+
+  .hero__garantias {
+    text-align: center;
+    font-size: 0.74rem;
   }
 
   .card {

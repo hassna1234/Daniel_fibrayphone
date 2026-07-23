@@ -35,6 +35,27 @@
       });
   }
 
+  function setupHeroCTAs() {
+    const textComparativa = "Hola, quiero pedir una comparativa gratuita de fibra y móvil. ¿Podéis ayudarme?";
+    const textAsesor = "Hola, quiero hablar con un asesor sobre mis opciones de fibra y móvil en Córdoba.";
+
+    const comparativaBtn = document.getElementById("wa-hero-comparativa");
+    if (comparativaBtn) {
+      comparativaBtn.href = buildWhatsAppUrl({ text: textComparativa });
+      comparativaBtn.addEventListener("click", () => {
+        track("clic_whatsapp", { punto: "hero_comparativa" });
+      });
+    }
+
+    const asesorBtn = document.getElementById("wa-hero-asesor");
+    if (asesorBtn) {
+      asesorBtn.href = buildWhatsAppUrl({ text: textAsesor });
+      asesorBtn.addEventListener("click", () => {
+        track("clic_whatsapp", { punto: "hero_asesor" });
+      });
+    }
+  }
+
   function setupMobileMenu() {
     const toggle = document.getElementById("menu-toggle");
     const nav = document.getElementById("nav-mobile");
@@ -463,6 +484,7 @@
   }
 
   setWaLinks();
+  setupHeroCTAs();
   applyContact();
   renderBrands();
   renderReviews();
