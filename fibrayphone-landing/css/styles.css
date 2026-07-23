@@ -565,6 +565,32 @@ a {
   margin-top: 1.5rem;
 }
 
+.section-cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.form-comment {
+  margin-bottom: 1rem;
+}
+
+.form-comment__toggle {
+  font-size: 0.85rem;
+  color: var(--brand-darker);
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  padding: 0.25rem 0;
+}
+
+.form-comment__toggle::-webkit-details-marker {
+  display: none;
+}
+
+.form-comment[open] .form-comment__toggle {
+  color: var(--muted);
+}
+
 /* Contact */
 .contact-grid {
   display: grid;
@@ -1154,7 +1180,7 @@ a {
   }
 
   .section {
-    padding: 2rem 0;
+    padding: 2.5rem 0;
   }
 
   .section__intro {

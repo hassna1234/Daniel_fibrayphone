@@ -29,7 +29,7 @@
   function setWaLinks() {
     const url = buildWhatsAppUrl();
     document
-      .querySelectorAll("#wa-header, #wa-hero, #wa-contact, #wa-fab, #wa-mobile-bar, #wa-vs")
+      .querySelectorAll("#wa-header, #wa-hero, #wa-contact, #wa-fab, #wa-mobile-bar, #wa-vs, #wa-steps, #wa-servicios")
       .forEach((el) => {
         el.href = url;
       });
@@ -99,6 +99,7 @@
     if (!list || !cfg.reviews?.length) return;
 
     list.innerHTML = cfg.reviews
+      .slice(0, 4)
       .map(
         (r) => `
       <blockquote class="review">

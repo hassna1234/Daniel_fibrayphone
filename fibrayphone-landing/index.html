@@ -180,10 +180,12 @@
                 <option value="Varios servicios">Varios servicios</option>
               </select>
             </div>
-            <div class="form-group">
-              <label for="mensaje">Comentario (opcional)</label>
-              <textarea id="mensaje" name="mensaje" rows="2" placeholder="Ej. Tengo factura de la luz, quiero ahorrar"></textarea>
-            </div>
+            <details class="form-comment">
+              <summary class="form-comment__toggle">+ Añadir comentario (opcional)</summary>
+              <div class="form-group" style="margin-top:0.5rem">
+                <textarea id="mensaje" name="mensaje" rows="2" placeholder="Ej. Tengo factura de la luz, quiero ahorrar"></textarea>
+              </div>
+            </details>
             <label class="form-check">
               <input type="checkbox" id="privacidad" name="privacidad" required>
               <span>He leído la <a href="#" id="open-privacy">política de privacidad</a> y acepto que Fibrayphone me contacte para la comparativa solicitada.</span>
@@ -205,24 +207,15 @@
       <div class="container free-banner__grid">
         <div class="free-banner__item">
           <span class="free-banner__icon" aria-hidden="true">✓</span>
-          <div>
-            <strong>Estudio 100% gratuito</strong>
-            <p>La comparativa no tiene coste para ti. Vienes, comparamos y decides con calma.</p>
-          </div>
+          <div><strong>Estudio 100% gratuito</strong></div>
         </div>
         <div class="free-banner__item">
           <span class="free-banner__icon" aria-hidden="true">✓</span>
-          <div>
-            <strong>Sin letra pequeña</strong>
-            <p>Te explicamos permanencia, subidas de precio y condiciones reales. Sin sorpresas.</p>
-          </div>
+          <div><strong>Te explicamos la letra pequeña</strong></div>
         </div>
         <div class="free-banner__item">
           <span class="free-banner__icon" aria-hidden="true">✓</span>
-          <div>
-            <strong>Ahorro a 12 meses</strong>
-            <p>No miramos solo el primer mes: calculamos el coste real del año.</p>
-          </div>
+          <div><strong>Calculamos el ahorro real a 12 meses</strong></div>
         </div>
       </div>
     </section>
@@ -237,9 +230,7 @@
             <ul class="vs-list vs-list--bad">
               <li>Te venden <strong>solo sus tarifas</strong>, no las del mercado</li>
               <li>Te hablan del precio del <strong>primer mes</strong>, no del año 2</li>
-              <li>Esperas <strong>20 minutos</strong> para hablar con un robot</li>
-              <li>Te llaman insistentemente <strong>después de colgar</strong></li>
-              <li>Si hay un problema, vuelves a empezar desde cero</li>
+              <li>Si hay un problema, <strong>vuelves a empezar desde cero</strong></li>
             </ul>
           </div>
           <div class="vs-col vs-col--good">
@@ -247,8 +238,6 @@
             <ul class="vs-list vs-list--good">
               <li>Comparamos <strong>todas las compañías a la vez</strong> en minutos</li>
               <li>Te calculamos el <strong>coste real a 12 meses</strong>, sin sorpresas</li>
-              <li>Gestionamos la <strong>portabilidad y la baja</strong> por ti</li>
-              <li>Atención personal de <strong>Daniel y Hassna</strong>, sin robots</li>
               <li>Nuestros clientes <strong>ahorran entre 20 y 30 € al mes</strong></li>
             </ul>
             <a class="btn btn--whatsapp" href="#" id="wa-vs" data-track="wa-vs">Quiero ahorrar por WhatsApp</a>
@@ -284,9 +273,7 @@
           <div class="about__content">
             <p>En <strong>C/ Diego Serrano 13</strong> llevamos años ayudando a vecinos y familias a comparar <strong>fibra, móvil, luz, gas y alarmas</strong> sin ir de comercial en comercial.</p>
             <ul class="about__list">
-              <li>Comparativa <strong>gratuita y sin compromiso</strong></li>
-              <li>Atención personal — Daniel, Hassna y el equipo en tienda</li>
-              <li>No vendemos una sola marca: buscamos lo que más te conviene</li>
+              <li>Atención personal de nuestro equipo en tienda</li>
               <li>Puedes venir con tu factura y salir con números claros</li>
             </ul>
             <div class="about__ctas">
@@ -413,28 +400,31 @@
           <article class="service">
             <div class="service__icon" aria-hidden="true">📶</div>
             <h3>Fibra</h3>
-            <p>Comparamos velocidad y precio real a 12 meses entre todas las operadoras. Sin sorpresas en el mes 13.</p>
+            <p>Precio real a 12 meses entre todas las operadoras. Sin sorpresas en el mes 13.</p>
           </article>
           <article class="service">
             <div class="service__icon" aria-hidden="true">📱</div>
             <h3>Móvil</h3>
-            <p>Buscamos el mejor precio por línea según tus gigas reales, no los que te venden y no usas.</p>
+            <p>El mejor precio por línea según los gigas que usas de verdad.</p>
           </article>
           <article class="service">
             <div class="service__icon" aria-hidden="true">💡</div>
             <h3>Luz</h3>
-            <p>Traes tu factura, la analizamos y te decimos si puedes ahorrar. Nuestros clientes ahorran entre 20 y 30 € al mes.</p>
+            <p>Traes tu factura y te decimos cuánto puedes ahorrar. Nuestros clientes ahorran 20-30 €/mes.</p>
           </article>
           <article class="service">
             <div class="service__icon" aria-hidden="true">🔥</div>
             <h3>Gas</h3>
-            <p>Comparativa por consumo real y término fijo. Te explicamos si tarifa fija o indexada sale mejor para ti.</p>
+            <p>Fija o indexada: te explicamos qué te conviene según tu consumo real.</p>
           </article>
           <article class="service">
             <div class="service__icon" aria-hidden="true">🛡️</div>
             <h3>Alarma</h3>
-            <p>Comparamos Segurma, Movistar Prosegur y Verisure. Gestionamos la baja de tu alarma actual sin que tengas que llamar tú.</p>
+            <p>Comparamos y gestionamos la baja de tu alarma actual sin que tengas que llamar.</p>
           </article>
+        </div>
+        <div class="section-cta">
+          <a class="btn btn--whatsapp" href="#" id="wa-servicios" data-track="wa-servicios">Quiero que comparen por mí</a>
         </div>
       </div>
     </section>
@@ -447,16 +437,20 @@
         <div class="steps">
           <article class="step">
             <h3>Cuéntanos qué tienes</h3>
-            <p>Nos dices tu compañía actual, líneas, potencia o consumo. Trae la factura si puedes.</p>
+            <p>Nos dices tu compañía actual, líneas o consumo. Trae la factura si puedes.</p>
           </article>
           <article class="step">
             <h3>Comparamos el mercado</h3>
-            <p>Buscamos entre operadoras y comercializadoras la opción que más te conviene.</p>
+            <p>Buscamos entre todas las operadoras y comercializadoras la opción que más te conviene.</p>
           </article>
           <article class="step">
             <h3>Decides tú, sin presión</h3>
-            <p>Te explicamos ahorro real, permanencia y letra pequeña. Contratas cuando estás seguro — o no contratas. Sin compromiso.</p>
+            <p>Contratas cuando estás seguro — o no contratas. Sin compromiso.</p>
           </article>
+        </div>
+        <div class="section-cta">
+          <a class="btn btn--whatsapp" href="#" id="wa-steps" data-track="wa-steps">Empezar ahora por WhatsApp</a>
+          <p class="hero__garantias" style="margin-top:0.5rem">✓ Gratis · ✓ Sin compromiso · ✓ Respondemos hoy</p>
         </div>
       </div>
     </section>
@@ -469,32 +463,32 @@
           <article class="feature">
             <div class="feature__icon" aria-hidden="true">🔍</div>
             <h3>Comparamos todas las compañías</h3>
-            <p>No trabajamos para Movistar ni para Iberdrola. Trabajamos para ti. Por eso buscamos en todo el mercado, no en un solo catálogo.</p>
+            <p>Todo el mercado, no un solo catálogo.</p>
           </article>
           <article class="feature">
             <div class="feature__icon" aria-hidden="true">💶</div>
             <h3>El precio real, no el del primer mes</h3>
-            <p>Las compañías te venden con el precio de oferta. Nosotros te calculamos lo que pagarás el mes 13, con permanencia, subidas y letra pequeña incluidas.</p>
+            <p>El coste del mes 13, con letra pequeña incluida.</p>
           </article>
           <article class="feature">
             <div class="feature__icon" aria-hidden="true">📋</div>
             <h3>Nos encargamos de todo el papeleo</h3>
-            <p>Portabilidad, baja con la compañía anterior, instalación. Tú no tienes que llamar a nadie ni esperar en ninguna cola.</p>
+            <p>Portabilidad, baja y alta sin que hagas nada.</p>
           </article>
           <article class="feature">
             <div class="feature__icon" aria-hidden="true">🤝</div>
             <h3>Seguimos aquí después de contratar</h3>
-            <p>Si hay un problema con la factura, la instalación o quieres cambiar algo, nos llamas a nosotros. No vuelves a empezar desde cero con un 900.</p>
+            <p>Si hay un problema, nos llamas a nosotros.</p>
           </article>
           <article class="feature">
             <div class="feature__icon" aria-hidden="true">🏪</div>
             <h3>Tienda física en Córdoba</h3>
-            <p>Puedes pasarte sin cita en C/ Diego Serrano 13. Te atendemos en persona con calma, sin robots ni centralitas.</p>
+            <p>Sin cita en C/ Diego Serrano 13.</p>
           </article>
           <article class="feature">
             <div class="feature__icon" aria-hidden="true">💬</div>
             <h3>Gestión rápida por WhatsApp</h3>
-            <p>Desde el primer mensaje hasta el alta, gestionamos todo por WhatsApp. Sin llamadas perdidas ni esperas innecesarias.</p>
+            <p>Del primer mensaje al alta, por WhatsApp.</p>
           </article>
         </div>
       </div>
