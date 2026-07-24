@@ -79,8 +79,8 @@ Leer siempre `BUSINESS.md` completo. Sin excepciones.
 |---|---|
 | `BUSINESS.md` | Completo y auditado |
 | `INDEX.md` | Completo |
-| `CONVERSION.md` | Pendiente de redactar |
-| `SEO.md` | Pendiente de redactar |
+| `CONVERSION.md` | Completo y auditado |
+| `SEO.md` | Completo y auditado |
 | `DESIGN.md` | Pendiente de redactar |
 | `CODE_STANDARDS.md` | Pendiente de redactar |
 | `CHECKLIST.md` | Pendiente de redactar |
