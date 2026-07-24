@@ -1,53 +1,91 @@
-# AI/ — Índice de documentación para IA
+# AI/ — Índice y puerta de entrada para cualquier IA
 
-> Esta carpeta contiene el contexto completo del proyecto Fibrayphone para cualquier agente de IA, desarrollador externo o colaborador. Leer siempre el archivo correspondiente a la tarea antes de escribir código, textos o propuestas.
+> Leer este archivo primero. Explica qué contiene cada documento, en qué orden leerlos y qué documento prevalece cuando hay contradicción.
 
 ---
 
-## Archivos disponibles
+## Qué es esta carpeta
 
-| Archivo | Propósito | Leer cuando… |
+La carpeta `AI/` contiene el contexto completo del proyecto Fibrayphone. Está escrita para que cualquier IA —Cursor, Claude, ChatGPT, Codex, Gemini o cualquier otra— entienda el negocio, sus reglas y su código antes de proponer o ejecutar cualquier cambio.
+
+Trabajar en este proyecto sin leer estos documentos produce decisiones técnicamente correctas pero comercialmente erróneas.
+
+---
+
+## Jerarquía de documentos
+
+Cuando dos documentos se contradigan, el de mayor prioridad en esta lista prevalece:
+
+| Prioridad | Archivo | Qué contiene |
 |---|---|---|
-| [`BUSINESS.md`](./BUSINESS.md) | Fuente de verdad del negocio: qué es Fibrayphone, cómo funciona, qué servicios ofrece, cómo piensa y comunica | Siempre. Es el primer archivo a leer en cualquier tarea |
-| [`CONVERSION.md`](./CONVERSION.md) | Estrategia de conversión: CTAs, formularios, WhatsApp, flujos de contacto y métricas | Al trabajar en cualquier elemento que el usuario ve o con el que interactúa |
-| [`SEO.md`](./SEO.md) | Posicionamiento local en Córdoba: palabras clave, Schema.org, metadatos, sitemap y reglas de SEO técnico | Al modificar HTML, URLs, títulos, encabezados o contenido textual |
-| [`DESIGN.md`](./DESIGN.md) | Sistema visual: colores, tipografía, componentes, espaciado y principios de diseño | Al tocar CSS, crear nuevas secciones o proponer cambios visuales |
-| [`CODE_STANDARDS.md`](./CODE_STANDARDS.md) | Estándares de código: convenciones, arquitectura, reglas de calidad y cómo debe escribirse el código en este proyecto | Al escribir o revisar cualquier archivo del repositorio |
-| [`CHECKLIST.md`](./CHECKLIST.md) | Lista de verificación antes de hacer push a producción | Siempre, antes de cualquier deploy |
-| [`PROMPTS.md`](./PROMPTS.md) | Prompts reutilizables para tareas frecuentes: textos, SEO, código, análisis | Al necesitar un punto de partida para una tarea concreta |
+| 1 | [`BUSINESS.md`](./BUSINESS.md) | Fuente de verdad del negocio. Historia, modelo, servicios, operadores, perfiles de cliente, objetivos, tono, principios fundamentales y reglas de decisión para IAs. **Si hay conflicto con cualquier otro documento, este gana.** |
+| 2 | [`CONVERSION.md`](./CONVERSION.md) | Estrategia de conversión. CTAs, flujos de contacto, formularios, WhatsApp, llamadas y métricas clave. |
+| 3 | [`SEO.md`](./SEO.md) | Posicionamiento local en Córdoba. Palabras clave, Schema.org, metadatos, sitemap y reglas de SEO técnico. |
+| 4 | [`DESIGN.md`](./DESIGN.md) | Sistema visual. Colores, tipografía, componentes, espaciado y principios de diseño. |
+| 5 | [`CODE_STANDARDS.md`](./CODE_STANDARDS.md) | Estándares de código. Convenciones, arquitectura del proyecto y criterios de calidad. |
+| 6 | [`CHECKLIST.md`](./CHECKLIST.md) | Lista de verificación antes de hacer push a producción. |
+| 7 | [`PROMPTS.md`](./PROMPTS.md) | Prompts reutilizables para tareas frecuentes: textos, SEO, código y análisis. |
 
 ---
 
-## Orden de lectura recomendado
+## BUSINESS.md es la fuente de verdad
 
-### Para cualquier tarea
-1. `BUSINESS.md` — entender el negocio antes que cualquier otra cosa
-2. El archivo específico de la tarea (ver tabla)
-3. `CHECKLIST.md` — antes de entregar o hacer push
+`BUSINESS.md` describe cómo es y cómo debe ser Fibrayphone. Si cualquier otro documento, archivo de código, texto de la web o propuesta de IA contradice algo de `BUSINESS.md`, prevalece `BUSINESS.md`.
 
-### Para tareas de código
+Esto incluye:
+- Si el código hace algo distinto a lo que dice `BUSINESS.md`, el código debe corregirse.
+- Si otro documento de esta carpeta describe algo de forma diferente, debe actualizarse para alinearse.
+- Si una IA propone algo que contradice los principios de `BUSINESS.md`, la propuesta debe rechazarse o reformularse.
+
+---
+
+## Orden de lectura según la tarea
+
+No todos los documentos son necesarios para cada tarea. Este esquema ayuda a decidir qué leer:
+
+### Antes de cualquier tarea
+Leer siempre `BUSINESS.md` completo. Sin excepciones.
+
+### Tarea de código (HTML, CSS, JS, API)
 1. `BUSINESS.md`
 2. `CODE_STANDARDS.md`
-3. `DESIGN.md` si hay cambios visuales
-4. `SEO.md` si hay cambios en HTML o contenido
-5. `CHECKLIST.md`
+3. `DESIGN.md` — si el cambio afecta a la interfaz
+4. `SEO.md` — si el cambio afecta a contenido, URLs o estructura HTML
+5. `CHECKLIST.md` — antes del push
 
-### Para tareas de contenido o copywriting
+### Tarea de contenido o textos
 1. `BUSINESS.md`
 2. `CONVERSION.md`
 3. `SEO.md`
 
-### Para tareas de diseño o UX
+### Tarea de diseño o UX
 1. `BUSINESS.md`
 2. `DESIGN.md`
 3. `CONVERSION.md`
 
+### Tarea de SEO
+1. `BUSINESS.md`
+2. `SEO.md`
+3. `CONVERSION.md`
+
+### Antes de hacer push a producción
+1. `CHECKLIST.md` — siempre, independientemente de la tarea
+
 ---
 
-## Regla de oro
+## Estado de los documentos
 
-> Si un archivo de esta carpeta y el código del repositorio se contradicen, prevalece la intención de negocio descrita aquí. El código describe cómo está hecho; estos documentos describen cómo debe funcionar y por qué.
+| Archivo | Estado |
+|---|---|
+| `BUSINESS.md` | Completo y auditado |
+| `INDEX.md` | Completo |
+| `CONVERSION.md` | Pendiente de redactar |
+| `SEO.md` | Pendiente de redactar |
+| `DESIGN.md` | Pendiente de redactar |
+| `CODE_STANDARDS.md` | Pendiente de redactar |
+| `CHECKLIST.md` | Pendiente de redactar |
+| `PROMPTS.md` | Pendiente de redactar |
 
 ---
 
-*Actualizar este índice si se añaden, renombran o eliminan archivos en esta carpeta.*
+*Actualizar este índice si se añaden, renombran o eliminan archivos en esta carpeta, o si cambia el estado de algún documento.*

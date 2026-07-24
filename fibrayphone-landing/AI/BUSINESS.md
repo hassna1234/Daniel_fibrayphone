@@ -19,6 +19,8 @@
 | 6 | **Toda afirmación debe poder justificarse** | Precios, estadísticas, perfiles de cliente y comportamientos deben estar respaldados por datos reales del negocio o del repositorio. Si no lo están, se etiquetan como estimación. |
 | 7 | **La simplicidad siempre tiene prioridad sobre la complejidad** | La solución más simple que resuelve el problema es la correcta. No se añade complejidad técnica sin una necesidad de negocio documentada. |
 | 8 | **Cada cambio debe aportar valor medible** | Antes de aplicar cualquier modificación, debe poder responderse: ¿en qué métrica concreta mejora esto? Si la respuesta es "en ninguna medible", el cambio no es prioritario. |
+| 9 | **No asumir información no documentada** | Si un dato (precio, operador, promoción, estadística, proceso interno) no aparece en esta documentación ni en el código, no debe inventarse. Marcarlo como "Pendiente de definir" o consultar al propietario del negocio antes de usarlo. |
+| 10 | **Justificar las decisiones** | Toda propuesta relevante debe incluir una explicación breve de por qué mejora el negocio. El argumento debe conectar el cambio con al menos uno de estos cinco criterios: confianza, conversiones, SEO, mantenibilidad o estabilidad del proyecto. |
 
 ---
 
