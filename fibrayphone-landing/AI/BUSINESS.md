@@ -36,7 +36,7 @@ Esta honestidad no es altruismo; es estrategia. Un cliente que siente que le han
 **Frente a llamar directamente a una operadora:**
 La operadora solo ofrece sus propias tarifas. Su incentivo es maximizar el valor del contrato, no minimizar el gasto del cliente. Su agente de atención al cliente no tiene por qué conocer las condiciones de la competencia. Si el cliente tiene un problema meses después, empieza de cero con otra persona distinta.
 
-En Fibrayphone el cliente siempre habla con el mismo equipo que le asesoró. Si hay un problema, la tienda medía y gestiona.
+En Fibrayphone el cliente siempre habla con el mismo equipo que le asesoró. Si hay un problema, la tienda media y gestiona.
 
 **Frente a un comparador online (HolaMóvil, Kelisto, Rastreator, etc.):**
 Los comparadores online muestran resultados de búsqueda. El cliente sigue teniendo que interpretar la información, entender qué condiciones aplican en su dirección, gestionar la portabilidad, llamar para dar la baja en la compañía anterior y resolver problemas si algo falla durante el proceso.
@@ -107,9 +107,12 @@ Fibrayphone no tiene operadora propia. Trabaja con todas simultáneamente. Su in
 
 ### 3.1 Fibra e internet
 
-**Qué hace Fibrayphone:** Compara la oferta vigente de todas las operadoras con cobertura en la dirección del cliente. No solo el precio del primer mes, sino el coste real a 12 meses, incluyendo las subidas previstas al terminar la promoción inicial, los cargos de instalación (si los hay), las condiciones de permanencia y las penalizaciones por baja anticipada.
+**Qué hace Fibrayphone:** Compara la oferta vigente de todas las operadoras con cobertura en la dirección exacta del cliente. No solo el precio del primer mes, sino el coste real a 12 meses. Eso incluye:
+- Las subidas de precio al terminar la promoción inicial
+- Los cargos de instalación, si los hay
+- Las condiciones de permanencia y penalizaciones por baja anticipada
 
-**Valor para el cliente:** El mercado de fibra en España tiene tarifas desde 20 €/mes para conexiones básicas hasta packs de varios cientos de euros para hogar con varias líneas y TV. La diferencia entre la oferta más cara y la que realmente necesita el cliente puede ser de 30–50 €/mes. Eso es lo que Fibrayphone encuentra.
+**Valor para el cliente:** El mercado de fibra en España tiene una horquilla de precios amplia. La diferencia entre lo que el cliente paga sin comparar y lo que pagaría con la tarifa adecuada puede ser sustancial. Fibrayphone la calcula con datos reales. *(Ver precios orientativos en Información variable.)*
 
 **Qué gestiona:** Alta del servicio nuevo, comprobación de cobertura real en la dirección (no todos los edificios tienen fibra de todas las operadoras), gestión de la baja del servicio anterior, coordinación de la instalación si hace falta técnico.
 
@@ -119,7 +122,7 @@ Fibrayphone no tiene operadora propia. Trabaja con todas simultáneamente. Su in
 
 **Qué hace Fibrayphone:** Analiza el consumo real del cliente (gigas usados al mes, número de llamadas, si viaja al extranjero, número de líneas en el hogar) y compara entre operadoras. El objetivo es encontrar la tarifa que cubra las necesidades reales sin pagar por gigas que no se usan.
 
-**Valor para el cliente:** En España, muchos usuarios llevan años con la misma tarifa sin revisarla. El mercado ha cambiado drásticamente: operadores como Digi, Lowi o Pepephone ofrecen tarifas de 10–15 GB por menos de 10 €/mes. Un cliente con una tarifa de una operadora grande de 2020 puede estar pagando 25–30 € más de lo necesario.
+**Valor para el cliente:** Muchos usuarios llevan años con la misma tarifa sin revisarla. El mercado de móvil español ha cambiado: existen operadores con precios muy inferiores a los de las grandes operadoras de hace cinco años. Fibrayphone analiza el consumo real del cliente para encontrar la tarifa que le corresponde, no la más cara ni la más barata de forma ciega. *(Precios de referencia del mercado actual en Información variable.)*
 
 **Qué gestiona:** Contratación de la nueva línea, portabilidad del número (el cliente conserva su número), baja con la operadora anterior. El cliente no tiene que llamar a nadie.
 
@@ -127,7 +130,7 @@ Fibrayphone no tiene operadora propia. Trabaja con todas simultáneamente. Su in
 
 **Qué hace Fibrayphone:** Analiza si al cliente le compensa contratar fibra y móvil por separado o en pack. Los packs de operadora pueden ser más baratos o más caros que la combinación de servicios independientes, dependiendo del momento y la operadora. No hay una respuesta genérica.
 
-**Valor para el cliente:** El pack más solicitado en Fibrayphone es fibra + 2 líneas móviles con 50 GB cada una + acceso a plataformas de streaming. El precio orientativo está en torno a 59 €/mes, pero puede variar. El cliente que llegó pagando 90 €/mes por lo mismo en Movistar o Vodafone ve el ahorro de forma inmediata.
+**Valor para el cliente:** El pack más solicitado en Fibrayphone es fibra + 2 líneas móviles + acceso a plataformas de streaming. El cliente que lleva años con la misma operadora sin comparar suele encontrar diferencias de precio significativas. *(Precio orientativo vigente en Información variable.)*
 
 **TV y plataformas:** Fibrayphone puede incluir acceso a Netflix, HBO Max, Disney+ y Prime Video dentro de los packs de algunos operadores. Se verifica qué plataformas incluye cada pack antes de recomendarlo.
 
@@ -135,7 +138,7 @@ Fibrayphone no tiene operadora propia. Trabaja con todas simultáneamente. Su in
 
 **Qué hace Fibrayphone:** Analiza la factura actual de electricidad del cliente. Con la factura en mano, el asesor puede calcular cuánto pagaría con tarifa fija de distintas comercializadoras y compararlo con la tarifa indexada (PVPC) que suele tener el cliente de forma predeterminada.
 
-**Valor para el cliente:** El mercado eléctrico español es volátil. El PVPC puede ser barato en algunos períodos y muy caro en otros (como ocurrió en 2021–2022). Una tarifa fija elimina esa incertidumbre. Los clientes de Fibrayphone ahorran entre 20 y 30 €/mes al cambiar de comercializadora, según el perfil de consumo.
+**Valor para el cliente:** El mercado eléctrico español es volátil. El PVPC puede ser barato en algunos períodos y muy caro en otros. Una tarifa fija elimina esa incertidumbre. El ahorro real depende del perfil de consumo de cada cliente; Fibrayphone lo calcula con la factura en mano antes de recomendar el cambio. *(Ahorro orientativo en Información variable.)*
 
 **Qué explica el asesor:** La diferencia entre tarifa fija e indexada. Los períodos de consumo (punta, llano, valle) y si el cliente tiene discriminación horaria o no. Si merece la pena cambiar de potencia contratada. El proceso de cambio de comercializadora (no hay corte de suministro, el cambio es administrativo).
 
@@ -157,7 +160,7 @@ Fibrayphone no tiene operadora propia. Trabaja con todas simultáneamente. Su in
 
 **Valor para el cliente:** El mercado de alarmas tiene contratos de permanencia largos (36–60 meses) y cuotas mensuales que varían según los servicios incluidos. Cambiar de empresa de alarmas sin ayuda puede ser complicado porque las compañías ponen obstáculos al proceso de baja. Fibrayphone gestiona esa baja, que es uno de los puntos de dolor más habituales de los clientes.
 
-**Precio orientativo:** Desde 19,90 €/mes según empresa y configuración.
+**Precio orientativo:** Variable según empresa y configuración. *(Precio de referencia actual en Información variable.)*
 
 **Qué gestiona:** Contratación de la nueva alarma, gestión de la baja de la alarma anterior. El cliente no tiene que llamar a su empresa de alarmas actual ni enfrentarse a la retención telefónica.
 
@@ -287,7 +290,7 @@ La confianza se construye con:
 
 ### 7.1 Particular adulto
 
-**Quién es:** Persona de entre 35 y 65 años, residente en Córdoba. Tiene uno o varios contratos de telecomunicaciones o energía que no ha revisado en más de dos años. Sospecha que está pagando de más pero no tiene ni el tiempo ni las ganas de comparar por su cuenta.
+**Quién es:** Adulto residente en Córdoba con uno o varios contratos de telecomunicaciones o energía que no ha revisado en mucho tiempo. Sospecha que está pagando de más pero no tiene ni el tiempo ni las ganas de comparar por su cuenta.
 
 **Cómo llega a Fibrayphone:** Por recomendación de un familiar o vecino ("me han dicho que en Diego Serrano os ayudan a comparar"), por una reseña de Google, o porque pasaba por la calle y vio la tienda.
 
@@ -303,7 +306,7 @@ La confianza se construye con:
 
 **Qué necesita:** Un pack que cubra a toda la familia a un precio razonable. Valoran que alguien gestione todas las portabilidades sin que nadie se quede sin cobertura durante el proceso.
 
-**Ticket habitual:** Pack fibra + 2–3 móviles, a veces con TV y plataformas. Potencial de ahorro de 30–60 €/mes respecto a lo que pagan con grandes operadoras sin haber comparado.
+**Ticket habitual:** Pack fibra + 2–3 móviles, a veces con TV y plataformas. Son el perfil con mayor potencial de ahorro porque acumulan varios contratos sin revisar.
 
 ### 7.3 Autónomo
 
@@ -319,7 +322,7 @@ La confianza se construye con:
 
 **Qué necesita:** Alguien que centralice todos sus contratos de telecomunicaciones y energía y los optimice. Aprecia la eficiencia de no tener que gestionar varios proveedores por separado.
 
-**Potencial de ahorro:** Mayor que el particular. Una empresa con 5 líneas móviles, fibra de empresa y luz de local puede ahorrar 100–200 €/mes con una comparativa bien hecha.
+**Potencial de ahorro:** Mayor que el particular, porque acumula varios contratos (móviles, fibra de empresa, luz del local). El ahorro depende del volumen contratado y del tiempo que lleven sin revisar.
 
 ### 7.5 Cliente que NO es prioritario para Fibrayphone
 
@@ -347,7 +350,7 @@ La web es el escaparate digital de una asesoría presencial. Su misión es gener
 
 ### 8.2 Jerarquía de canales de contacto
 
-El orden de prioridad no es arbitrario; responde a las tasas de conversión reales de cada canal:
+El orden de prioridad no es arbitrario; responde a la lógica del comportamiento de compra en servicios de asesoría local:
 
 **1. WhatsApp (prioridad máxima)**
 Es el canal con mayor tasa de conversión. El cliente que abre WhatsApp ya está en un contexto de conversación personal. El paso de escribir un mensaje es mínimo. La probabilidad de que esa conversación acabe en visita o contrato es alta. En Fibrayphone, WhatsApp tiene múltiples puntos de entrada en la página (header, hero, sección de servicios, sección vs, sección de pasos, barra móvil, FAB) y cada uno tiene un mensaje contextual preescrito que facilita el inicio de la conversación.
@@ -470,7 +473,7 @@ El formulario es un canal de captación de leads. Existe porque hay personas que
 
 ### 10.6 Nunca eliminar ni ocultar botones de WhatsApp
 
-WhatsApp es el canal de mayor conversión. La web tiene múltiples puntos de entrada de WhatsApp porque los tests de comportamiento de usuario muestran que distintas personas hacen clic en puntos distintos de la página. Reducir los puntos de entrada de WhatsApp por "limpieza visual" es una pérdida de conversiones directa.
+WhatsApp es el canal de mayor conversión. La web tiene múltiples puntos de entrada porque distintos usuarios se deciden en momentos distintos del scroll: algunos al ver el hero, otros al leer las ofertas, otros al revisar las opiniones. Reducir esos puntos de entrada por "limpieza visual" elimina oportunidades reales de contacto.
 
 ### 10.7 Nunca eliminar ni reescribir reseñas de clientes reales
 
@@ -568,14 +571,9 @@ Esto significa:
 
 ### 12.2 Simplicidad como principio de ingeniería
 
-El stack actual (HTML + CSS + JS puro + Vercel Functions) no es técnicamente "interesante". Es deliberadamente simple. Esta simplicidad tiene valor:
+El stack es deliberadamente simple. Esta simplicidad tiene valor concreto: cualquier persona con conocimientos básicos puede entender cómo funciona, no hay dependencias que deprecarse ni procesos de build que mantener. La arquitectura completa está en §12.5.
 
-- Cualquier persona con conocimientos básicos puede entender cómo funciona
-- No tiene dependencias que deprecarse, vulnerabilidades que parchear o ecosistemas que mantenerse actualizado
-- No requiere npm install, webpack, babel ni ningún proceso de build
-- Despliega en Vercel en menos de 30 segundos
-
-Añadir un framework, un bundler o un sistema de gestión de contenidos solo está justificado si resuelve un problema real y documentado, no si "es lo que se usa ahora" o "escala mejor".
+Añadir un framework, un bundler o un CMS solo está justificado si resuelve un problema real y documentado, no si "es lo que se usa ahora" o "escala mejor".
 
 ### 12.3 Principio de no duplicación
 
@@ -587,9 +585,23 @@ Cualquier valor que pueda necesitar actualizarse en el futuro debe estar en un �
 
 ### 12.4 Principio de análisis antes de modificación
 
-Antes de modificar cualquier función de `js/main.js`, hay que entender qué hace, por qué está así y qué otras partes del sistema dependen de ella. Este JS gestiona: generación de URLs de WhatsApp, configuración de CTAs del hero, menú móvil, aplicación de datos de contacto, renderizado de reviews, tracking de campaña desde URL, limpieza de parámetros, inicialización de GA4, tracking de todos los eventos, modal de privacidad, validación y envío del formulario, renderizado de marcas, carga de fotos de tienda con fallback, mensajes contextuales por servicio e indicador de estado de apertura de tienda en tiempo real.
+Antes de modificar cualquier función de `js/main.js`, hay que entender qué hace, por qué está así y qué otras partes dependen de ella. Este archivo gestiona:
 
-Cada función tiene un propósito de negocio. Eliminar o simplificar sin entender ese propósito puede romper algo que funciona y aporta valor.
+- Generación de URLs de WhatsApp con mensaje contextual por punto de entrada
+- Configuración de los dos CTAs específicos del hero (`#wa-hero-comparativa`, `#wa-hero-asesor`)
+- Menú móvil (apertura, cierre, accesibilidad ARIA)
+- Aplicación de datos de contacto desde `config.js` al DOM
+- Renderizado de reviews y marcas desde `config.js`
+- Tracking de campaña desde parámetros UTM y `?from=maps`
+- Limpieza de parámetros de tracking de la barra de navegación
+- Inicialización de GA4 y disparo de todos los eventos
+- Modal de política de privacidad
+- Validación, envío del formulario y apertura de WhatsApp con datos del lead
+- Carga de fotos de tienda con fallback progresivo a SVG
+- Mensajes de WhatsApp contextuales por categoría de servicio
+- Indicador de estado de apertura de la tienda en tiempo real (zona horaria Madrid)
+
+Cada función tiene un propósito de negocio directo. Eliminar o simplificar sin entender ese propósito puede romper algo que genera leads.
 
 ### 12.5 Arquitectura técnica de referencia
 
@@ -666,6 +678,56 @@ La ventaja competitiva de Fibrayphone no es tecnológica ni de escala. Es la con
 
 ---
 
+## Información variable
+
+> Esta sección contiene datos que cambian con frecuencia. **No hardcodear estos valores en código ni en otros documentos.** La fuente de verdad en producción es `js/config.js`. Actualizar aquí cuando se actualice el repositorio.
+
+### Estadísticas del negocio
+
+| Dato | Valor actual | Fuente en el repo | Nota |
+|---|---|---|---|
+| Clientes atendidos | 900+ | `index.html` (sección #nosotros) | Actualizar manualmente |
+| Reseñas en Google | 200+ según `config.js` / 250+ según HTML fallback | `js/config.js → googleReviewCount` y `index.html` línea ~145 | **Inconsistencia detectada:** hay tres valores distintos en el repositorio (`"200"` en Schema.org, `"200+"` en config.js, `"250+"` en el HTML fallback del hero). Pendiente de unificar. |
+| Valoración media | 5,0 ★ | `js/config.js → googleRating` | |
+| Año de apertura | 2022 | `index.html` (sección #nosotros) | |
+
+### Equipo
+
+| Nombre | Rol |
+|---|---|
+| Daniel | Asesor principal, atención presencial y comercial |
+| Hassna | Asesoría y gestión operativa |
+
+*Los nombres del equipo aparecen en las reseñas de clientes de `config.js`. Si el equipo cambia, actualizar también el contenido de testimonios donde se mencione por nombre.*
+
+### Horario de tienda
+
+| Días | Turno mañana | Turno tarde |
+|---|---|---|
+| Lunes a jueves | 9:30–14:00 | 18:00–20:30 |
+| Viernes | 9:30–14:00 | Cerrado |
+| Sábado | 10:00–13:30 | Cerrado |
+| Domingo | Cerrado | Cerrado |
+
+*Fuente: `index.html` (sección #contacto y FAQ). El indicador de estado en tiempo real de `js/main.js` usa estos mismos horarios hardcodeados. Si el horario cambia, actualizar también `js/main.js → updateStoreStatus()`.*
+
+### Precios orientativos (mercado julio 2026)
+
+> Estos precios proceden del HTML de la web y son orientativos. Cambian con frecuencia. No usarlos como referencia definitiva; siempre remitir al cliente a la comparativa personalizada.
+
+| Servicio | Precio orientativo | Fuente |
+|---|---|---|
+| Fibra (básica) | Desde 20 €/mes | `index.html` sección #ofertas |
+| Pack fibra + 2 móviles + TV | ~59 €/mes | `index.html` sección #ofertas |
+| Alarma con CRA | Desde 19,90 €/mes | `index.html` sección #ofertas |
+| Ahorro típico en luz (cambio comercializadora) | 20–30 €/mes | `index.html` hero y sección #servicios |
+
+### Catálogo de operadores
+
+Ver sección 4. Tiene su propio aviso de vigencia. Antes de publicar contenido específico de una operadora, verificar que sigue activa en el catálogo.
+
+---
+
 ## Pendiente de definir
 
 La siguiente información sería recomendable completar en el futuro para tener una documentación más completa y operativa:
@@ -711,4 +773,57 @@ Si existe algún mecanismo para que los clientes actuales vuelvan cuando necesit
 
 ---
 
-*Documento creado en julio de 2026. Actualizar cuando cambie información del negocio: operadores del catálogo, horarios, equipo, servicios o datos de contacto. La fecha de última actualización debe revisarse al principio de cada año.*
+---
+
+## Auditoría del documento (julio 2026)
+
+### Errores encontrados y cambios realizados
+
+| # | Problema encontrado | Tipo | Sección | Cambio realizado |
+|---|---|---|---|---|
+| 1 | Typo "medía" (verbo medir) en lugar de "media" (intermediario) | Error ortográfico | §1.3 | Corregido |
+| 2 | "Tasas de conversión reales de cada canal" — no existe ningún dato de conversión en el repositorio | Afirmación sin evidencia | §8.2 | Reemplazado por "lógica del comportamiento de compra en servicios de asesoría local" |
+| 3 | "Tests de comportamiento de usuario muestran que distintas personas hacen clic en puntos distintos" — no hay ningún test documentado | Afirmación inventada | §10.6 | Reemplazado por observación lógica del comportamiento de scroll |
+| 4 | Rango de edad "35 y 65 años" — ningún documento del repositorio confirma este dato | Dato inventado | §7.1 | Eliminado. Descripción del perfil mantenida sin rango de edad específico |
+| 5 | "90 €/mes" como precio de comparación frente a Movistar/Vodafone — fabricado | Dato inventado | §3.3 | Eliminado. Descripción del valor mantenida sin precio concreto falso |
+| 6 | "25–30 € más de lo necesario" para tarifas de móvil de 2020 — cifra sin evidencia | Dato inventado | §3.2 | Eliminado. Sustituido por descripción cualitativa del beneficio |
+| 7 | "10–15 GB por menos de 10 €/mes" — dato de mercado volátil presentado como permanente | Dato perecedero en lugar incorrecto | §3.2 | Movido a Información variable con referencia al mercado actual |
+| 8 | "100–200 €/mes" de ahorro para pymes — cifra sin evidencia | Dato inventado | §7.4 | Eliminado. Descripción del potencial de ahorro mantenida sin cifra inventada |
+| 9 | "30–60 €/mes" de ahorro para familias — cifra sin evidencia | Dato inventado | §7.2 | Eliminado |
+| 10 | Frase de ~60 palabras en la descripción de fibra | Frase excesivamente larga | §3.1 | Convertida en lista de tres puntos |
+| 11 | Frase de ~80 palabras listando las funciones de main.js | Frase excesivamente larga | §12.4 | Convertida en lista de 14 puntos |
+| 12 | Stack técnico descrito dos veces (principios y arquitectura) | Duplicación | §12.2 y §12.5 | §12.2 simplificado a principio; detalle completo únicamente en §12.5 |
+| 13 | Precios orientativos dispersos en secciones de servicios, sin indicación de volatilidad | Datos perecederos sin gestión | §3.1, §3.2, §3.3, §3.4, §3.6 | Movidos a sección "Información variable". Cada servicio referencia esa sección |
+| 14 | Estadísticas del negocio (900+, 200+, 5.0) sin indicar que son perecederas | Datos perecederos sin gestión | §1.1 y §13 | Añadidos a "Información variable" con fuentes exactas en el repo |
+| 15 | **Inconsistencia interna en el repositorio:** `Schema.org` dice `"reviewCount": "200"`, `config.js` dice `"200+"`, HTML fallback del hero dice `"250+"` | Inconsistencia en el código, no en el doc | Codebase | Documentada en "Información variable". Pendiente de resolver en el repositorio |
+
+### Nivel de confianza por sección
+
+| Sección | Nivel | Justificación |
+|---|---|---|
+| §1.1 Historia | **Medio** | El año 2022 y los nombres están confirmados. La narrativa del origen ("nace como respuesta a…") es una inferencia razonable pero no está documentada explícitamente en ningún archivo |
+| §1.2 Filosofía | **Alto** | Cita literal extraída de `index.html` |
+| §1.3 Diferenciación | **Alto** | Respaldado por la sección VS de `index.html` |
+| §1.4 Por qué existe | **Medio** | Inferencia razonada del modelo de negocio; no contradice ningún dato real |
+| §1.5 Posicionamiento | **Alto** | Confirmado por el texto "asesoría de barrio, no call center" de `index.html` |
+| §2.1 Ingresos | **Alto** | Confirmado en la FAQ de `index.html` y en el texto del formulario |
+| §2.2 Gratuidad | **Alto** | Texto literal del formulario en `index.html` |
+| §2.3 vs. comparadores online | **Alto** | Confirmado por la sección VS de `index.html` |
+| §2.4 vs. tiendas de operadora | **Alto** | Confirmado por la sección VS de `index.html` |
+| §3 Servicios — descripción funcional | **Alto** | Confirmado por secciones de servicios y ofertas de `index.html` |
+| §3 Servicios — precios | **Bajo** | Volátiles por definición; movidos a Información variable |
+| §4 Catálogo de operadores | **Alto** (en julio 2026) | Extraído de `js/config.js` con advertencia de vigencia |
+| §5 Qué no comercializa | **Alto** | Deducido del ámbito del negocio; ningún dato del repo lo contradice |
+| §6 Objetivo principal | **Alto** | Confirmado por la arquitectura de CTAs y los eventos de GA4 en `js/main.js` |
+| §7 Perfiles de cliente | **Medio** | Perfiles plausibles y coherentes con el negocio; no existe segmentación documentada en el repo |
+| §8 Objetivos de la web | **Alto** | Confirmado por la estructura de CTAs, los IDs de WhatsApp y los eventos GA4 |
+| §9 Decisiones de IA | **Alto** | Derivado directamente de la lógica de negocio; no depende de datos externos |
+| §10 Prioridades absolutas | **Alto** | Derivado de la arquitectura real del sistema y del modelo de negocio |
+| §11 Tono | **Alto** | Confirmado por el copy real de `index.html` |
+| §12 Mentalidad de desarrollador | **Alto** | Confirmado por la estructura real del repositorio |
+| §13 Resumen ejecutivo | **Alto** | Síntesis de datos verificados |
+| Información variable | **Alto** | Datos extraídos directamente de archivos del repositorio con referencias exactas |
+
+---
+
+*Documento creado en julio de 2026. Revisado y auditado en julio de 2026. Actualizar cuando cambie información del negocio: operadores del catálogo, horarios, equipo, servicios o datos de contacto. Revisar la sección "Información variable" al inicio de cada año.*
