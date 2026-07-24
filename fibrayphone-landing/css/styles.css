@@ -5,6 +5,7 @@
   --brand-darker: #006f84;
   --brand-light: #e5f7fa;
   --brand-muted: #7fd4e4;
+  --accent: var(--brand);
   /* Texto y UI */
   --navy: #0f2744;
   --navy-dark: #0a1c33;
