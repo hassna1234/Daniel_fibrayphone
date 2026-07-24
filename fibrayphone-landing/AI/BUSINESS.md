@@ -1,324 +1,714 @@
-# BUSINESS.md — Contexto de negocio de Fibrayphone
+# BUSINESS.md — Fuente de verdad del negocio Fibrayphone
 
-> **Propósito de este documento**
-> Este archivo explica cómo funciona Fibrayphone como negocio: su modelo, sus servicios, sus clientes y sus reglas de decisión. Cualquier IA que trabaje en este proyecto —escribiendo código, textos, SEO, diseño o estrategia— debe leer este documento antes de proponer cualquier cambio. El desconocimiento del negocio produce cambios tecnicamente correctos pero comercialmente erróneos.
+> **Instrucción de uso**
+> Este documento es la referencia definitiva del negocio para cualquier agente de IA, desarrollador externo o colaborador que trabaje en este proyecto. Debe leerse completo antes de proponer cualquier cambio, ya sea de código, texto, diseño o estrategia. La ignorancia del negocio produce trabajo técnicamente correcto y comercialmente inútil. Si hay contradicción entre este documento y cualquier otro archivo del repositorio, este documento tiene precedencia.
 
 ---
 
 ## 1. Qué es Fibrayphone
 
-Fibrayphone es una **asesoría independiente de tarifas** con tienda física en Córdoba. Su función es comparar las ofertas del mercado español de telecomunicaciones, energía y seguridad, y recomendar a cada cliente la opción que mejor encaja con su situación real.
+### 1.1 Historia y origen
 
-No es una operadora. No es una comercializadora. No vende sus propios productos. Es un intermediario de confianza que trabaja simultáneamente con decenas de compañías para que el cliente no tenga que hacerlo él mismo.
+Fibrayphone nace en Córdoba en 2022 como respuesta a un problema real y cotidiano: los consumidores tienen dificultades para comparar tarifas de telecomunicaciones y energía porque cada operadora solo ofrece sus propios productos, las condiciones cambian con frecuencia, y la letra pequeña de los contratos está diseñada para confundir más que para aclarar.
 
-**Datos de contacto e identidad:**
+El negocio parte de la observación de que en Córdoba, como en muchas ciudades medianas españolas, no existe un intermediario de confianza que ayude a familias y autónomos a tomar estas decisiones sin presión comercial y sin coste. Los comparadores online existen, pero ninguno ofrece atención personalizada presencial ni se hace cargo del proceso de contratación de principio a fin.
 
-| Campo | Valor |
-|---|---|
-| Nombre comercial | Fibrayphone |
-| Dirección | C/ Diego Serrano 13, Local, Córdoba (14005) |
-| Teléfono | 696 78 54 71 |
-| WhatsApp | +34 696 78 54 71 |
-| Email | info@fibrayphone.es |
-| Web | https://www.fibrayphone.es |
-| Actividad desde | 2022 |
-| Valoración Google | 5,0 ★ · 200+ reseñas |
-| Clientes atendidos | 900+ |
+Daniel y Hassna abren la tienda en C/ Diego Serrano 13 con un modelo sencillo: atender a cada persona como lo haría un familiar que sabe de tarifas. Sin comisiones escondidas al cliente, sin presión para contratar y con seguimiento real después de la firma.
 
-**Equipo:**
-- **Daniel** — asesor principal, atención presencial y comercial
-- **Hassna** — asesoría y gestión operativa
+Desde 2022 han atendido a más de 900 clientes y acumulado más de 200 reseñas de 5 estrellas en Google. Este dato no es decorativo: en un negocio de reputación local, la valoración media de 5,0 es el activo más valioso y el resultado directo de no anteponer la comisión a la honestidad.
 
-**Horario de tienda:**
+### 1.2 Filosofía
 
-| Días | Mañana | Tarde |
-|---|---|---|
-| Lunes a jueves | 9:30–14:00 | 18:00–20:30 |
-| Viernes | 9:30–14:00 | Cerrado |
-| Sábado | 10:00–13:30 | Cerrado |
-| Domingo | Cerrado | Cerrado |
+La filosofía de Fibrayphone se resume en una frase que aparece literalmente en la web:
+
+> *"No intentamos venderte una compañía. Queremos recomendarte la que realmente mejor encaja contigo."*
+
+Esto tiene consecuencias prácticas que distinguen a Fibrayphone de cualquier tienda de operadora:
+
+- Si la tarifa actual del cliente es la mejor opción para su situación, se le dice. No se cambia por el placer de cobrar una comisión.
+- Si una compañía tiene mejor cobertura en el barrio del cliente que otra más barata, se recomienda la de mejor cobertura.
+- Si el cliente no está seguro, puede marcharse, pensarlo y volver cuando quiera. Sin seguimiento agresivo.
+
+Esta honestidad no es altruismo; es estrategia. Un cliente que siente que le han tratado bien vuelve cuando necesita cambiar, trae a su familia y deja una reseña de 5 estrellas. Un cliente que siente que le han vendido lo que no necesitaba no vuelve y puede dejar una reseña negativa que cuesta más de recuperar que diez comisiones.
+
+### 1.3 Qué hace diferente a Fibrayphone
+
+**Frente a llamar directamente a una operadora:**
+La operadora solo ofrece sus propias tarifas. Su incentivo es maximizar el valor del contrato, no minimizar el gasto del cliente. Su agente de atención al cliente no tiene por qué conocer las condiciones de la competencia. Si el cliente tiene un problema meses después, empieza de cero con otra persona distinta.
+
+En Fibrayphone el cliente siempre habla con el mismo equipo que le asesoró. Si hay un problema, la tienda medía y gestiona.
+
+**Frente a un comparador online (HolaMóvil, Kelisto, Rastreator, etc.):**
+Los comparadores online muestran resultados de búsqueda. El cliente sigue teniendo que interpretar la información, entender qué condiciones aplican en su dirección, gestionar la portabilidad, llamar para dar la baja en la compañía anterior y resolver problemas si algo falla durante el proceso.
+
+Fibrayphone hace todo eso. El cliente describe su situación; la tienda compara, recomienda, contrata y gestiona la baja anterior. El cliente no hace nada más.
+
+**Frente a una tienda multimarca de operadora:**
+Algunas tiendas venden varias operadoras de telecomunicaciones, pero raramente cubren energía y alarmas. Además, su modelo suele estar condicionado por objetivos de venta de marcas específicas.
+
+Fibrayphone cubre cinco categorías (fibra, móvil, luz, gas, alarmas) con independencia real, porque trabaja por comisión y no tiene objetivo de venta por marca.
+
+### 1.4 Por qué existe
+
+Fibrayphone existe porque el mercado español de telecomunicaciones y energía es intencionalmente opaco. Las tarifas cambian cada semana, las promociones tienen fecha de caducidad, las permanencias están escritas en letra de cuerpo seis y el precio del "mes 1" rara vez es el del "mes 13". Navegar este mercado requiere tiempo, paciencia y conocimiento que la mayoría de familias no tienen.
+
+La propuesta de valor es concreta: *alguien que sabe más que tú sobre este mercado te ayuda gratis, te ahorra entre 20 y 30 euros al mes y se encarga del papeleo*.
+
+### 1.5 Posicionamiento en el mercado
+
+Fibrayphone se posiciona como **asesoría de barrio**, no como call center ni como gran plataforma digital. Este posicionamiento es deliberado y tiene implicaciones directas en cómo debe comunicarse el negocio:
+
+- Lo local es una ventaja, no una limitación. Ser conocidos en Córdoba genera confianza que un comparador nacional nunca puede replicar.
+- La tienda física es un diferencial, no un coste. En un mundo donde todo es digital, poder hablar cara a cara con un asesor que conoce el barrio es valioso.
+- El tamaño humano del equipo es un activo. Los clientes hablan con Daniel o con Hassna. No con un agente anónimo de turno.
+
+El posicionamiento objetivo a medio plazo es ser *la primera referencia en Córdoba* para cualquier duda sobre fibra, móvil, luz, gas o alarmas. No la primera en España. No la más grande. La primera de confianza en su ciudad.
 
 ---
 
 ## 2. Modelo de negocio
 
-Fibrayphone opera como **comparador con asesoramiento humano**. El modelo económico es el siguiente:
+### 2.1 Cómo genera ingresos
 
-- El servicio de asesoría y comparativa es **completamente gratuito para el cliente**.
-- Fibrayphone recibe una **comisión de las compañías** (operadoras, comercializadoras, empresas de seguridad) cuando un cliente contrata a través de ellos.
-- Si el cliente no contrata, Fibrayphone no cobra nada. No hay letra pequeña, no hay cuota de consulta.
+Fibrayphone ingresa exclusivamente mediante **comisiones de las compañías** con las que trabaja (operadoras de telecomunicaciones, comercializadoras de energía y empresas de seguridad). Cuando un cliente contrata un servicio a través de Fibrayphone, la compañía paga una comisión a la asesoría por haber captado ese cliente.
 
-Este modelo es crítico para entender el tono de comunicación: Fibrayphone puede permitirse ser honesto sobre cuándo *no* merece la pena cambiar, porque su reputación local vale más que una comisión forzada. Esa honestidad es precisamente lo que genera las reseñas de 5 estrellas y la fidelización.
+El importe y las condiciones de las comisiones varían por compañía, por tipo de servicio y por las condiciones comerciales vigentes en cada momento. Este modelo es estándar en el sector de distribución de telecomunicaciones y energía en España.
 
-**Lo que diferencia a Fibrayphone de un comparador online:**
-- Atención personalizada con un asesor humano, no un algoritmo
-- Posibilidad de acudir a tienda física con la factura en mano
-- Gestión completa del proceso: portabilidad, baja de la compañía anterior, contratación
-- Seguimiento postventa: si hay un problema, el cliente vuelve a la tienda y lo resuelven
-- Conocimiento profundo del mercado local (cobertura por zonas de Córdoba, promociones vigentes)
+### 2.2 El asesoramiento al cliente es completamente gratuito
+
+El cliente no paga nada por la comparativa, la recomendación, la gestión de la contratación ni el seguimiento postventa. Esto es un principio no negociable de Fibrayphone y es transparente al respecto: en el propio formulario de la web se lee literalmente *"Gratis para ti: cobramos comisión a las compañías si contratas. Nunca a ti."*
+
+Esta transparencia no es un eslogan; es la base de la confianza. El cliente que entiende el modelo comprende que Fibrayphone tiene incentivo económico solo si le recomienda algo que de verdad le conviene y que además decide contratar. Un cliente descontento no vuelve, no recomienda y puede dejar una reseña negativa.
+
+Si el cliente viene a comparar y decide no contratar, Fibrayphone no cobra nada y no tiene ningún mecanismo para presionarle. Esto también se comunica activamente: *"Puedes venir, comparar y decidir con calma."*
+
+### 2.3 Diferencia respecto a comparadores online
+
+| Aspecto | Comparador online | Fibrayphone |
+|---|---|---|
+| Atención | Algoritmo + formulario | Persona real, presencial o por WhatsApp |
+| Cobertura | Estimada por código postal | Verificada por dirección exacta |
+| Gestión contratación | El cliente llama y tramita | Fibrayphone lo hace todo |
+| Gestión baja anterior | El cliente llama a su compañía | Fibrayphone gestiona la baja |
+| Portabilidad | El cliente la tramita | Fibrayphone la tramita |
+| Postventa | No existe | El cliente llama a la tienda |
+| Letra pequeña | El cliente la interpreta | El asesor la explica |
+| Actualización de ofertas | Automática, pero sin contexto | Manual, con criterio real |
+
+### 2.4 Diferencia respecto a tiendas oficiales de operadoras
+
+Las tiendas oficiales de Movistar, Orange, Vodafone u otras operadoras tienen un catálogo fijo: sus propios productos. Están incentivadas para maximizar el valor del contrato de su operadora. No tienen acceso ni incentivo para recomendar a la competencia.
+
+Fibrayphone no tiene operadora propia. Trabaja con todas simultáneamente. Su incentivo es encontrar la mejor opción para el cliente, porque eso es lo que genera reseñas positivas, fidelización y nuevos clientes por recomendación.
 
 ---
 
-## 3. Servicios que ofrece
-
-Fibrayphone compara y gestiona la contratación en cinco categorías:
+## 3. Servicios
 
 ### 3.1 Fibra e internet
-Comparativa de velocidad, precio real a 12 meses, permanencia, cobertura en la dirección exacta del cliente. No solo el precio del primer mes: el coste real durante toda la vigencia del contrato. Fibra desde 20 €/mes según zona y operadora.
+
+**Qué hace Fibrayphone:** Compara la oferta vigente de todas las operadoras con cobertura en la dirección del cliente. No solo el precio del primer mes, sino el coste real a 12 meses, incluyendo las subidas previstas al terminar la promoción inicial, los cargos de instalación (si los hay), las condiciones de permanencia y las penalizaciones por baja anticipada.
+
+**Valor para el cliente:** El mercado de fibra en España tiene tarifas desde 20 €/mes para conexiones básicas hasta packs de varios cientos de euros para hogar con varias líneas y TV. La diferencia entre la oferta más cara y la que realmente necesita el cliente puede ser de 30–50 €/mes. Eso es lo que Fibrayphone encuentra.
+
+**Qué gestiona:** Alta del servicio nuevo, comprobación de cobertura real en la dirección (no todos los edificios tienen fibra de todas las operadoras), gestión de la baja del servicio anterior, coordinación de la instalación si hace falta técnico.
+
+**Condición para una buena recomendación:** Verificar la cobertura exacta antes de recomendar. Una oferta barata sin cobertura en la calle del cliente no es una oferta.
 
 ### 3.2 Telefonía móvil
-Comparativa de tarifas por línea, gigas reales de consumo, roaming, llamadas ilimitadas. También packs de varias líneas para familias. El asesor pregunta cuántos gigas usa realmente el cliente para no sobredimensionar la tarifa.
 
-### 3.3 Pack fibra + móvil (+ TV)
-La combinación más solicitada. Packs con 2 líneas móviles, fibra 600 Mb, plataformas de streaming (Netflix, HBO Max, Disney+, Prime Video). Ejemplo orientativo: desde 59 €/mes para familia con dos móviles y fibra.
+**Qué hace Fibrayphone:** Analiza el consumo real del cliente (gigas usados al mes, número de llamadas, si viaja al extranjero, número de líneas en el hogar) y compara entre operadoras. El objetivo es encontrar la tarifa que cubra las necesidades reales sin pagar por gigas que no se usan.
+
+**Valor para el cliente:** En España, muchos usuarios llevan años con la misma tarifa sin revisarla. El mercado ha cambiado drásticamente: operadores como Digi, Lowi o Pepephone ofrecen tarifas de 10–15 GB por menos de 10 €/mes. Un cliente con una tarifa de una operadora grande de 2020 puede estar pagando 25–30 € más de lo necesario.
+
+**Qué gestiona:** Contratación de la nueva línea, portabilidad del número (el cliente conserva su número), baja con la operadora anterior. El cliente no tiene que llamar a nadie.
+
+### 3.3 Pack fibra + móvil (y TV)
+
+**Qué hace Fibrayphone:** Analiza si al cliente le compensa contratar fibra y móvil por separado o en pack. Los packs de operadora pueden ser más baratos o más caros que la combinación de servicios independientes, dependiendo del momento y la operadora. No hay una respuesta genérica.
+
+**Valor para el cliente:** El pack más solicitado en Fibrayphone es fibra + 2 líneas móviles con 50 GB cada una + acceso a plataformas de streaming. El precio orientativo está en torno a 59 €/mes, pero puede variar. El cliente que llegó pagando 90 €/mes por lo mismo en Movistar o Vodafone ve el ahorro de forma inmediata.
+
+**TV y plataformas:** Fibrayphone puede incluir acceso a Netflix, HBO Max, Disney+ y Prime Video dentro de los packs de algunos operadores. Se verifica qué plataformas incluye cada pack antes de recomendarlo.
 
 ### 3.4 Electricidad (luz)
-Análisis de la factura actual del cliente. Comparativa entre tarifa indexada (PVPC) y tarifa fija de distintas comercializadoras. El ahorro habitual para clientes que cambian es de 20–30 €/mes. Se gestiona el cambio de compañía sin que el cliente tenga que llamar.
 
-### 3.5 Gas
-Comparativa de tarifa de gas natural: indexada vs. fija. Se explica la diferencia de forma comprensible, teniendo en cuenta el consumo real del cliente (calefacción, agua caliente, cocina). Se gestiona el cambio sin corte de suministro.
+**Qué hace Fibrayphone:** Analiza la factura actual de electricidad del cliente. Con la factura en mano, el asesor puede calcular cuánto pagaría con tarifa fija de distintas comercializadoras y compararlo con la tarifa indexada (PVPC) que suele tener el cliente de forma predeterminada.
 
-### 3.6 Alarmas y seguridad
-Comparativa entre empresas de seguridad con alarma conectada a central receptora. Se incluye la gestión de la baja de la alarma anterior, evitando al cliente la llamada a la compañía actual (que suele ser complicada). Desde 19,90 €/mes orientativo.
+**Valor para el cliente:** El mercado eléctrico español es volátil. El PVPC puede ser barato en algunos períodos y muy caro en otros (como ocurrió en 2021–2022). Una tarifa fija elimina esa incertidumbre. Los clientes de Fibrayphone ahorran entre 20 y 30 €/mes al cambiar de comercializadora, según el perfil de consumo.
+
+**Qué explica el asesor:** La diferencia entre tarifa fija e indexada. Los períodos de consumo (punta, llano, valle) y si el cliente tiene discriminación horaria o no. Si merece la pena cambiar de potencia contratada. El proceso de cambio de comercializadora (no hay corte de suministro, el cambio es administrativo).
+
+**Qué gestiona:** Alta con la nueva comercializadora, gestión de la baja con la actual. El cliente no tiene que llamar a Iberdrola ni a Endesa.
+
+### 3.5 Gas natural
+
+**Qué hace Fibrayphone:** Compara tarifas de gas entre comercializadoras. El gas natural se usa principalmente para calefacción, agua caliente y cocina. El consumo varía enormemente según el tipo de vivienda y los hábitos del cliente.
+
+**Valor para el cliente:** Al igual que con la luz, muchos clientes tienen la tarifa por defecto de su distribuidora sin haber comparado. Cambiar de comercializadora de gas puede suponer un ahorro significativo en los meses de mayor consumo (octubre–marzo).
+
+**Qué explica el asesor:** La diferencia entre el mercado libre y la tarifa regulada (TUR). Tarifa fija vs. indexada al mercado. Qué pasa si el precio del gas sube en mercado libre con tarifa fija (nada: el precio está garantizado).
+
+**Qué gestiona:** Alta con la nueva comercializadora de gas. El cambio no implica corte de suministro. La gestión es puramente administrativa.
+
+### 3.6 Alarmas y sistemas de seguridad
+
+**Qué hace Fibrayphone:** Compara sistemas de alarma con conexión a central receptora de alarmas (CRA). Analiza las necesidades del hogar o local del cliente (superficie, número de plantas, si hay jardín, si es primer o último piso) y compara entre las empresas disponibles.
+
+**Valor para el cliente:** El mercado de alarmas tiene contratos de permanencia largos (36–60 meses) y cuotas mensuales que varían según los servicios incluidos. Cambiar de empresa de alarmas sin ayuda puede ser complicado porque las compañías ponen obstáculos al proceso de baja. Fibrayphone gestiona esa baja, que es uno de los puntos de dolor más habituales de los clientes.
+
+**Precio orientativo:** Desde 19,90 €/mes según empresa y configuración.
+
+**Qué gestiona:** Contratación de la nueva alarma, gestión de la baja de la alarma anterior. El cliente no tiene que llamar a su empresa de alarmas actual ni enfrentarse a la retención telefónica.
 
 ---
 
-## 4. Operadores y compañías que comercializa
+## 4. Qué comercializa Fibrayphone
+
+> **Aviso:** Esta tabla refleja el catálogo vigente en julio de 2026. Los acuerdos con operadoras pueden cambiar. Antes de publicar contenido específico de una compañía, verificar que sigue en el catálogo activo.
 
 ### Telecomunicaciones (fibra y móvil)
-Movistar, Orange, Vodafone, Yoigo, MásMóvil, Digi, O2, Pepephone, Lowi, Jazztel, PTV Telecom, Simyo.
 
-> La lista puede variar según acuerdos vigentes y cobertura disponible en cada zona de Córdoba. Antes de publicar contenido específico de una compañía, verificar que sigue activa en el catálogo.
+| Operadora | Tipo |
+|---|---|
+| Movistar | Fibra, móvil, packs |
+| Orange | Fibra, móvil, packs |
+| Vodafone | Fibra, móvil, packs |
+| Yoigo | Fibra, móvil, packs |
+| MásMóvil | Fibra, móvil, packs |
+| Digi | Fibra, móvil |
+| O2 | Fibra, móvil |
+| Pepephone | Fibra, móvil |
+| Lowi | Fibra, móvil |
+| Jazztel | Fibra, móvil, packs |
+| PTV Telecom | Fibra, móvil |
+| Simyo | Móvil |
 
 ### Energía (luz y gas)
-Iberdrola, Endesa, Naturgy, Repsol, TotalEnergies, Holaluz, Octopus Energy, Gana Energía, Lucera, CHC Energía.
+
+| Comercializadora | Tipo |
+|---|---|
+| Iberdrola | Luz, gas |
+| Endesa | Luz, gas |
+| Naturgy | Luz, gas |
+| Repsol | Luz, gas |
+| TotalEnergies | Luz, gas |
+| Holaluz | Luz |
+| Octopus Energy | Luz |
+| Gana Energía | Luz |
+| Lucera | Luz |
+| CHC Energía | Luz |
 
 ### Seguridad y alarmas
-Segurma, Movistar Prosegur, Verisure.
+
+| Empresa | Tipo |
+|---|---|
+| Segurma | Alarma con CRA |
+| Movistar Prosegur | Alarma con CRA |
+| Verisure | Alarma con CRA |
 
 ---
 
 ## 5. Qué NO comercializa Fibrayphone
 
-Entender los límites del negocio es tan importante como conocer lo que ofrece. Una IA que proponga contenido fuera de estos límites generará confusión o expectativas falsas en el cliente.
+Este apartado es tan importante como el anterior. Una IA que proponga contenido, servicios o integraciones fuera de este ámbito generará confusión, expectativas falsas o problemas legales.
 
-Fibrayphone **no** ofrece:
-- Seguros de hogar, vida, coche o salud
-- Servicios bancarios o financiación
-- Venta de hardware (routers, teléfonos, dispositivos)
-- Instalaciones eléctricas o de fontanería
-- Servicios de telecomunicaciones propios (no tiene red propia)
-- Tarifas de empresas que no sean su catálogo activo
-- Comparativas de internet rural por satélite o radiofrecuencia (salvo que lo incorporen expresamente)
-- Gestiones con Administraciones Públicas, ayudas o subvenciones energéticas (no es su actividad)
+Fibrayphone no ofrece, no vende, no intermedia y no gestiona:
 
-Si un cliente pregunta por algo fuera del catálogo, la respuesta honesta es derivarlo a quien corresponda, no inventar una solución.
+**Servicios financieros y seguros**
+- Seguros de hogar, vida, salud o coche
+- Préstamos, financiación o productos bancarios
+- Planes de pensiones o productos de inversión
+
+**Hardware y venta de dispositivos**
+- Venta de teléfonos móviles, routers, repetidores o cualquier dispositivo
+- Reparación de dispositivos
+- Accesorios o periféricos
+
+**Instalaciones y obra**
+- Instalaciones eléctricas (electricistas)
+- Instalaciones de fontanería, gas (fontaneros, gasistas)
+- Obra civil o reformas
+- Instalación de paneles solares (salvo que Fibrayphone lo incorpore expresamente en el futuro)
+
+**Conectividad no estándar**
+- Internet por satélite (Starlink, HughesNet)
+- Antenas de radio o WiMax para zonas sin cobertura de fibra
+- Redes corporativas o soluciones empresariales complejas (SD-WAN, MPLS)
+
+**Gestiones públicas y subvenciones**
+- Bonos sociales eléctricos o de gas (aunque puede informar sobre su existencia)
+- Solicitudes de ayudas o subvenciones gubernamentales
+- Trámites con la Administración Pública
+
+**Servicios fuera del ámbito geográfico**
+- Fibrayphone opera principalmente en Córdoba y área metropolitana. No tiene capacidad operativa para gestionar servicios en otras provincias, aunque puede dar información orientativa.
+
+**Televisión de pago directa**
+- No vende suscripciones directas a Netflix, Disney+ u otras plataformas. Puede incluirlas como parte de un pack de operadora, pero no es distribuidor directo de estas plataformas.
 
 ---
 
 ## 6. Objetivo principal del negocio
 
-El objetivo de Fibrayphone es **aumentar el número de contratos cerrados** a través de relaciones de confianza con clientes locales en Córdoba.
+### 6.1 La métrica que importa
 
-No es un negocio de volumen masivo ni de tráfico web nacional. Es un negocio de reputación local donde cada cliente satisfecho genera recomendaciones directas (boca a boca) y reseñas de 5 estrellas que atraen a los siguientes clientes.
+El objetivo de Fibrayphone es **aumentar el número de contratos cerrados**. Todo lo demás es instrumental. La web más bonita del mundo sin leads es un fracaso. Un cliente que entra a la tienda o escribe por WhatsApp y contrata es un éxito.
 
-**Consecuencia directa para cualquier trabajo en este proyecto:**
-Toda decisión debe evaluarse con esta pregunta: *¿esto ayuda a que más personas de Córdoba confíen en Fibrayphone y contraten a través de ellos?* Si la respuesta no es claramente sí, el cambio probablemente no es prioritario.
+Esto no significa que la imagen, el SEO o la experiencia de usuario sean irrelevantes. Significa que deben evaluarse siempre en función de si contribuyen o no a que más personas de Córdoba contacten con Fibrayphone.
+
+### 6.2 Cómo se construye la confianza local
+
+En un negocio de asesoría local, la confianza es la única ventaja competitiva sostenible. No el precio (las comisiones de las operadoras son similares para todos los distribuidores), no la tecnología (cualquier comparador online tiene más herramientas digitales) y no la publicidad (Fibrayphone no puede competir en inversión publicitaria con Movistar o Iberdrola).
+
+La confianza se construye con:
+
+1. **Honestidad sobre el modelo de negocio.** Los clientes saben que Fibrayphone cobra comisión. Eso no es un problema; es un contrato social claro.
+
+2. **Resultados reales.** Un cliente que ahorra 25 €/mes en la factura de la luz lo cuenta en el trabajo, en el vecindario, en la familia.
+
+3. **Facilidad de acceso.** Sin cita previa, sin formularios interminables, sin call centers. La tienda está ahí, el WhatsApp está ahí.
+
+4. **Seguimiento postventa.** Si el nuevo contrato tiene un problema, el cliente llama a Daniel o a Hassna. No a un 800 de atención al cliente.
+
+5. **Presencia en Google.** 200+ reseñas de 5,0 ★ son el equivalente digital del boca a boca. Cada nueva reseña es un activo acumulativo que reduce el coste de adquisición de los siguientes clientes.
+
+### 6.3 Lo que NO es el objetivo
+
+- No es tener la web más innovadora del sector
+- No es posicionarse en Madrid, Barcelona o a nivel nacional
+- No es automatizar el proceso de comparativa (el asesor humano es el producto)
+- No es escalar a franquicia o modelo nacional en el corto plazo
+- No es captar clientes que no vivan en Córdoba y área metropolitana
 
 ---
 
 ## 7. Perfil del cliente ideal
 
-Fibrayphone tiene dos perfiles principales de cliente:
+### 7.1 Particular adulto
 
-### 7.1 Particular / familia
-- Adulto de 30–65 años, residente en Córdoba capital o área metropolitana
-- Tiene contrato vigente de fibra o luz que no ha revisado en 1–3 años
-- Sospecha que está pagando de más pero no sabe con certeza cuánto ni cómo comparar
-- No quiere invertir tiempo en llamar a varias compañías, esperar en cola y entender términos técnicos
-- Valora la atención presencial y humana
-- Toma decisiones basadas en confianza, no en funcionalidades técnicas
-- Llega a Fibrayphone por recomendación de vecino, familiar o reseñas de Google
+**Quién es:** Persona de entre 35 y 65 años, residente en Córdoba. Tiene uno o varios contratos de telecomunicaciones o energía que no ha revisado en más de dos años. Sospecha que está pagando de más pero no tiene ni el tiempo ni las ganas de comparar por su cuenta.
 
-### 7.2 Autónomo / pequeña empresa
-- Autónomo o responsable de una pyme en Córdoba
-- Necesita varios servicios: fibra de empresa, líneas móviles de empleados, luz del local
-- El ahorro mensual tiene impacto directo en su cuenta de resultados
-- Aprecia que alguien gestione todo sin que él tenga que perder tiempo
+**Cómo llega a Fibrayphone:** Por recomendación de un familiar o vecino ("me han dicho que en Diego Serrano os ayudan a comparar"), por una reseña de Google, o porque pasaba por la calle y vio la tienda.
 
-**Lo que NO es el cliente de Fibrayphone:**
-- Un usuario que busca autogestión digital y compara webs solo
-- Alguien de otra provincia que no pueda venir a la tienda (la atención remota es complementaria, no el foco)
-- Un cliente que busca precio mínimo absoluto sin importar el servicio
+**Qué necesita:** Alguien que le explique sin tecnicismos cuánto puede ahorrar y se ocupe de todo el proceso. No quiere hacer nada más que tomar la decisión.
+
+**Qué le genera confianza:** Que le digan la verdad, aunque esa verdad sea que no merece la pena cambiar en este momento. Que el asesor tenga paciencia para explicar la letra pequeña. Que pueda venir en persona y hablar cara a cara.
+
+**Qué le genera desconfianza:** La presión para firmar el mismo día, las promesas demasiado buenas, las comisiones ocultas.
+
+### 7.2 Familia con varias líneas
+
+**Quién es:** Unidad familiar con 2–4 miembros, cada uno con su línea móvil. Suelen tener también fibra, y a menudo también luz y gas. Son el perfil con mayor potencial de ahorro porque aglutinan varios contratos que comparar.
+
+**Qué necesita:** Un pack que cubra a toda la familia a un precio razonable. Valoran que alguien gestione todas las portabilidades sin que nadie se quede sin cobertura durante el proceso.
+
+**Ticket habitual:** Pack fibra + 2–3 móviles, a veces con TV y plataformas. Potencial de ahorro de 30–60 €/mes respecto a lo que pagan con grandes operadoras sin haber comparado.
+
+### 7.3 Autónomo
+
+**Quién es:** Trabajador por cuenta propia con local o despacho en Córdoba, o que trabaja desde casa. Necesita fibra fiable para trabajar, una o varias líneas móviles de empresa, y a menudo también tiene factura de luz del local.
+
+**Qué necesita:** Estabilidad más que precio mínimo. Un autónomo no puede permitirse quedarse sin internet por una mala migración. Valora que Fibrayphone gestione el proceso sin fricciones y que haya alguien a quien llamar si hay un problema.
+
+**Diferencial relevante:** Algunas operadoras ofrecen tarifas y condiciones específicas para autónomos (fibra simétrica, SLA, etc.). El asesor debe conocer estas diferencias.
+
+### 7.4 Pequeña empresa
+
+**Quién es:** PYME con sede en Córdoba, de 2 a 15 empleados. Tiene varias líneas móviles, posiblemente centralita virtual, internet del local y factura de luz y gas.
+
+**Qué necesita:** Alguien que centralice todos sus contratos de telecomunicaciones y energía y los optimice. Aprecia la eficiencia de no tener que gestionar varios proveedores por separado.
+
+**Potencial de ahorro:** Mayor que el particular. Una empresa con 5 líneas móviles, fibra de empresa y luz de local puede ahorrar 100–200 €/mes con una comparativa bien hecha.
+
+### 7.5 Cliente que NO es prioritario para Fibrayphone
+
+- Persona que busca autogestión digital total y no quiere hablar con nadie
+- Residente fuera del área de Córdoba que no puede desplazarse ni ser atendido de forma remota con efectividad
+- Cliente que solo busca el precio mínimo absoluto sin importar la calidad del servicio ni el proceso de cambio
+- Empresas con necesidades de telecomunicaciones corporativas complejas (data centers, redes WAN, infraestructura IT)
+- Cliente que quiere comparar solo para informarse sin ninguna intención real de contratar (se atiende, pero no es el perfil objetivo)
 
 ---
 
 ## 8. Objetivos de la web (fibrayphone.es)
 
-La web tiene un único propósito funcional: **convertir visitantes en leads cualificados**.
+### 8.1 Función de la web
 
-Un lead cualificado en Fibrayphone es una persona que:
-1. Inicia una conversación por WhatsApp, o
-2. Llama por teléfono, o
-3. Rellena el formulario de contacto
+La web de Fibrayphone tiene una función única y bien definida: **convertir visitantes en leads**. Un lead es una persona que ha dado el primer paso para contactar con la asesoría.
 
-No hay e-commerce, no hay área privada, no hay chatbot automatizado. El proceso de conversión siempre termina en contacto humano.
+La web no es:
+- Un comparador automático que resuelve la consulta sin intervención humana
+- Un catálogo de tarifas actualizado en tiempo real
+- Una tienda online
+- Un portal informativo genérico sobre telecomunicaciones
 
-**Jerarquía de conversión (de mayor a menor prioridad):**
-1. Clic en WhatsApp (más directo, mayor tasa de cierre)
-2. Clic en llamar (alta intención, cliente decide comprar)
-3. Envío de formulario (lead cualificado, contacto en el mismo día)
-4. Visita a tienda sin contacto previo (rara pero valiosa)
+La web es el escaparate digital de una asesoría presencial. Su misión es generar suficiente confianza y facilitar suficientemente el contacto como para que el visitante dé el paso siguiente: escribir por WhatsApp, llamar o rellenar el formulario.
 
-**Lo que la web NO debe hacer:**
-- Intentar resolver toda la comparativa de forma autónoma (el valor está en el asesor humano)
-- Ofrecer precios exactos y definitivos (dependen de cobertura, promoción y momento)
-- Generar fricción o pasos innecesarios antes del CTA
-- Competir en diseño con grandes plataformas sin aportar valor local
+### 8.2 Jerarquía de canales de contacto
 
-**Métricas que importan:**
-- Clics en WhatsApp (`clic_whatsapp` en GA4)
-- Clics en llamar (`clic_llamar`)
-- Formularios enviados (`formulario_enviado`)
-- Leads generados (`generate_lead`)
+El orden de prioridad no es arbitrario; responde a las tasas de conversión reales de cada canal:
+
+**1. WhatsApp (prioridad máxima)**
+Es el canal con mayor tasa de conversión. El cliente que abre WhatsApp ya está en un contexto de conversación personal. El paso de escribir un mensaje es mínimo. La probabilidad de que esa conversación acabe en visita o contrato es alta. En Fibrayphone, WhatsApp tiene múltiples puntos de entrada en la página (header, hero, sección de servicios, sección vs, sección de pasos, barra móvil, FAB) y cada uno tiene un mensaje contextual preescrito que facilita el inicio de la conversación.
+
+**2. Llamada (prioridad alta)**
+El cliente que llama tiene una intención de compra muy alta. No hay fricción de escritura. La conversación es inmediata. Debe ser posible llamar desde cualquier dispositivo con un solo toque.
+
+**3. Formulario (prioridad media)**
+El formulario captura leads que no quieren iniciar una conversación en tiempo real. Es asíncrono: el cliente deja sus datos y la tienda responde el mismo día en horario de apertura. El formulario actual redirige a WhatsApp al enviar (el cliente envía un mensaje por WhatsApp con sus datos preformateados) y simultáneamente envía una copia por email a `info@fibrayphone.es` via Resend.
+
+**4. Visita directa a tienda (prioridad complementaria)**
+El cliente que entra a la tienda sin haber contactado previamente es el de mayor nivel de confianza previo (viene por recomendación directa de alguien). No tiene un punto de entrada digital específico, pero la dirección, el mapa y el horario deben estar siempre visibles y correctos.
+
+### 8.3 Por qué este orden y no el inverso
+
+Cualquier propuesta que añada fricción antes de que el cliente llegue a WhatsApp o al teléfono es una propuesta que reduce conversiones. Ejemplos de fricción innecesaria que deben evitarse:
+
+- Páginas de registro previo antes de mostrar información
+- Formularios con más de cuatro campos (nombre, teléfono, servicio, privacidad es el mínimo viable)
+- Pop-ups que bloquean el contenido
+- Tiempos de carga superiores a 2–3 segundos
+- Navegación compleja que aleja al usuario del CTA
+- Chatbots que intentan resolver la comparativa de forma automática (destruyen la propuesta de valor humana)
+
+### 8.4 Métricas de seguimiento (GA4)
+
+Los eventos configurados en `js/main.js` que miden el rendimiento de la web:
+
+| Evento GA4 | Qué mide |
+|---|---|
+| `clic_whatsapp` | Todo clic en cualquier botón de WhatsApp, con parámetro `punto` (hero, formulario, servicios, etc.) |
+| `clic_llamar` | Todo clic en el número de teléfono, con parámetro `punto` |
+| `generate_lead` | Envío del formulario (abre WhatsApp con datos), con parámetros `method` y `service` |
+| `formulario_enviado` | Confirmación de que el email de lead llegó correctamente |
+| `clic_email` | Clic en el enlace de email |
+| `clic_como_llegar` | Clic en el enlace de Google Maps |
+| `clic_ver_reseñas` | Clic en "Ver todas las reseñas en Google" |
+
+El seguimiento de campaña está implementado con UTM params estándar y con el parámetro `?from=maps` específico para tráfico desde Google Maps. Los parámetros se eliminan de la barra de navegación después de registrarse (history.replaceState) para mantener la URL limpia.
 
 ---
 
-## 9. Cómo debe tomar decisiones una IA cuando proponga cambios
+## 9. Cómo debe tomar decisiones una IA
 
-Antes de proponer cualquier cambio —de código, texto, diseño, estructura o SEO— una IA debe responder estas preguntas en orden:
+Antes de proponer cualquier cambio en este proyecto, una IA debe aplicar este proceso de evaluación en orden estricto. No es un checklist opcional; es un filtro obligatorio.
 
-### Pregunta 1: ¿Rompe algo que funciona?
-Fibrayphone tiene clientes reales, una web en producción y un flujo de conversión que genera negocio. El riesgo de romper algo que funciona siempre supera al beneficio de una mejora hipotética. Si el cambio toca una ruta crítica (formulario, WhatsApp, llamada, lead), debe probarse exhaustivamente antes de aplicar.
+### Pregunta 1: ¿Rompe alguna funcionalidad existente?
 
-### Pregunta 2: ¿Aumenta contratos o confianza?
-Si la respuesta no es claramente sí, el cambio no es prioritario. Los cambios puramente estéticos, los rediseños completos, las refactorizaciones de código sin impacto en el usuario o las mejoras de "arquitectura" que no afectan al negocio deben posponerse o descartarse.
+Si la respuesta es sí o "no estoy seguro", el cambio no puede aplicarse sin pruebas exhaustivas. Las rutas críticas que nunca pueden romperse:
 
-### Pregunta 3: ¿Es coherente con el tono y los valores del negocio?
-Fibrayphone comunica con honestidad, cercanía y sin agresividad comercial. Un cambio de texto que suene a vendedor agresivo, prometa cosas inexactas o use jerga técnica incomprensible para el cliente es incorrecto, aunque sea gramaticalmente perfecto.
+- El formulario de contacto captura nombre, teléfono, servicio y consentimiento de privacidad, y abre WhatsApp con los datos preformateados
+- Simultáneamente, el formulario envía los datos al endpoint `/api/send-lead` que reenvía por email a `info@fibrayphone.es`
+- Todos los botones de WhatsApp del sitio generan la URL correcta con el mensaje contextual apropiado
+- El número de teléfono es clicable (`tel:`) en todos los dispositivos
+- La web carga en menos de 3 segundos en conexión 4G
 
-### Pregunta 4: ¿Es sostenible para el equipo?
-Fibrayphone es un negocio pequeño gestionado por dos personas. Las propuestas que requieren mantenimiento técnico constante, paneles de gestión complejos o procesos que dependen de terceros sin garantía son inadecuadas. La solución más simple que resuelve el problema es siempre la mejor opción.
+Si un cambio toca cualquiera de estos elementos, debe probarse en local antes de hacer push.
 
-### Pregunta 5: ¿Afecta al SEO local?
-La web tiene posicionamiento local en Córdoba. Cualquier cambio que afecte a URLs, títulos, metadatos, Schema.org, sitemap o estructura de encabezados debe evaluarse con criterio SEO antes de aplicarlo.
+### Pregunta 2: ¿Aumenta la confianza del visitante?
+
+La confianza en una web de asesoría local se construye con: reseñas reales, datos de contacto verificables, dirección física visible, equipo humano identificable, transparencia sobre el modelo de negocio y ausencia de promesas irreales. Un cambio que elimine alguno de estos elementos en nombre del "minimalismo" o la "modernidad" reduce la confianza aunque mejore la estética.
+
+### Pregunta 3: ¿Aumenta las conversiones?
+
+Un cambio que no mejora las métricas de `clic_whatsapp`, `clic_llamar` o `generate_lead` no es prioritario. Esto aplica a rediseños visuales, reorganizaciones de contenido, nuevas secciones informativas y cualquier mejora que no tenga un mecanismo claro de impacto en la tasa de contacto.
+
+Si la IA no puede explicar con claridad por qué el cambio propuesto debería aumentar conversiones, debe reconsiderar la propuesta.
+
+### Pregunta 4: ¿Mejora o mantiene el SEO?
+
+La web está posicionada localmente en Córdoba para búsquedas como "comparativa fibra Córdoba", "asesoría telecomunicaciones Córdoba", "comparar luz gas Córdoba". Cualquier cambio que afecte a:
+
+- El título (`<title>`) o la meta descripción
+- Los encabezados `<h1>`, `<h2>` y su jerarquía
+- El Schema.org LocalBusiness y FAQPage en el `<head>`
+- La URL canónica
+- El sitemap.xml
+- La velocidad de carga (Core Web Vitals)
+
+...debe evaluarse antes de aplicarse. Si el cambio mejora el SEO, adelante. Si lo perjudica, no se aplica aunque mejore la estética.
+
+### Pregunta 5: ¿Mantiene o mejora el rendimiento?
+
+La web actual no tiene ninguna dependencia JavaScript de terceros en el critical path. No hay React, no hay Vue, no hay jQuery. Carga un CSS propio y dos JS propios. Cualquier dependencia nueva debe justificar su peso en términos de impacto real en el negocio.
+
+### Si la respuesta a alguna de estas preguntas es negativa
+
+La IA debe:
+1. Explicar por qué el cambio propuesto no supera el filtro
+2. Proponer una alternativa que sí lo supere, o
+3. Indicar que no hay alternativa válida y que el cambio no debe realizarse
+
+No es aceptable aplicar un cambio que no supera este filtro con el argumento de que "mejora el código" o "es más moderno".
 
 ---
 
-## 10. Prioridad absoluta
+## 10. Prioridades absolutas
 
-> **Aumentar contratos y confianza siempre antes que hacer cambios estéticos.**
+Las siguientes son reglas no negociables. No admiten excepciones salvo instrucción explícita y documentada del propietario del negocio.
 
-Este principio no es negociable. Se traduce en reglas concretas:
+### 10.1 Nunca romper funcionalidades existentes
 
-1. **Un botón de WhatsApp que funciona vale más que un diseño perfecto.** Si hay que elegir entre corregir un bug de conversión y mejorar un color corporativo, siempre va primero el bug de conversión.
+El formulario, el WhatsApp, el teléfono y el email son los canales de ingresos del negocio. Romper cualquiera de estos elementos equivale a cerrar la caja registradora. Todo cambio en estas áreas requiere prueba en local antes de push a main, y verificación posterior en producción.
 
-2. **El formulario de leads es sagrado.** No se modifica sin pruebas. No se añaden campos sin justificación de negocio. No se cambia el flujo de envío sin verificar que los leads siguen llegando a `info@fibrayphone.es` y al WhatsApp.
+### 10.2 Nunca perjudicar el SEO local
 
-3. **Los textos de confianza no se eliminan por razones de diseño.** Frases como "Gratis para ti: cobramos comisión a las compañías si contratas. Nunca a ti." existen porque reducen la fricción del cliente receloso. Eliminarlas para "limpiar" el diseño es un error comercial.
+El posicionamiento en Google para búsquedas locales de Córdoba ha costado tiempo y clientes reales. No se cambian URLs, títulos, encabezados ni metadatos sin analizar el impacto SEO. No se elimina el Schema.org por "limpiar el HTML". No se añaden redirecciones sin verificar que no rompen el canonical.
 
-4. **Las reseñas de clientes reales no se tocan.** Son el activo de reputación más valioso del negocio. No se reescriben, no se sintetizan, no se eliminan para "economizar espacio".
+### 10.3 Nunca reducir la velocidad sin una razón con más peso
 
-5. **Los datos de contacto (teléfono, WhatsApp, dirección, horario) deben ser siempre visibles, correctos y actualizados.** Un dato de contacto incorrecto es una venta perdida.
+La velocidad de carga es un factor de conversión directo (el visitante que espera, abandona) y un factor de SEO (Google penaliza las páginas lentas). No se añaden scripts de terceros, imágenes sin comprimir, fuentes web externas ni animaciones JavaScript sin verificar el impacto en los Core Web Vitals.
 
-6. **La velocidad de carga importa.** Un cliente que espera más de 3 segundos cierra la pestaña. No se añaden scripts pesados, imágenes sin optimizar ni dependencias innecesarias sin análisis de impacto.
+### 10.4 Nunca cambiar la identidad visual sin instrucción explícita
+
+Los colores corporativos, el logotipo y la tipografía no se modifican porque "queda mejor" o porque "hay una tendencia nueva". La identidad visual de Fibrayphone está definida en `css/styles.css` mediante variables CSS. Si hay que modificarla, el propietario del negocio debe aprobarlo explícitamente.
+
+### 10.5 Nunca eliminar el formulario de contacto
+
+El formulario es un canal de captación de leads. Existe porque hay personas que no quieren abrir WhatsApp ni llamar, pero sí están dispuestas a dejar sus datos. Eliminar el formulario elimina ese segmento de leads. No importa cuánto se simplifique la web; el formulario permanece.
+
+### 10.6 Nunca eliminar ni ocultar botones de WhatsApp
+
+WhatsApp es el canal de mayor conversión. La web tiene múltiples puntos de entrada de WhatsApp porque los tests de comportamiento de usuario muestran que distintas personas hacen clic en puntos distintos de la página. Reducir los puntos de entrada de WhatsApp por "limpieza visual" es una pérdida de conversiones directa.
+
+### 10.7 Nunca eliminar ni reescribir reseñas de clientes reales
+
+Las reseñas son el testimonio de personas reales que han pasado por la tienda. No son contenido de marketing; son evidencia social auténtica. No se sintetizan, no se reescriben para que "suenen mejor", no se eliminan porque "ocupan espacio". Si hay nuevas reseñas reales que añadir, se añaden. Si hay reseñas desactualizadas o incorrectas, se consulta al propietario antes de modificar.
+
+### 10.8 Nunca añadir complejidad que el equipo no pueda mantener
+
+Fibrayphone es un negocio pequeño gestionado por dos personas. Cualquier sistema, panel, CMS, base de datos o integración que requiera conocimientos técnicos avanzados para su mantenimiento diario es inapropiado para este contexto. La solución más simple que resuelve el problema es siempre la mejor opción.
+
+### 10.9 Nunca complicar el proceso de contacto
+
+Cada paso adicional entre el visitante y el contacto con la asesoría reduce la tasa de conversión. No se añaden pantallas de validación, captchas complejos, páginas de confirmación intermedias ni flujos multistep sin una razón de negocio muy sólida.
+
+### 10.10 Nunca usar datos de contacto incorrectos o desactualizados
+
+El teléfono, el WhatsApp, el email, la dirección y el horario deben ser siempre correctos. Un cliente que llama a un número equivocado o que se persona en la tienda fuera de horario por información incorrecta de la web es una pérdida de confianza irreversible. Estos datos están centralizados en `js/config.js` para facilitar su actualización.
 
 ---
 
 ## 11. Tono de comunicación
 
-El tono de Fibrayphone es **cercano, honesto, claro y sin presión**. No es el tono de una gran corporación ni el de un vendedor agresivo. Es el tono de un vecino de confianza que sabe más que tú sobre tarifas y te lo explica sin condescendencia.
+### 11.1 Descripción del tono
 
-### Características del tono
+El tono de Fibrayphone es el de un asesor experto de confianza que conoce al cliente desde hace tiempo. No el de un vendedor que intenta cerrar una venta. No el de una corporación que se dirige a sus stakeholders. No el de un comparador online que optimiza para el CTR.
 
-**Cercano:** Se habla de tú al cliente. El equipo se presenta con nombres reales (Daniel, Hassna). Se menciona la tienda física como un lugar al que "puedes pasarte". No hay distancia corporativa.
+Los cinco atributos del tono:
 
-**Honesto:** Se explica que Fibrayphone cobra comisión de las compañías, no del cliente. Se dice explícitamente que el cliente puede venir, comparar y no contratar. Se admite que los precios son orientativos porque dependen de la cobertura. No se promete lo que no se puede garantizar.
+**Cercanía:** Se habla de tú al cliente, siempre. El equipo se identifica con nombres reales. Se menciona el barrio, la calle, la tienda física. La comunicación refleja que Fibrayphone forma parte del tejido local de Córdoba.
 
-**Claro:** Se evita la jerga técnica (no se habla de "SLA", "throughput" o "ADSL2+"). Se explican los conceptos en lenguaje cotidiano. "Letra pequeña" en lugar de "condiciones contractuales". "Coste real a 12 meses" en lugar de "TCO anual".
+**Honestidad:** Se admite que el modelo de negocio implica comisiones. Se reconoce que el cliente puede venir y no contratar. Se dice la verdad sobre los precios ("son orientativos, dependen de tu dirección y del momento"). No se promete lo que no puede garantizarse. Esta honestidad no es debilidad; es la base del posicionamiento.
 
-**Sin presión:** No hay cuenta atrás, no hay "oferta que caduca en 24 horas", no hay escasez artificial. El cliente decide cuando está seguro. Esta es la razón por la que el texto "Decides tú, sin presión" aparece en la sección de pasos.
+**Claridad:** Los conceptos técnicos se explican en lenguaje cotidiano. "Letra pequeña" en lugar de "cláusulas contractuales". "Lo que pagarás el mes 13" en lugar de "coste total sin promoción". "Nos encargamos de la baja" en lugar de "gestionamos la portabilidad y rescisión contractual". Si un texto requiere más de una lectura para entenderse, está mal escrito.
 
-**Local:** Se menciona Córdoba constantemente. Se nombran calles reales. Se habla de "vecinos y familias". El cliente debe sentir que Fibrayphone es parte de su comunidad, no una empresa anónima.
+**Profesionalidad:** La cercanía no implica informalidad excesiva. El tono es el de un profesional competente, no el de un amigo sin filtros. Los errores gramaticales, las mayúsculas innecesarias y los signos de exclamación múltiples no tienen lugar.
 
-### Lo que el tono NO es
+**Sin presión:** No hay urgencia artificial, no hay escasez fabricada, no hay "oferta solo hoy". El cliente decide cuando quiere. Fibrayphone no necesita presionar porque su propuesta de valor habla por sí sola.
 
-- No es formal ni distante ("Estimado cliente", "Le informamos que...")
-- No es agresivo ni urgente ("¡Última oportunidad!", "¡No te lo pierdas!")
-- No es técnico sin necesidad ("Tarifa con velocidad simétrica de 1 Gbps...")
-- No es genérico ("El mejor precio del mercado") sin respaldo real
+### 11.2 Palabras y construcciones que sí se usan
 
-### Ejemplo de contraste
+- "Comparamos por ti"
+- "Sin compromiso"
+- "Gratis para ti"
+- "Te explicamos la letra pequeña"
+- "Decides tú"
+- "Puedes venir cuando quieras"
+- "Nuestros clientes ahorran…"
+- "Si no contratas, no te cobramos nada"
+- "Nos encargamos de todo"
 
-❌ **Incorrecto:** "Maximice su ahorro energético contratando nuestras soluciones de optimización tarifaria."
-✅ **Correcto:** "Trae tu factura de la luz y te decimos cuánto puedes ahorrar. Nuestros clientes ahorran entre 20 y 30 € al mes."
+### 11.3 Palabras y construcciones que NO se usan
+
+- "¡Oferta irrepetible!" — urgencia artificial
+- "El mejor precio del mercado" — promesa sin respaldo específico
+- "Soluciones integrales" — jerga corporativa sin significado
+- "Optimice su ahorro energético" — registro formal e impersonal
+- "No espere más" — presión innecesaria
+- "¡Llame ahora!" — agresividad comercial
+- Anglicismos innecesarios cuando existe equivalente en español claro
+- Emojis en exceso en textos de cuerpo (los emojis funcionales en listas o bullets son aceptables)
+
+### 11.4 Ejemplo de contraste
+
+**Incorrecto:**
+*"¡Maximice su ahorro! Nuestras soluciones de comparativa de tarifas energéticas y de telecomunicaciones le permitirán optimizar su gasto mensual con las mejores condiciones del mercado. ¡No espere más, contáctenos hoy!"*
+
+**Correcto:**
+*"Trae tu factura de la luz y te decimos cuánto puedes ahorrar. Nuestros clientes ahorran entre 20 y 30 € al mes. El estudio es gratuito y sin compromiso."*
+
+La diferencia no es solo de estilo; es de credibilidad. El primer texto podría pertenecer a cualquier empresa. El segundo texto solo puede pertenecer a alguien que conoce el negocio.
+
+### 11.5 Tono en distintos contextos
+
+**En el hero de la web:** Directo, orientado al beneficio real, con la garantía de gratuidad y sin compromiso como elemento central.
+
+**En las descripciones de servicios:** Específico, con cifras concretas (precio orientativo, ahorro típico), sin ambigüedades.
+
+**En el formulario:** Transparente sobre el proceso (qué pasa después de enviarlo), sin fricción adicional.
+
+**En las FAQs:** Conversacional, como si el asesor respondiera en persona. Completo pero no exhaustivo.
+
+**En los mensajes de WhatsApp preformateados:** Concreto y personalizado por servicio. El mensaje del formulario incluye los datos del cliente para que la tienda pueda responder sin pedir información adicional.
 
 ---
 
 ## 12. Cómo debe pensar un desarrollador que trabaje para Fibrayphone
 
-Un desarrollador que trabaje en este proyecto no es solo un técnico: es un colaborador que afecta directamente al negocio de dos personas reales con clientes reales en Córdoba.
+### 12.1 Mentalidad de negocio antes que de tecnología
 
-### Mentalidad de negocio primero
+Un desarrollador que trabaje para Fibrayphone no tiene como función principal escribir código elegante. Su función es ayudar a que más personas de Córdoba contraten a través de Fibrayphone. El código es el medio, no el fin.
 
-Antes de escribir código, pregúntate: *¿qué está intentando conseguir Fibrayphone con esto?* La respuesta casi siempre es: que un cliente de Córdoba les contacte y contrate. Cada decisión técnica debe servir a ese objetivo.
+Esto significa:
+- Antes de refactorizar, preguntarse si la refactorización mejora algo que el cliente nota
+- Antes de añadir una dependencia, preguntarse si el problema que resuelve no puede resolverse con menos código
+- Antes de rediseñar, preguntarse si el diseño actual tiene algún problema que afecte al cliente o a la conversión
 
-### Simplicidad operativa
+### 12.2 Simplicidad como principio de ingeniería
 
-El equipo de Fibrayphone no tiene un CTO. No tiene un equipo de desarrollo interno. Los cambios deben poder entenderse, mantenerse y actualizarse por personas con conocimientos básicos. Si la solución requiere un manual de usuario o conocimientos avanzados para cada cambio de contenido, es demasiado compleja.
+El stack actual (HTML + CSS + JS puro + Vercel Functions) no es técnicamente "interesante". Es deliberadamente simple. Esta simplicidad tiene valor:
 
-Ejemplos concretos:
-- Los textos editables más importantes (teléfono, reviews, marcas, GA4 ID) están en `js/config.js` por diseño. No los muevas a un CMS o base de datos sin una razón muy sólida.
-- El stack actual (HTML + CSS + JS + Vercel Functions) es deliberadamente simple. No introduzcas frameworks, bundlers o dependencias sin justificación de negocio clara.
+- Cualquier persona con conocimientos básicos puede entender cómo funciona
+- No tiene dependencias que deprecarse, vulnerabilidades que parchear o ecosistemas que mantenerse actualizado
+- No requiere npm install, webpack, babel ni ningún proceso de build
+- Despliega en Vercel en menos de 30 segundos
 
-### Cero tolerancia a regresiones de conversión
+Añadir un framework, un bundler o un sistema de gestión de contenidos solo está justificado si resuelve un problema real y documentado, no si "es lo que se usa ahora" o "escala mejor".
 
-Una regresión de conversión es cualquier cambio que provoque que el formulario no funcione, que los botones de WhatsApp no abran el chat correcto, que el teléfono no sea clicable en móvil, que el lead no llegue a `info@fibrayphone.es`. Estas regresiones cuestan contratos reales.
+### 12.3 Principio de no duplicación
 
-Antes de hacer push a `main`:
-- Verificar que el formulario envía correctamente
-- Verificar que WhatsApp se abre con el mensaje correcto
-- Verificar que el teléfono es funcional en móvil
-- Verificar que los eventos de GA4 se disparan correctamente
+- Toda la configuración editable está en `js/config.js`. No se dispersan valores configurables en el HTML ni en el CSS.
+- Los colores corporativos están en variables CSS en `:root`. No se usan valores hexadecimales directos en ningún lugar del CSS.
+- Los mensajes de WhatsApp están centralizados en `js/main.js`. No se hardcodea el número ni el mensaje en el HTML.
 
-### Respeto por el trabajo existente
+Cualquier valor que pueda necesitar actualizarse en el futuro debe estar en un único lugar.
 
-La web tiene decisiones de diseño, texto y estructura que no son accidentales. Antes de "mejorar" algo, pregúntate por qué está hecho así. Puede haber una razón de SEO, de conversión o de accesibilidad que no es obvia a primera vista.
+### 12.4 Principio de análisis antes de modificación
 
-### Entender la arquitectura actual
+Antes de modificar cualquier función de `js/main.js`, hay que entender qué hace, por qué está así y qué otras partes del sistema dependen de ella. Este JS gestiona: generación de URLs de WhatsApp, configuración de CTAs del hero, menú móvil, aplicación de datos de contacto, renderizado de reviews, tracking de campaña desde URL, limpieza de parámetros, inicialización de GA4, tracking de todos los eventos, modal de privacidad, validación y envío del formulario, renderizado de marcas, carga de fotos de tienda con fallback, mensajes contextuales por servicio e indicador de estado de apertura de tienda en tiempo real.
 
-- `js/config.js` es el único punto de configuración para el equipo. No disperses la configuración.
-- `js/main.js` contiene toda la lógica de interacción: WhatsApp dinámico, formulario, tracking GA4, menú móvil, horario en tiempo real. Es un módulo IIFE auto-ejecutado que no tiene dependencias externas.
-- `api/send-lead.js` es una Vercel Function que recibe el formulario y envía email vía Resend. Requiere la variable de entorno `RESEND_API_KEY` en el panel de Vercel.
-- `css/styles.css` usa variables CSS en `:root` para todos los colores corporativos. Siempre usa las variables, nunca valores hardcoded.
-- No hay framework CSS externo. No hay React, Vue ni Angular. No hay bundler.
+Cada función tiene un propósito de negocio. Eliminar o simplificar sin entender ese propósito puede romper algo que funciona y aporta valor.
 
-### Variables de entorno en producción
+### 12.5 Arquitectura técnica de referencia
 
-| Variable | Dónde se configura | Para qué |
+```
+fibrayphone-landing/
+├── index.html              # Página única. Todo el contenido HTML, Schema.org y metadatos SEO
+├── css/
+│   └── styles.css          # Estilos completos. Variables CSS en :root. Sin framework externo
+├── js/
+│   ├── config.js           # Punto único de configuración: teléfono, reviews, marcas, GA4, fotos
+│   └── main.js             # Toda la lógica de interacción. IIFE sin dependencias externas
+├── api/
+│   └── send-lead.js        # Vercel Function. Recibe el formulario y envía email via Resend
+├── assets/                 # Logos SVG, favicon, fotos de tienda (.webp)
+├── sitemap.xml             # Sitemap para Google Search Console
+├── vercel.json             # Config de deploy: cleanUrls, trailingSlash false, framework null
+└── package.json            # Una sola dependencia: resend ^4.0.0
+```
+
+### 12.6 Variables de entorno en producción
+
+| Variable | Configuración | Función |
 |---|---|---|
-| `RESEND_API_KEY` | Vercel → Settings → Environment Variables | Envío de emails de lead |
+| `RESEND_API_KEY` | Vercel → Settings → Environment Variables | Autoriza el envío de emails desde `api/send-lead.js` |
 
-### Colores corporativos (variables CSS)
+Sin esta variable, el formulario sigue funcionando (abre WhatsApp con los datos del cliente), pero no se envía la copia por email a `info@fibrayphone.es`.
 
-| Variable | Valor | Uso |
+### 12.7 Colores corporativos — referencia completa
+
+| Variable CSS | Valor | Uso |
 |---|---|---|
-| `--brand` | `#00A9C6` | Color principal cyan del logo |
-| `--brand-dark` | `#008da6` | Hover y variantes oscuras |
-| `--brand-darker` | `#006f84` | Estados activos |
-| `--brand-light` | `#e5f7fa` | Fondos suaves |
+| `--brand` | `#00A9C6` | Color principal de marca (cyan del logo) |
+| `--brand-dark` | `#008da6` | Hover de elementos primarios |
+| `--brand-darker` | `#006f84` | Estados activos, focus |
+| `--brand-light` | `#e5f7fa` | Fondos suaves, secciones alt |
+| `--brand-muted` | `#7fd4e4` | Elementos decorativos secundarios |
 | `--navy` | `#0f2744` | Header, footer, fondos oscuros |
-| `--text` | `#1e293b` | Texto principal |
-| `--success` | `#059669` | Mensajes de éxito |
+| `--navy-dark` | `#0a1c33` | Variante más oscura del navy |
+| `--white` | `#ffffff` | Fondos blancos |
+| `--bg` | `#f4fbfc` | Background general de la página |
+| `--text` | `#1e293b` | Texto principal de cuerpo |
+| `--muted` | `#64748b` | Texto secundario, labels |
+| `--border` | `#dceef2` | Bordes de elementos |
+| `--success` | `#059669` | Mensajes de confirmación, estados positivos |
+| `--shadow` | `0 4px 24px rgba(0,109,132,0.1)` | Sombra estándar de cards |
+| `--shadow-lg` | `0 12px 40px rgba(0,109,132,0.14)` | Sombra de elementos destacados |
+| `--radius` | `14px` | Border-radius estándar de componentes |
+| `--max` | `1120px` | Ancho máximo del contenedor |
+
+### 12.8 Verificación antes de cualquier push a main
+
+1. El formulario envía correctamente y abre WhatsApp con los datos del cliente
+2. El email de lead llega a `info@fibrayphone.es`
+3. Todos los botones de WhatsApp tienen la URL correcta con el mensaje apropiado
+4. El número de teléfono es clicable en móvil
+5. Los eventos de GA4 se disparan correctamente (verificar en Tiempo real de Analytics)
+6. La página carga correctamente en móvil (Chrome DevTools → modo responsivo)
+7. El horario de tienda se muestra correctamente
+8. Las reseñas de clientes se renderizan desde `config.js`
 
 ---
 
-## 13. Resumen ejecutivo para IAs
+## 13. Resumen ejecutivo
 
-Si solo puedes leer un párrafo de este documento, que sea este:
+Fibrayphone es una asesoría de tarifas con tienda física en C/ Diego Serrano 13, Córdoba. Desde 2022, Daniel y Hassna ayudan a familias, particulares y autónomos a comparar y contratar fibra, móvil, luz, gas y alarmas sin ningún coste para el cliente. Los ingresos vienen de comisiones que pagan las compañías cuando hay contratación, no del cliente.
 
-**Fibrayphone es una asesoría local en Córdoba que ayuda a familias y autónomos a comparar y contratar fibra, móvil, luz, gas y alarmas de forma gratuita. Gana comisiones de las compañías cuando hay contratación. Su ventaja competitiva es la honestidad, la atención humana y la confianza local, no el precio más bajo. La web existe para generar contactos (WhatsApp, llamada, formulario). Cualquier cambio debe evaluarse con la pregunta: ¿esto hace que más personas de Córdoba contacten y contraten? Si no, no es prioritario.**
+El modelo funciona porque la honestidad es más rentable que la presión comercial. Un cliente que siente que le han tratado bien vuelve, recomienda a su familia y deja una reseña de 5 estrellas. Con 900+ clientes atendidos y una valoración de 5,0 en Google, este modelo está funcionando.
+
+La web de Fibrayphone tiene un propósito concreto: que un visitante de Córdoba contacte con la asesoría por WhatsApp, teléfono o formulario. Todo lo que facilite ese contacto es valioso. Todo lo que lo dificulte es un problema, independientemente de cómo quede visualmente.
+
+La ventaja competitiva de Fibrayphone no es tecnológica ni de escala. Es la confianza local y la atención personalizada. Cualquier trabajo en este proyecto debe reforzar esa ventaja, nunca erosionarla.
+
+**Regla de oro:** antes de proponer cualquier cambio, preguntarse si hace que más personas de Córdoba contacten y contraten. Si la respuesta no es claramente sí, el cambio no es prioritario.
 
 ---
 
-*Última actualización: julio 2026. Mantener este documento actualizado cuando cambie información del negocio (operadores, horarios, equipo, servicios).*
+## Pendiente de definir
+
+La siguiente información sería recomendable completar en el futuro para tener una documentación más completa y operativa:
+
+| Información | Por qué es importante |
+|---|---|
+| Rango real de comisiones por tipo de servicio y compañía | Permite entender qué servicios son más rentables y priorizarlos en la estrategia de contenidos |
+| Cuáles son los 3 servicios más contratados actualmente | Para priorizar secciones y CTAs de la web |
+| Ticket medio de ahorro real por categoría (no solo orientativo) | Para usar en textos de conversión con mayor credibilidad |
+| Tiempo medio de respuesta real por canal (WhatsApp, teléfono, email) | Para ajustar las promesas de respuesta en la web |
+| De dónde vienen los leads actualmente (Maps, búsqueda orgánica, directo, boca a boca) | Para priorizar inversión SEO y Google Business |
+| Si existe o está planificado un CRM o sistema de seguimiento de leads | Para evaluar integraciones futuras |
+| Si hay o se planea algún sistema de gestión de citas previas | Para evaluar si hay que añadir funcionalidad a la web |
+| Compañías con las que Fibrayphone tiene mejores condiciones comerciales | Para entender si hay conflicto de interés potencial en las recomendaciones |
+| Política de devolución o cancelación de contratos gestionados | Para responder correctamente en FAQs y comunicación |
+| Si atienden clientes de otras provincias de forma remota | Para definir el alcance geográfico de SEO |
+| Nombre legal de la empresa y NIF | Para completar la información legal del sitio (actualmente solo aparece en la política de privacidad de forma parcial) |
+| Si existe o se planea Google Business Profile optimizado | Impacto directo en SEO local y en el tráfico `?from=maps` |
+
+---
+
+## Mejoras futuras del conocimiento del negocio
+
+Las siguientes secciones o documentos complementarían este archivo y aumentarían la calidad del contexto disponible para cualquier IA o colaborador:
+
+**Casos de éxito documentados**
+Ejemplos reales (anonimizados si es necesario) de clientes que han ahorrado una cantidad específica en una categoría específica. Estos casos son el material más poderoso para textos de conversión porque son verificables y concretos.
+
+**Preguntas reales recibidas en tienda**
+Las 20 preguntas más frecuentes que hacen los clientes cuando llegan a la tienda. Estas preguntas son la base perfecta para expandir la sección FAQ de la web y para crear contenido SEO de cola larga.
+
+**Mapa de estacionalidad**
+En qué meses hay más demanda de cada categoría. La luz y el gas tienen picos estacionales claros. La fibra y el móvil son más estables. Conocer esto permite planificar campañas y contenidos con anticipación.
+
+**Proceso detallado de cada tipo de cambio**
+Qué ocurre exactamente desde que el cliente dice "quiero cambiar de compañía de luz" hasta que el cambio es efectivo. Plazos reales, pasos intermedios, posibles incidencias. Este documento permitiría crear contenido SEO muy específico y útil ("cuánto tarda el cambio de comercializadora de luz en España") y también preparar mejor al cliente antes de contratar.
+
+**Política de gestión de incidencias postventa**
+Qué hace Fibrayphone si después de contratar hay un problema (factura incorrecta, portabilidad que falla, alarma que no funciona). Documentar esto reforzaría el argumento de "seguimos aquí después de contratar" con información concreta.
+
+**Estrategia de fidelización**
+Si existe algún mecanismo para que los clientes actuales vuelvan cuando necesiten cambiar de nuevo (revisión anual de tarifas, newsletter, etc.). Si no existe, es una oportunidad de negocio a desarrollar.
+
+---
+
+*Documento creado en julio de 2026. Actualizar cuando cambie información del negocio: operadores del catálogo, horarios, equipo, servicios o datos de contacto. La fecha de última actualización debe revisarse al principio de cada año.*
