@@ -23,8 +23,9 @@ Cuando dos documentos se contradigan, el de mayor prioridad en esta lista preval
 | 3 | [`SEO.md`](./SEO.md) | Posicionamiento local en Córdoba. Palabras clave, Schema.org, metadatos, sitemap y reglas de SEO técnico. |
 | 4 | [`DESIGN.md`](./DESIGN.md) | Sistema visual. Colores, tipografía, componentes, espaciado y principios de diseño. |
 | 5 | [`CODE_STANDARDS.md`](./CODE_STANDARDS.md) | Estándares de código. Convenciones, arquitectura del proyecto y criterios de calidad. |
-| 6 | [`CHECKLIST.md`](./CHECKLIST.md) | Lista de verificación antes de hacer push a producción. |
-| 7 | [`PROMPTS.md`](./PROMPTS.md) | Prompts reutilizables para tareas frecuentes: textos, SEO, código y análisis. |
+| 6 | [`GROWTH.md`](./GROWTH.md) | Estrategia de crecimiento empresarial. Captación, fidelización, cross-sell, cultura comercial y priorización. No trata de código ni diseño. |
+| 7 | [`CHECKLIST.md`](./CHECKLIST.md) | Lista de verificación antes de hacer push a producción. |
+| 8 | [`PROMPTS.md`](./PROMPTS.md) | Prompts reutilizables para tareas frecuentes: textos, SEO, código y análisis. |
 
 ---
 
@@ -83,6 +84,7 @@ Leer siempre `BUSINESS.md` completo. Sin excepciones.
 | `SEO.md` | Completo y auditado |
 | `DESIGN.md` | Pendiente de redactar |
 | `CODE_STANDARDS.md` | Pendiente de redactar |
+| `GROWTH.md` | Completo y auditado |
 | `CHECKLIST.md` | Pendiente de redactar |
 | `PROMPTS.md` | Pendiente de redactar |
 
