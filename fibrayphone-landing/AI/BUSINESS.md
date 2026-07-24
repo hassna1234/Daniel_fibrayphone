@@ -5,6 +5,23 @@
 
 ---
 
+## Principios fundamentales
+
+> Estos ocho principios están por encima de cualquier decisión técnica, creativa o estratégica. No son recomendaciones: son las reglas que definen si un trabajo es correcto o incorrecto para Fibrayphone.
+
+| # | Principio | Implicación práctica |
+|---|---|---|
+| 1 | **El negocio es más importante que la tecnología** | Ningún cambio técnico justifica poner en riesgo los ingresos, la confianza o el contacto con el cliente. La tecnología sirve al negocio; no al revés. |
+| 2 | **La confianza es más importante que el diseño** | Un elemento que genera confianza (reseña real, dato de contacto, transparencia sobre el modelo) no se elimina ni se oculta por razones estéticas. |
+| 3 | **La conversión es más importante que la creatividad** | Una propuesta creativa que no mejora WhatsApp, llamadas o formularios no es prioritaria. El criterio de éxito es si más personas contactan con Fibrayphone. |
+| 4 | **Nunca romper funcionalidades existentes** | Formulario, WhatsApp, teléfono y email son los canales de ingresos reales. Cualquier cambio que los afecte requiere prueba antes de producción, sin excepciones. |
+| 5 | **Si hay duda, preguntar antes de asumir** | Una IA que asume sin evidencia introduce errores con apariencia de verdad. Toda afirmación incierta debe marcarse como tal o consultarse al propietario del negocio. |
+| 6 | **Toda afirmación debe poder justificarse** | Precios, estadísticas, perfiles de cliente y comportamientos deben estar respaldados por datos reales del negocio o del repositorio. Si no lo están, se etiquetan como estimación. |
+| 7 | **La simplicidad siempre tiene prioridad sobre la complejidad** | La solución más simple que resuelve el problema es la correcta. No se añade complejidad técnica sin una necesidad de negocio documentada. |
+| 8 | **Cada cambio debe aportar valor medible** | Antes de aplicar cualquier modificación, debe poder responderse: ¿en qué métrica concreta mejora esto? Si la respuesta es "en ninguna medible", el cambio no es prioritario. |
+
+---
+
 ## 1. Qué es Fibrayphone
 
 ### 1.1 Historia y origen
