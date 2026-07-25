@@ -1,0 +1,11 @@
+# El QR original lo coloca el usuario manualmente
+qr-code.png
+qr-code-placeholder.png
+
+# Archivos generados por el script de exportación
+cartel-vacaciones.pdf
+cartel-vacaciones.png
+
+# Node
+node_modules/
+package-lock.json
