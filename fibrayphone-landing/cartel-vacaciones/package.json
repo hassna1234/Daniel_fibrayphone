@@ -1,0 +1,12 @@
+{
+  "name": "cartel-vacaciones-fibrayphone",
+  "version": "1.0.0",
+  "description": "Exportador de cartel de vacaciones A4 a PDF y PNG",
+  "private": true,
+  "scripts": {
+    "exportar": "node exportar-cartel.js"
+  },
+  "devDependencies": {
+    "puppeteer": "*"
+  }
+}

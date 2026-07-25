@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cartel Vacaciones – FibrayPhone</title>
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── Variables corporativas ── */
+    :root {
+      --turquesa:        #00A9C6;
+      --turquesa-oscuro: #007F96;
+      --turquesa-claro:  #E0F7FA;
+      --turquesa-medio:  #B2EBF2;
+      --blanco:          #FFFFFF;
+      --negro:           #0D1F2D;
+      --gris-texto:      #2C3E50;
+      --verde-wa:        #25D366;
+    }
+
+    /* ── Página A4 a 300 dpi ── */
+    html, body {
+      width: 210mm;
+      min-height: 297mm;
+      background: #ccc;
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      background: var(--blanco);
+      margin: 0 auto;
+      padding: 10mm;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    /* ── 1. Cabecera – Logo + Nombre ── */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 6mm;
+      padding-bottom: 4mm;
+      border-bottom: 3px solid var(--turquesa);
+    }
+
+    .header__logo {
+      width: 22mm;
+      height: 22mm;
+      flex-shrink: 0;
+    }
+
+    .header__text {}
+
+    .header__brand {
+      font-size: 22pt;
+      font-weight: 800;
+      color: var(--turquesa);
+      letter-spacing: -0.5px;
+      line-height: 1;
+    }
+
+    .header__tagline {
+      font-size: 7.5pt;
+      color: var(--gris-texto);
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      margin-top: 1.5mm;
+      text-transform: uppercase;
+    }
+
+    /* ── 2. Bloque principal CERRADO ── */
+    .main-title {
+      text-align: center;
+      margin-top: 7mm;
+      line-height: 1;
+    }
+
+    .main-title__cerrado {
+      font-size: 62pt;
+      font-weight: 900;
+      color: var(--turquesa);
+      letter-spacing: -1px;
+      line-height: 0.95;
+      text-shadow: 0 2px 0 rgba(0,169,198,0.18);
+    }
+
+    .main-title__vacaciones {
+      font-size: 38pt;
+      font-weight: 800;
+      color: var(--negro);
+      letter-spacing: 1px;
+      margin-top: 1mm;
+    }
+
+    .main-title__icon {
+      font-size: 22pt;
+      margin-top: 2mm;
+      display: block;
+    }
+
+    /* ── 3. Bloque de fechas ── */
+    .fechas {
+      background: var(--turquesa-claro);
+      border: 2px solid var(--turquesa-medio);
+      border-radius: 4mm;
+      padding: 5mm 7mm;
+      margin-top: 6mm;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5mm;
+    }
+
+    .fechas__row {
+      display: flex;
+      align-items: center;
+      gap: 3mm;
+    }
+
+    .fechas__icono {
+      font-size: 14pt;
+      width: 8mm;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .fechas__label {
+      font-size: 8pt;
+      font-weight: 600;
+      color: var(--gris-texto);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      width: 22mm;
+      flex-shrink: 0;
+    }
+
+    .fechas__valor {
+      font-size: 13pt;
+      font-weight: 800;
+      color: var(--turquesa-oscuro);
+      letter-spacing: 0.02em;
+    }
+
+    /* ── 4. Franja "Volvemos" ── */
+    .volvemos {
+      background: var(--turquesa);
+      border-radius: 3mm;
+      margin-top: 5mm;
+      padding: 4mm 6mm;
+      text-align: center;
+    }
+
+    .volvemos__sub {
+      font-size: 8pt;
+      color: rgba(255,255,255,0.85);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 1mm;
+    }
+
+    .volvemos__texto {
+      font-size: 17pt;
+      font-weight: 900;
+      color: var(--blanco);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    /* ── 5. Bloque WhatsApp ── */
+    .whatsapp-block {
+      background: var(--turquesa-claro);
+      border: 2px solid var(--turquesa-medio);
+      border-radius: 4mm;
+      margin-top: 6mm;
+      padding: 5mm;
+      display: flex;
+      align-items: stretch;
+      gap: 4mm;
+    }
+
+    .wa__icon-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      width: 14mm;
+      padding-top: 1mm;
+    }
+
+    .wa__icon-svg {
+      width: 12mm;
+      height: 12mm;
+    }
+
+    .wa__divider {
+      width: 1px;
+      background: var(--turquesa-medio);
+      flex-shrink: 0;
+    }
+
+    .wa__text-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2mm;
+    }
+
+    .wa__title {
+      font-size: 9pt;
+      font-weight: 800;
+      color: var(--turquesa-oscuro);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .wa__body {
+      font-size: 8pt;
+      color: var(--gris-texto);
+      line-height: 1.5;
+    }
+
+    .wa__servicios {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5mm;
+      margin-top: 1mm;
+    }
+
+    .wa__servicio {
+      background: var(--turquesa);
+      color: var(--blanco);
+      font-size: 9pt;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      padding: 1.5mm 3mm;
+      border-radius: 2mm;
+      display: inline-block;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .wa__phone {
+      margin-top: 2mm;
+      font-size: 12pt;
+      font-weight: 900;
+      color: var(--negro);
+      letter-spacing: 0.05em;
+    }
+
+    .wa__phone-label {
+      font-size: 7pt;
+      color: var(--gris-texto);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .wa__qr-col {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5mm;
+    }
+
+    .wa__qr-wrap {
+      /* Zona blanca obligatoria alrededor del QR para escaneo */
+      background: var(--blanco);
+      padding: 3mm;
+      border-radius: 2mm;
+      border: 1px solid var(--turquesa-medio);
+      line-height: 0;
+    }
+
+    .wa__qr-img {
+      width: 38mm;
+      height: 38mm;
+      display: block;
+      image-rendering: crisp-edges;
+      /* Sin filtros, sin transformaciones */
+    }
+
+    .wa__qr-label {
+      font-size: 6.5pt;
+      color: var(--gris-texto);
+      text-align: center;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── 6. Gracias ── */
+    .gracias {
+      margin-top: 5mm;
+      text-align: center;
+      font-size: 9.5pt;
+      color: var(--gris-texto);
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    /* ── 7. Footer de servicios ── */
+    .footer {
+      margin-top: auto;
+      padding-top: 4mm;
+      border-top: 2px solid var(--turquesa);
+    }
+
+    .footer__servicios {
+      background: var(--turquesa);
+      border-radius: 2.5mm;
+      padding: 2.5mm 4mm;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+    }
+
+    .footer__item {
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: var(--blanco);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+
+    .footer__sep {
+      color: rgba(255,255,255,0.5);
+      margin: 0 3mm;
+      font-size: 8pt;
+    }
+
+    /* ── Print ── */
+    @media print {
+      html, body {
+        background: white;
+        width: 210mm;
+      }
+      .page {
+        margin: 0;
+        padding: 10mm;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 1. CABECERA -->
+  <header class="header">
+    <svg class="header__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Fibrayphone">
+      <rect width="400" height="400" fill="#00A9C6"/>
+      <text x="200" y="155" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="72" font-weight="700" letter-spacing="-1">Fibray</text>
+      <text x="200" y="235" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="72" font-weight="700" letter-spacing="-1">phone</text>
+    </svg>
+    <div class="header__text">
+      <div class="header__brand">FibrayPhone</div>
+      <div class="header__tagline">Asesoría de telecomunicaciones, energía y alarmas</div>
+    </div>
+  </header>
+
+  <!-- 2. CERRADO POR VACACIONES -->
+  <div class="main-title">
+    <div class="main-title__cerrado">CERRADO</div>
+    <div class="main-title__vacaciones">POR VACACIONES</div>
+    <span class="main-title__icon">🏖️&nbsp;&nbsp;☀️&nbsp;&nbsp;🌊</span>
+  </div>
+
+  <!-- 3. FECHAS -->
+  <div class="fechas">
+    <div class="fechas__row">
+      <div class="fechas__icono">📅</div>
+      <div class="fechas__label">Cierre</div>
+      <div class="fechas__valor">DOMINGO 27 DE JULIO</div>
+    </div>
+    <div class="fechas__row">
+      <div class="fechas__icono">📅</div>
+      <div class="fechas__label">Reapertura</div>
+      <div class="fechas__valor">LUNES 10 DE AGOSTO</div>
+    </div>
+  </div>
+
+  <!-- 4. FRANJA VOLVEMOS -->
+  <div class="volvemos">
+    <div class="volvemos__sub">Nos vemos pronto</div>
+    <div class="volvemos__texto">✅&nbsp; VOLVEMOS EL LUNES 10 DE AGOSTO</div>
+  </div>
+
+  <!-- 5. BLOQUE WHATSAPP + QR -->
+  <div class="whatsapp-block">
+
+    <!-- Icono WhatsApp -->
+    <div class="wa__icon-col">
+      <svg class="wa__icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-label="WhatsApp">
+        <circle cx="24" cy="24" r="24" fill="#25D366"/>
+        <path d="M24 8C15.16 8 8 15.16 8 24c0 2.83.74 5.49 2.04 7.8L8 40l8.45-2.02A15.93 15.93 0 0024 40c8.84 0 16-7.16 16-16S32.84 8 24 8zm7.66 21.84c-.32.9-1.86 1.72-2.54 1.82-.66.1-1.48.14-2.38-.15-.55-.17-1.26-.4-2.16-.78-3.8-1.64-6.28-5.5-6.47-5.75-.2-.25-1.6-2.13-1.6-4.06 0-1.93 1.01-2.88 1.37-3.27.36-.38.79-.48 1.05-.48h.76c.24 0 .57-.09.89.68.34.79 1.15 2.72 1.25 2.92.1.2.17.43.03.7-.13.26-.2.43-.39.66-.2.23-.42.51-.6.69-.19.18-.39.38-.17.75.22.37.99 1.63 2.13 2.64 1.46 1.3 2.7 1.7 3.07 1.89.37.19.59.16.81-.1.22-.25.94-1.1 1.19-1.47.25-.37.5-.31.84-.19.34.12 2.17 1.02 2.54 1.21.37.19.62.28.71.44.09.16.09.92-.23 1.82z" fill="#FFF"/>
+      </svg>
+    </div>
+
+    <div class="wa__divider"></div>
+
+    <!-- Texto central -->
+    <div class="wa__text-col">
+      <div class="wa__title">📲 Atención por WhatsApp</div>
+      <div class="wa__body">
+        Seguiremos atendiendo los mensajes de WhatsApp lo antes posible, exclusivamente para:
+      </div>
+      <div class="wa__servicios">
+        <div class="wa__servicio">⚡ Altas de fibra</div>
+        <div class="wa__servicio">💡 Cambios de luz</div>
+      </div>
+      <div class="wa__phone-label">Escríbenos o llámanos al</div>
+      <div class="wa__phone">📞 696 78 54 71</div>
+    </div>
+
+    <div class="wa__divider"></div>
+
+    <!-- QR original – NO modificar -->
+    <div class="wa__qr-col">
+      <div class="wa__qr-wrap">
+        <img
+          class="wa__qr-img"
+          src="./qr-code.png"
+          alt="QR de WhatsApp – 696 78 54 71"
+          draggable="false"
+        />
+      </div>
+      <div class="wa__qr-label">Escanear QR<br>para WhatsApp</div>
+    </div>
+
+  </div>
+
+  <!-- 6. GRACIAS -->
+  <p class="gracias">Gracias por vuestra confianza. ❤️</p>
+
+  <!-- 7. FOOTER SERVICIOS -->
+  <footer class="footer">
+    <div class="footer__servicios">
+      <span class="footer__item">Fibra y móvil</span>
+      <span class="footer__sep">|</span>
+      <span class="footer__item">Luz y gas</span>
+      <span class="footer__sep">|</span>
+      <span class="footer__item">TV y plataformas</span>
+      <span class="footer__sep">|</span>
+      <span class="footer__item">Alarmas</span>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
