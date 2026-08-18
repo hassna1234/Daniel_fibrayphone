@@ -1621,3 +1621,90 @@ a {
 .form-check--error {
   color: #c0392b;
 }
+
+/* ——— Barra de anuncio (promo bar) ——— */
+.promo-bar {
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 0.55rem 3rem;
+  position: relative;
+  line-height: 1.45;
+}
+
+.promo-bar__message {
+  display: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.promo-bar__message.active {
+  display: block;
+}
+
+.promo-bar__message strong {
+  font-weight: 700;
+}
+
+.promo-bar__message a {
+  color: var(--brand-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
+.promo-bar__message a:hover {
+  color: var(--white);
+}
+
+.promo-bar__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.3rem;
+}
+
+.promo-bar__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.promo-bar__dot.active {
+  background: var(--white);
+}
+
+.promo-bar__close {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 1.3rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.35rem;
+  display: flex;
+  align-items: center;
+}
+
+.promo-bar__close:hover {
+  color: var(--white);
+}
+
+@media (max-width: 767px) {
+  .promo-bar {
+    padding: 0.55rem 2.5rem;
+  }
+
+  .promo-bar__message {
+    font-size: 0.74rem;
+  }
+}

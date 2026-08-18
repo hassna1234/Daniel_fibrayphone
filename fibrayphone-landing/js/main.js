@@ -444,10 +444,12 @@
   }
 
   const WA_SERVICE_TEXTS = {
-    fibra:  "Hola, me interesa comparar tarifas de fibra e internet en Córdoba. ¿Podéis ayudarme?",
-    pack:   "Hola, me interesa el pack de fibra + móvil + TV. ¿Podéis hacer una comparativa para mi caso?",
-    luz:    "Hola, quiero comparar mi factura de luz para ver si puedo ahorrar. ¿Podéis ayudarme?",
-    alarma: "Hola, me interesa comparar sistemas de alarma para mi hogar. ¿Podéis hacer un estudio gratuito?",
+    fibra:       "Hola, me interesa comparar tarifas de fibra e internet en Córdoba. ¿Podéis ayudarme?",
+    pack:        "Hola, me interesa el pack de fibra + móvil + TV. ¿Podéis hacer una comparativa para mi caso?",
+    deportes:    "Hola, me interesa el pack de fibra + móvil ilimitado con fútbol y baloncesto. ¿Podéis hacer una comparativa para mi caso?",
+    estudiantes: "Hola, me interesa la oferta de fibra para estudiantes desde 20 €/mes. ¿Podéis ayudarme?",
+    luz:         "Hola, quiero comparar mi factura de luz para ver si puedo ahorrar. ¿Podéis ayudarme?",
+    alarma:      "Hola, me interesa comparar sistemas de alarma para mi hogar. ¿Podéis hacer un estudio gratuito?",
   };
 
   document.querySelectorAll("[data-wa-service]").forEach((el) => {
@@ -484,6 +486,42 @@
     } catch (_) {}
   }
 
+  function setupPromoBar() {
+    const bar = document.getElementById("promo-bar");
+    if (!bar) return;
+    const messages = bar.querySelectorAll(".promo-bar__message");
+    const dots = bar.querySelectorAll(".promo-bar__dot");
+    const closeBtn = document.getElementById("promo-bar-close");
+    let current = 0;
+    let timer;
+
+    function show(index) {
+      messages.forEach((m, i) => m.classList.toggle("active", i === index));
+      dots.forEach((d, i) => d.classList.toggle("active", i === index));
+      current = index;
+    }
+
+    function startRotation() {
+      timer = setInterval(() => show((current + 1) % messages.length), 5000);
+    }
+
+    startRotation();
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        clearInterval(timer);
+        show(i);
+        startRotation();
+      });
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => {
+        bar.style.display = "none";
+      });
+    }
+  }
+
   setWaLinks();
   setupHeroCTAs();
   applyContact();
@@ -493,4 +531,5 @@
   setupStorePhotos();
   updateStoreStatus();
   setupExtraTracking();
+  setupPromoBar();
 })();
