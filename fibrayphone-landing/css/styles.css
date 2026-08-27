@@ -1708,3 +1708,331 @@ a {
     font-size: 0.74rem;
   }
 }
+
+.student-offer-link {
+  display: inline-flex;
+  justify-content: center;
+  margin-top: 0.65rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--brand-darker);
+  text-decoration: none;
+}
+
+.student-offer-link:hover {
+  text-decoration: underline;
+}
+
+/* Landing estudiantes */
+.student-page {
+  background: var(--white);
+}
+
+.student-page main {
+  padding-bottom: 2rem;
+}
+
+.student-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgba(4, 19, 28, 0.92), rgba(4, 19, 28, 0.76)), var(--navy);
+  color: var(--white);
+}
+
+.student-hero__media {
+  position: absolute;
+  inset: 0;
+  opacity: 0.22;
+}
+
+.student-hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.student-hero__content {
+  position: relative;
+  min-height: 86vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 5rem 0 3rem;
+  min-width: 0;
+}
+
+.student-hero .badge {
+  align-self: flex-start;
+  background: var(--brand);
+  border-color: var(--brand);
+  color: var(--white);
+}
+
+.student-hero h1 {
+  max-width: 760px;
+  margin: 0 0 0.9rem;
+  font-size: clamp(2rem, 7vw, 4rem);
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+}
+
+.student-hero__lead {
+  max-width: 620px;
+  margin: 0 0 1.25rem;
+  font-size: 1.08rem;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.student-hero__actions,
+.student-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.student-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.student-proof span {
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.student-strip {
+  background: var(--brand);
+  color: var(--white);
+  padding: 1rem 0;
+}
+
+.student-strip__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-weight: 800;
+}
+
+.student-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.student-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.15rem;
+  box-shadow: var(--shadow);
+}
+
+.student-card h3,
+.student-step h3 {
+  margin: 0 0 0.35rem;
+  color: var(--navy);
+  font-size: 1rem;
+}
+
+.student-card p,
+.student-step p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.student-offer {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 1.35rem;
+}
+
+.student-offer h2,
+.student-offer p {
+  color: inherit;
+}
+
+.student-offer h2 {
+  margin-bottom: 0.35rem;
+}
+
+.student-offer__price {
+  margin: 0;
+  color: var(--brand-muted);
+  font-weight: 700;
+}
+
+.student-offer__price strong {
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--white);
+}
+
+.student-steps {
+  display: grid;
+  gap: 0.8rem;
+  counter-reset: student-step;
+}
+
+.student-step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.8rem;
+  align-items: start;
+}
+
+.student-step::before {
+  counter-increment: student-step;
+  content: counter(student-step);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand);
+  color: var(--white);
+  font-weight: 800;
+}
+
+.student-location {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+
+.student-location img {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+@media (min-width: 768px) {
+  .student-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .student-offer,
+  .student-location {
+    grid-template-columns: 1fr 0.8fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .student-page .container {
+    width: min(100% - 1.25rem, var(--max));
+  }
+
+  .student-page .header__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    justify-content: stretch;
+    gap: 0.4rem;
+    padding: 0.5rem 0 0.65rem;
+  }
+
+  .student-page .logo-svg {
+    width: min(52vw, 150px);
+    height: auto;
+  }
+
+  .student-page .header__actions {
+    justify-self: center;
+    gap: 0.3rem;
+    flex-shrink: 0;
+    min-width: 0;
+  }
+
+  .student-page .header__actions--top .btn[data-tel] {
+    display: none;
+  }
+
+  .student-page .header__actions--top .btn {
+    min-height: 38px;
+    padding: 0.45rem 0.8rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+
+  .student-page .header__actions--top .hide-desktop {
+    display: none;
+  }
+
+  .student-page main {
+    padding-bottom: 4.75rem;
+  }
+
+  .student-hero__content {
+    min-height: 82vh;
+    padding: 4rem 0 2rem;
+  }
+
+  .student-hero .badge {
+    align-self: flex-start;
+    max-width: 19rem;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.35;
+  }
+
+  .student-hero h1 {
+    max-width: 19rem;
+    font-size: 2rem;
+    text-wrap: balance;
+  }
+
+  .student-hero__lead {
+    max-width: 19rem;
+    overflow-wrap: anywhere;
+  }
+
+  .student-hero__actions,
+  .student-proof {
+    max-width: 19rem;
+  }
+
+  .student-hero__actions .btn,
+  .student-actions .btn {
+    width: 100%;
+    min-height: 48px;
+    white-space: normal;
+  }
+
+  .student-strip__inner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .student-proof {
+    display: grid;
+  }
+}
+
+.football-hero {
+  background: #132414;
+}
+
+.football-hero .student-hero__media {
+  opacity: 0.26;
+}
+
+.football-hero .badge--free,
+.football-offer .btn--whatsapp {
+  background: #25d366;
+}
+
+.football-offer {
+  background: linear-gradient(135deg, #132414 0%, #0f2744 100%);
+}

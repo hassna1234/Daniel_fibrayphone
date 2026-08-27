@@ -446,7 +446,7 @@
   const WA_SERVICE_TEXTS = {
     fibra:       "Hola, me interesa comparar tarifas de fibra e internet en Córdoba. ¿Podéis ayudarme?",
     pack:        "Hola, me interesa el pack de fibra + móvil + TV. ¿Podéis hacer una comparativa para mi caso?",
-    deportes:    "Hola, me interesa el pack de fibra + móvil ilimitado con fútbol y baloncesto. ¿Podéis hacer una comparativa para mi caso?",
+    deportes:    "Hola, quiero información sobre el Pack Deporte de 78,90 €/mes: fibra 600 Mb, fijo, 2 líneas ilimitadas, fútbol y baloncesto. ¿Podéis ayudarme?",
     estudiantes: "Hola, me interesa la oferta de fibra para estudiantes desde 20 €/mes. ¿Podéis ayudarme?",
     luz:         "Hola, quiero comparar mi factura de luz para ver si puedo ahorrar. ¿Podéis ayudarme?",
     alarma:      "Hola, me interesa comparar sistemas de alarma para mi hogar. ¿Podéis hacer un estudio gratuito?",
