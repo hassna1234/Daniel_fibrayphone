@@ -169,12 +169,15 @@
   }
 
   function trackClick(id, el) {
+    const context = {};
+    if (el?.dataset?.landing) context.landing = el.dataset.landing;
+    if (el?.dataset?.position) context.position = el.dataset.position;
     if (id.startsWith("wa-")) {
-      track("clic_whatsapp", { punto: id });
+      track("clic_whatsapp", { punto: id, ...context });
       return;
     }
     if (id.startsWith("call-")) {
-      track("clic_llamar", { punto: id });
+      track("clic_llamar", { punto: id, ...context });
       return;
     }
     if (id === "maps-hero") {
@@ -186,7 +189,7 @@
       return;
     }
     if (id.startsWith("cta-")) {
-      track("clic_cta", { cta_id: id });
+      track("clic_cta", { cta_id: id, ...context });
     }
   }
 
@@ -449,7 +452,7 @@
     deportes:    "Hola, quiero información sobre el Pack Deporte de 78,90 €/mes: fibra 600 Mb, fijo, 2 líneas ilimitadas, fútbol y baloncesto. ¿Podéis ayudarme?",
     estudiantes: "Hola, me interesa la oferta de fibra para estudiantes desde 20 €/mes. ¿Podéis ayudarme?",
     luz:         "Hola, quiero comparar mi factura de luz para ver si puedo ahorrar. ¿Podéis ayudarme?",
-    alarma:      "Hola, me interesa comparar sistemas de alarma para mi hogar. ¿Podéis hacer un estudio gratuito?",
+    alarma:      "Hola, he visto la página de alarmas de Fibrayphone y quiero solicitar un estudio gratuito para mi vivienda o negocio",
   };
 
   document.querySelectorAll("[data-wa-service]").forEach((el) => {
