@@ -2133,3 +2133,193 @@ a {
     opacity: 0.5;
   }
 }
+
+.energy-page main {
+  padding-bottom: 2rem;
+}
+
+.energy-hero {
+  background: linear-gradient(135deg, #082334 0%, #006f84 54%, #123d2c 100%);
+}
+
+.energy-hero .student-hero__content {
+  min-height: 84vh;
+}
+
+.energy-hero .badge--free {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(255, 255, 255, 0.72);
+  color: var(--brand-darker);
+}
+
+.energy-hero__visual {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.energy-hero__visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(6, 19, 34, 0.92) 0%, rgba(6, 19, 34, 0.62) 58%, rgba(6, 19, 34, 0.35) 100%),
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 22px);
+}
+
+.energy-bill {
+  position: absolute;
+  right: clamp(1rem, 8vw, 7rem);
+  bottom: clamp(4rem, 12vw, 7rem);
+  width: clamp(10rem, 24vw, 16rem);
+  padding: 1.1rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--navy);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+
+.energy-bill span {
+  display: block;
+  height: 0.6rem;
+  margin-bottom: 0.65rem;
+  border-radius: 999px;
+  background: var(--brand-light);
+}
+
+.energy-bill span:nth-child(2) {
+  width: 76%;
+}
+
+.energy-bill span:nth-child(3) {
+  width: 58%;
+  background: rgba(5, 150, 105, 0.18);
+}
+
+.energy-bill strong {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 1.35rem;
+  line-height: 1.15;
+  color: var(--success);
+}
+
+.energy-orbit {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  background: rgba(0, 169, 198, 0.25);
+  color: var(--white);
+  font-weight: 900;
+}
+
+.energy-orbit--light {
+  right: clamp(11rem, 29vw, 21rem);
+  bottom: clamp(12rem, 20vw, 15rem);
+}
+
+.energy-orbit--gas {
+  right: clamp(1rem, 7vw, 6rem);
+  bottom: clamp(16rem, 24vw, 18rem);
+  background: rgba(5, 150, 105, 0.3);
+}
+
+.energy-offer {
+  background: linear-gradient(135deg, #006f84 0%, #123d2c 100%);
+}
+
+.energy-saving .section__label {
+  color: var(--success);
+}
+
+.energy-two {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.energy-trust {
+  margin: 0.75rem 0 1rem;
+}
+
+.energy-trust span {
+  background: var(--brand-light);
+  color: var(--brand-darker);
+}
+
+.privacy-note {
+  max-width: 52ch;
+  margin: 0.85rem 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.section-cta .privacy-note {
+  margin-inline: auto;
+  color: var(--muted);
+  text-align: center;
+}
+
+.privacy-note a {
+  color: inherit;
+  font-weight: 800;
+  text-decoration-color: currentColor;
+}
+
+@media (max-width: 767px) {
+  .energy-page main {
+    padding-bottom: 5rem;
+  }
+
+  .energy-hero__visual {
+    opacity: 0.62;
+  }
+
+  .energy-hero .student-hero__content {
+    padding-bottom: 4.5rem;
+  }
+
+  .energy-hero .student-proof {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.45rem;
+  }
+
+  .energy-hero .student-proof span {
+    padding: 0.32rem 0.45rem;
+    font-size: 0.72rem;
+    line-height: 1.25;
+  }
+
+  .energy-bill {
+    display: none;
+  }
+
+  .energy-bill strong {
+    font-size: 1.1rem;
+  }
+
+  .energy-orbit {
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 0.8rem;
+  }
+
+  .energy-orbit--light {
+    right: 6.6rem;
+    bottom: 11rem;
+  }
+
+  .energy-orbit--gas {
+    right: 1rem;
+    bottom: 12rem;
+  }
+
+  .energy-hero .privacy-note {
+    max-width: 19rem;
+    font-size: 0.74rem;
+  }
+}

@@ -172,6 +172,7 @@
     const context = {};
     if (el?.dataset?.landing) context.landing = el.dataset.landing;
     if (el?.dataset?.position) context.position = el.dataset.position;
+    if (el?.dataset?.action) context.action = el.dataset.action;
     if (id.startsWith("wa-")) {
       track("clic_whatsapp", { punto: id, ...context });
       return;
@@ -222,7 +223,11 @@
   document.getElementById("year").textContent = new Date().getFullYear();
 
   const modal = document.getElementById("privacy-modal");
-  const openers = [document.getElementById("open-privacy"), document.getElementById("open-privacy-footer")];
+  const openers = [
+    document.getElementById("open-privacy"),
+    document.getElementById("open-privacy-inline"),
+    document.getElementById("open-privacy-footer"),
+  ];
   const closer = document.getElementById("close-privacy");
 
   openers.forEach((btn) => {
@@ -451,7 +456,7 @@
     pack:        "Hola, me interesa el pack de fibra + móvil + TV. ¿Podéis hacer una comparativa para mi caso?",
     deportes:    "Hola, quiero información sobre el Pack Deporte de 78,90 €/mes: fibra 600 Mb, fijo, 2 líneas ilimitadas, fútbol y baloncesto. ¿Podéis ayudarme?",
     estudiantes: "Hola, me interesa la oferta de fibra para estudiantes desde 20 €/mes. ¿Podéis ayudarme?",
-    luz:         "Hola, quiero comparar mi factura de luz para ver si puedo ahorrar. ¿Podéis ayudarme?",
+    luz:         "Hola, he visto la página de luz y gas de Fibrayphone y quiero que reviséis gratuitamente mi factura para saber si puedo ahorrar.",
     alarma:      "Hola, he visto la página de alarmas de Fibrayphone y quiero solicitar un estudio gratuito para mi vivienda o negocio",
   };
 
