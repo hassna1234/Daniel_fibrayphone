@@ -670,6 +670,33 @@ a {
   color: var(--brand-muted);
 }
 
+.footer-featured {
+  display: grid;
+  gap: 0.6rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.footer-featured h2 {
+  margin: 0;
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.footer-featured__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1.25rem;
+}
+
+.footer-featured__links a {
+  color: var(--white);
+  font-weight: 700;
+  text-decoration-color: rgba(255, 255, 255, 0.4);
+  text-underline-offset: 0.2em;
+}
+
 .footer__inner {
   display: flex;
   flex-wrap: wrap;
@@ -1003,6 +1030,10 @@ a {
 
 .offer-card__list li {
   margin-bottom: 0.35rem;
+}
+
+.offer-card .btn + .btn {
+  margin-top: 0.65rem;
 }
 
 .disclaimer {
