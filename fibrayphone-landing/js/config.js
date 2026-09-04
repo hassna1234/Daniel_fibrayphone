@@ -26,7 +26,7 @@ window.FIBRAYPHONE = {
 
   googleRating: "5,0",
 
-  googleReviewCount: "200+",
+  googleReviewCount: "260+",
 
 
 

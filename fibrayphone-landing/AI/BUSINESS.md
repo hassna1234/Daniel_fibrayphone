@@ -34,7 +34,7 @@ El negocio parte de la observación de que en Córdoba, como en muchas ciudades 
 
 Daniel y Hassna abren la tienda en C/ Diego Serrano 13 con un modelo sencillo: atender a cada persona como lo haría un familiar que sabe de tarifas. Sin comisiones escondidas al cliente, sin presión para contratar y con seguimiento real después de la firma.
 
-Desde 2022 han atendido a más de 900 clientes y acumulado más de 200 reseñas de 5 estrellas en Google. Este dato no es decorativo: en un negocio de reputación local, la valoración media de 5,0 es el activo más valioso y el resultado directo de no anteponer la comisión a la honestidad.
+Desde 2022 han atendido a más de 900 clientes y acumulado más de 260 reseñas de 5 estrellas en Google. Este dato no es decorativo: en un negocio de reputación local, la valoración media de 5,0 es el activo más valioso y el resultado directo de no anteponer la comisión a la honestidad.
 
 ### 1.2 Filosofía
 

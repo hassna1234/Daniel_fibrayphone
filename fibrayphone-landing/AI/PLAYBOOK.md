@@ -240,7 +240,7 @@ El argumento tiene dos partes: el acceso al mercado completo y la eliminación d
 **Por qué la hace:** sospecha que Fibrayphone recomienda lo que paga más comisión, no lo mejor para el cliente.
 
 **Cómo responder:**
-*"Es una pregunta muy razonable. La respuesta es que nuestro negocio funciona porque los clientes quedan contentos y vuelven, y porque nos recomiendan a sus familias. Si te recomendara algo que no te conviene, no volverías y no nos recomendarías. Con más de 200 reseñas de 5 estrellas, lo que nos funciona es ser honestos, aunque a veces eso signifique decirte que en tu caso no merece la pena cambiar ahora mismo."*
+*"Es una pregunta muy razonable. La respuesta es que nuestro negocio funciona porque los clientes quedan contentos y vuelven, y porque nos recomiendan a sus familias. Si te recomendara algo que no te conviene, no volverías y no nos recomendarías. Con más de 260 reseñas de 5 estrellas, lo que nos funciona es ser honestos, aunque a veces eso signifique decirte que en tu caso no merece la pena cambiar ahora mismo."*
 
 El argumento más poderoso aquí no son las palabras propias; son las reseñas de terceros. Si es posible, en persona, mostrar el perfil de Google.
 
