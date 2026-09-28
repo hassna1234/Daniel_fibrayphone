@@ -112,25 +112,23 @@ window.FIBRAYPHONE = {
 
     telecom: [
 
-      "Movistar",
-
-      "Orange",
-
-      "Vodafone",
-
-      "Yoigo",
-
-      "MásMóvil",
-
-      "Digi",
-
       "O2",
-
-      "Pepephone",
 
       "Lowi",
 
+      "PTV Telecom",
+
       "Jazztel",
+
+      "MásMóvil",
+
+      "Pepephone",
+
+      "Digi",
+
+      "Simyo",
+
+      "Vodafone",
 
     ],
 

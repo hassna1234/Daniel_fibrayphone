@@ -46,7 +46,7 @@
     },
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "09:30", "closes": "14:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "18:00", "closes": "20:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "17:00", "closes": "20:30" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:30", "closes": "14:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "13:30" }
     ],
@@ -82,7 +82,7 @@
       {
         "@type": "Question",
         "name": "¿Necesito cita previa para ir a la tienda?",
-        "acceptedAnswer": { "@type": "Answer", "text": "No hace falta cita previa. Puedes pasarte directamente en C/ Diego Serrano 13, Córdoba, en horario de tienda: lunes a jueves de 9:30 a 14:00 y de 18:00 a 20:30, viernes de 9:30 a 14:00 y sábados de 10:00 a 13:30." }
+        "acceptedAnswer": { "@type": "Answer", "text": "No hace falta cita previa. Puedes pasarte directamente en C/ Diego Serrano 13, Córdoba, en horario de tienda: lunes a jueves de 9:30 a 14:00 y de 17:00 a 20:30, viernes de 9:30 a 14:00 y sábados de 10:00 a 13:30." }
       },
       {
         "@type": "Question",
@@ -124,6 +124,7 @@
         <a href="#servicios">Servicios</a>
         <a href="#marcas">Marcas</a>
         <a href="#ofertas">Ofertas</a>
+        <a href="/tarifas-o2-cordoba/">Tarifas O2</a>
         <a href="#opiniones">Opiniones</a>
         <a href="#faq">FAQ</a>
         <a href="#contacto">Contacto</a>
@@ -151,18 +152,17 @@
           <span class="badge badge--free">Asesores independientes de fibra y móvil en Córdoba</span>
           <h1>Encontramos tu mejor tarifa de <span>fibra y móvil</span> en Córdoba</h1>
           <p class="hero__lead">
-            Comparamos Digi, O2, Lowi, Jazztel, Pepephone, Vodafone, PTV Telecom, Simyo y otras compañías para recomendarte la que mejor encaja con tu vivienda y tu presupuesto. <strong>Estudio gratuito y sin compromiso.</strong>
+            Comprobamos cobertura, precio final, permanencia y plazo de instalación <strong>según tu dirección exacta</strong>. Sin sorpresas en el mes 13.
           </p>
-          <p class="hero__diferenciador">No intentamos venderte una compañía. Queremos recomendarte la que realmente mejor encaja contigo.</p>
           <div class="hero__trust-icons">
             <span>📍 Tienda física en Córdoba</span>
             <span>⭐ <span id="google-rating-text">5,0 · 200+ reseñas en Google</span></span>
-            <span>🤝 Atención personalizada antes y después de contratar</span>
+            <span>🤝 Gestión gratuita: alta, portabilidad y baja anterior</span>
             <span id="store-status" class="store-status" hidden></span>
           </div>
           <div class="hero__ctas">
-            <a class="btn btn--whatsapp btn--lg" href="https://wa.me/34696785471?text=Hola%2C%20quiero%20pedir%20una%20comparativa%20gratuita%20de%20fibra%20y%20m%C3%B3vil.%20%C2%BFPod%C3%A9is%20ayudarme%3F" id="wa-hero-comparativa">Pedir comparativa gratis</a>
-            <a class="btn btn--outline btn--lg" href="https://wa.me/34696785471?text=Hola%2C%20quiero%20hablar%20con%20un%20asesor%20sobre%20mis%20opciones%20de%20fibra%20y%20m%C3%B3vil%20en%20C%C3%B3rdoba." id="wa-hero-asesor">Hablar por WhatsApp</a>
+            <a class="btn btn--whatsapp btn--lg" href="https://wa.me/34696785471?text=Hola%2C%20quiero%20saber%20qu%C3%A9%20fibra%20hay%20disponible%20en%20mi%20direcci%C3%B3n%20y%20cu%C3%A1l%20es%20el%20precio%20real.%20%C2%BFPod%C3%A9is%20ayudarme%3F" id="wa-hero-comparativa">Comprobar fibra disponible en mi dirección</a>
+            <a class="btn btn--outline btn--lg" href="https://wa.me/34696785471?text=Hola%2C%20quiero%20hablar%20con%20un%20asesor%20sobre%20mis%20opciones%20de%20fibra%20y%20m%C3%B3vil%20en%20C%C3%B3rdoba." id="wa-hero-asesor">Hablar con un asesor</a>
           </div>
           <p class="hero__garantias">✓ Asesoría gratuita &nbsp;·&nbsp; ✓ Sin compromiso &nbsp;·&nbsp; ✓ Te explicamos la letra pequeña</p>
         </div>
@@ -204,7 +204,7 @@
               <input type="checkbox" id="privacidad" name="privacidad" required>
               <span>He leído la <a href="#" id="open-privacy">política de privacidad</a> y acepto que Fibrayphone me contacte para la comparativa solicitada.</span>
             </label>
-            <p class="form-note">Se abrirá WhatsApp con tus datos ya escritos; solo pulsa <strong>Enviar</strong> en la app y te respondemos.</p>
+            <p class="form-note">Al enviar se abrirá WhatsApp con tus datos ya escritos. <strong>Pulsa Enviar en WhatsApp</strong> para que recibamos tu solicitud. El formulario no registra tu consulta hasta que envías el mensaje.</p>
             <button type="submit" class="btn btn--whatsapp btn--block btn--lg">Enviar por WhatsApp</button>
             <p class="form-trust-micro">Sin compromiso · Respuesta el mismo día · Gratis para ti</p>
           </form>
@@ -250,7 +250,7 @@
           <div class="vs-col vs-col--good">
             <h3 class="vs-col__title">Si nos llamas a nosotros…</h3>
             <ul class="vs-list vs-list--good">
-              <li>Comparamos <strong>todas las compañías a la vez</strong> en minutos</li>
+              <li>Comparamos <strong>las operadoras con las que trabajamos</strong>, sin exclusivas</li>
               <li>Te calculamos el <strong>coste real a 12 meses</strong>, sin sorpresas</li>
               <li>Nuestros clientes <strong>ahorran entre 20 y 30 € al mes</strong></li>
             </ul>
@@ -330,8 +330,8 @@
     <section class="section section--alt" id="marcas">
       <div class="container">
         <p class="section__label">Marcas</p>
-        <h2>Comparamos entre las principales compañías</h2>
-        <p class="section__intro">Trabajamos con operadoras, comercializadoras y empresas de seguridad para encontrar la tarifa o el sistema de alarma que mejor encaje contigo.</p>
+        <h2>Compañías con las que trabajamos</h2>
+        <p class="section__intro">Trabajamos con las siguientes operadoras, comercializadoras y empresas de seguridad. Si tu compañía actual no está en la lista, cuéntanos tu situación y valoramos opciones.</p>
         <div class="brands-block">
           <h3 class="brands-block__title">Fibra y móvil</h3>
           <div class="brands-grid" id="brands-telecom" aria-label="Operadoras de telecomunicaciones"></div>
@@ -344,7 +344,7 @@
           <h3 class="brands-block__title">Seguridad y alarmas</h3>
           <div class="brands-grid" id="brands-seguridad" aria-label="Empresas de seguridad y alarmas"></div>
         </div>
-        <p class="disclaimer">* Marcas orientativas del mercado español. La oferta final depende de cobertura, consumo, vivienda y promociones vigentes.</p>
+        <p class="disclaimer">* Operadoras con las que Fibrayphone trabaja directamente a septiembre de 2026. No trabajamos con Movistar, Orange, Yoigo ni Llamaya. La oferta final depende de cobertura, consumo, vivienda y promociones vigentes.</p>
       </div>
     </section>
 
@@ -433,7 +433,7 @@
           <article class="service">
             <div class="service__icon" aria-hidden="true">📶</div>
             <h3>Fibra</h3>
-            <p>Precio real a 12 meses entre todas las operadoras. Sin sorpresas en el mes 13.</p>
+            <p>Cobertura, precio real a 12 meses y plazo de instalación verificados para tu dirección exacta.</p>
           </article>
           <article class="service">
             <div class="service__icon" aria-hidden="true">📱</div>
@@ -474,7 +474,7 @@
           </article>
           <article class="step">
             <h3>Comparamos el mercado</h3>
-            <p>Buscamos entre todas las operadoras y comercializadoras la opción que más te conviene.</p>
+            <p>Buscamos entre las operadoras y comercializadoras con las que trabajamos la opción que más te conviene.</p>
           </article>
           <article class="step">
             <h3>Decides tú, sin presión</h3>
@@ -495,8 +495,8 @@
         <div class="features">
           <article class="feature">
             <div class="feature__icon" aria-hidden="true">🔍</div>
-            <h3>Comparamos todas las compañías</h3>
-            <p>Todo el mercado, no un solo catálogo.</p>
+            <h3>Sin exclusiva de operadora</h3>
+            <p>Comparamos las compañías con las que trabajamos, no un solo catálogo.</p>
           </article>
           <article class="feature">
             <div class="feature__icon" aria-hidden="true">💶</div>
@@ -579,7 +579,7 @@
           </details>
           <details class="faq-item">
             <summary class="faq-question">¿Necesito cita previa para ir a la tienda?</summary>
-            <div class="faq-answer"><p>No hace falta cita previa. Puedes pasarte directamente en <strong>C/ Diego Serrano 13, Córdoba</strong>, en horario de tienda: lunes a jueves de 9:30 a 14:00 y de 18:00 a 20:30, viernes de 9:30 a 14:00 y sábados de 10:00 a 13:30.</p></div>
+            <div class="faq-answer"><p>No hace falta cita previa. Puedes pasarte directamente en <strong>C/ Diego Serrano 13, Córdoba</strong>, en horario de tienda: lunes a jueves de 9:30 a 14:00 y de 17:00 a 20:30, viernes de 9:30 a 14:00 y sábados de 10:00 a 13:30.</p></div>
           </details>
           <details class="faq-item">
             <summary class="faq-question">¿Comparáis solo fibra o también luz, gas y alarmas?</summary>
@@ -607,7 +607,7 @@
             <div class="hours">
               <h3>Horario de tienda</h3>
               <dl>
-                <dt>Lun – Jue</dt><dd>9:30 – 14:00 · 18:00 – 20:30</dd>
+                <dt>Lun – Jue</dt><dd>9:30 – 14:00 · 17:00 – 20:30</dd>
                 <dt>Viernes</dt><dd>9:30 – 14:00</dd>
                 <dt>Sábado</dt><dd>10:00 – 13:30</dd>
                 <dt>Domingo</dt><dd>Cerrado</dd>
@@ -635,6 +635,7 @@
     <div class="container footer-featured" aria-labelledby="footer-featured-title">
       <h2 id="footer-featured-title">Ofertas destacadas</h2>
       <nav class="footer-featured__links" aria-label="Ofertas destacadas">
+        <a href="/tarifas-o2-cordoba/" data-track="footer-o2">Tarifas O2 en Córdoba</a>
         <a href="/fibra-estudiantes-cordoba/" data-track="footer-estudiantes">Fibra para estudiantes en Córdoba</a>
         <a href="/fibra-futbol-cordoba/" data-track="footer-futbol">Fibra con fútbol y baloncesto en Córdoba</a>
         <a href="/alarmas-cordoba/" data-track="footer-alarmas">Alarmas para hogar y negocio en Córdoba</a>
