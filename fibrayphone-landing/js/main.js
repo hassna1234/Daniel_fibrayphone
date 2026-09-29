@@ -36,7 +36,7 @@
   }
 
   function setupHeroCTAs() {
-    const textComparativa = "Hola, quiero pedir una comparativa gratuita de fibra y móvil. ¿Podéis ayudarme?";
+    const textComparativa = "Hola, quiero saber qué fibra hay disponible en mi dirección y cuál es el precio real. ¿Podéis ayudarme?";
     const textAsesor = "Hola, quiero hablar con un asesor sobre mis opciones de fibra y móvil en Córdoba.";
 
     const comparativaBtn = document.getElementById("wa-hero-comparativa");
@@ -353,12 +353,14 @@
 
     sendLeadEmail(data)
       .then(() => {
-        track("formulario_enviado", { servicio });
-        showFormStatus("✓ Datos enviados. Se abre WhatsApp…", false);
+        // Confirmación de que la copia por email llegó — NO equivale a lead confirmado
+        // El lead se confirma cuando el usuario envía el mensaje en WhatsApp
+        track("email_copia_enviada", { servicio });
+        showFormStatus("✓ Abriendo WhatsApp… pulsa Enviar en la app para completar tu solicitud.", false);
       })
       .catch((err) => {
         console.warn("Email error:", err);
-        showFormStatus("WhatsApp se abrirá, pero no se pudo enviar copia por email.", true);
+        showFormStatus("Se abre WhatsApp. No se pudo enviar copia interna por email.", true);
       })
       .finally(() => {
         submitBtn.disabled = false;
@@ -482,7 +484,7 @@
       const T = (h, m) => h * 60 + m;
       let open = false;
       if (day >= 1 && day <= 4) {
-        open = (t >= T(9, 30) && t < T(14, 0)) || (t >= T(18, 0) && t < T(20, 30));
+        open = (t >= T(9, 30) && t < T(14, 0)) || (t >= T(17, 0) && t < T(20, 30));
       } else if (day === 5) {
         open = t >= T(9, 30) && t < T(14, 0);
       } else if (day === 6) {

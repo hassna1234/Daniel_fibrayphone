@@ -191,20 +191,19 @@ Fibrayphone no tiene operadora propia. Trabaja con todas simultáneamente. Su in
 
 ### Telecomunicaciones (fibra y móvil)
 
-| Operadora | Tipo |
-|---|---|
-| Movistar | Fibra, móvil, packs |
-| Orange | Fibra, móvil, packs |
-| Vodafone | Fibra, móvil, packs |
-| Yoigo | Fibra, móvil, packs |
-| MásMóvil | Fibra, móvil, packs |
-| Digi | Fibra, móvil |
-| O2 | Fibra, móvil |
-| Pepephone | Fibra, móvil |
-| Lowi | Fibra, móvil |
-| Jazztel | Fibra, móvil, packs |
-| PTV Telecom | Fibra, móvil |
-| Simyo | Móvil |
+> **Actualización septiembre 2026:** Fibrayphone trabaja con las operadoras listadas a continuación. No trabaja directamente con Movistar, Orange, Yoigo ni Llamaya. Esta distinción es importante para no generar expectativas falsas en clientes.
+
+| Operadora | Tipo | Notas |
+|---|---|---|
+| O2 | Fibra, móvil | Activa. Red Telefónica. Sin permanencia. |
+| Lowi | Fibra, móvil | Activa. Red Vodafone. |
+| PTV Telecom | Fibra, móvil | Activa. |
+| Jazztel | Fibra, móvil, packs | Activa. Red Orange. |
+| MásMóvil | Fibra, móvil, packs | Activa. |
+| Pepephone | Fibra, móvil | Activa. Red Movistar/Vodafone. |
+| Digi | Fibra, móvil | Activa. |
+| Simyo | Móvil | Activa. Solo móvil. |
+| Vodafone | Fibra, móvil, packs | Ocasionalmente. Verificar disponibilidad. |
 
 ### Energía (luz y gas)
 
@@ -721,9 +720,11 @@ La ventaja competitiva de Fibrayphone no es tecnológica ni de escala. Es la con
 
 ### Horario de tienda
 
+> **Actualización septiembre 2026:** El turno de tarde de lunes a jueves empieza a las 17:00 (antes 18:00). Actualizado en Schema.org, HTML de contacto, FAQ y js/main.js.
+
 | Días | Turno mañana | Turno tarde |
 |---|---|---|
-| Lunes a jueves | 9:30–14:00 | 18:00–20:30 |
+| Lunes a jueves | 9:30–14:00 | 17:00–20:30 |
 | Viernes | 9:30–14:00 | Cerrado |
 | Sábado | 10:00–13:30 | Cerrado |
 | Domingo | Cerrado | Cerrado |
