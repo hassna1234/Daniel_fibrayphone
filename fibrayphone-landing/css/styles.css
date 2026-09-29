@@ -1653,6 +1653,54 @@ a {
   color: #c0392b;
 }
 
+/* ——— Hero simplificado (portada redesign) ——— */
+.hero--simple {
+  text-align: center;
+}
+.hero--simple .container {
+  max-width: 680px;
+}
+.hero--simple .hero__ctas {
+  justify-content: center;
+}
+.hero--simple .hero__lead {
+  max-width: none;
+}
+
+.hero__trust-compact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem 1rem;
+  font-size: 0.84rem;
+  color: var(--muted);
+  margin-top: 1rem;
+}
+
+/* Nota de atribución bajo el precio de tarifa */
+.tarifa-note {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin: -0.5rem 0 0.75rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.tarifa-card__text {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0 0 1rem;
+  line-height: 1.55;
+}
+
+/* Grid de tarifas 2 columnas a partir de 560px */
+@media (min-width: 560px) {
+  .tarifas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* ——— Barra de anuncio (promo bar) ——— */
 .promo-bar {
   background: var(--navy);
