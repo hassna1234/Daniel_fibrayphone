@@ -373,12 +373,23 @@
     const brands = cfg.brands;
     if (!brands) return;
 
-    function fill(containerId, list) {
+    function fill(containerId, data) {
       const el = document.getElementById(containerId);
-      if (!el || !list?.length) return;
-      el.innerHTML = list
-        .map((name) => `<span class="brand-chip">${name}</span>`)
-        .join("");
+      if (!el) return;
+
+      let html = "";
+      if (Array.isArray(data)) {
+        html = data.map((n) => `<span class="brand-chip">${n}</span>`).join("");
+      } else {
+        const confirmed = data?.confirmed ?? [];
+        const other = data?.other ?? [];
+        html = confirmed.map((n) => `<span class="brand-chip">${n}</span>`).join("");
+        if (other.length) {
+          html += `<span class="brands-other-label">También comparamos:</span>`;
+          html += other.map((n) => `<span class="brand-chip brand-chip--other">${n}</span>`).join("");
+        }
+      }
+      el.innerHTML = html;
     }
 
     fill("brands-telecom", brands.telecom);

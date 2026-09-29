@@ -108,55 +108,27 @@ window.FIBRAYPHONE = {
     interior: "tienda-interior.webp",
   },
 
+  /**
+   * Marcas: separad en "confirmed" (acuerdo comercial directo) y "other"
+   * (podemos comparar o asesorar pero sin contrato directo activo).
+   * Las "other" se muestran en gris punteado y con etiqueta "también comparamos".
+   */
   brands: {
 
-    telecom: [
+    telecom: {
+      confirmed: ["O2", "Lowi", "PTV Telecom", "Jazztel", "MásMóvil", "Pepephone"],
+      other: ["Digi", "Simyo", "Vodafone"],
+    },
 
-      "O2",
+    energia: {
+      confirmed: ["Iberdrola", "Endesa", "Naturgy", "Repsol", "TotalEnergies"],
+      other: ["Holaluz", "Octopus Energy", "Gana Energía", "Lucera", "CHC Energía"],
+    },
 
-      "Lowi",
-
-      "PTV Telecom",
-
-      "Jazztel",
-
-      "MásMóvil",
-
-      "Pepephone",
-
-      "Digi",
-
-      "Simyo",
-
-      "Vodafone",
-
-    ],
-
-    energia: [
-
-      "Iberdrola",
-
-      "Endesa",
-
-      "Naturgy",
-
-      "Repsol",
-
-      "TotalEnergies",
-
-      "Holaluz",
-
-      "Octopus Energy",
-
-      "Gana Energía",
-
-      "Lucera",
-
-      "CHC Energía",
-
-    ],
-
-    seguridad: ["Segurma", "Movistar Prosegur", "Verisure"],
+    seguridad: {
+      confirmed: ["Segurma", "Movistar Prosegur", "Verisure"],
+      other: [],
+    },
 
   },
 
