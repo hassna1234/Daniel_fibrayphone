@@ -192,6 +192,30 @@
       text-align: right;
     }
 
+    /* Badges de plataformas de streaming */
+    .platform-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0.75rem 0 0.5rem;
+    }
+    .platform-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      border-radius: 6px;
+      padding: 0.25rem 0.55rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #fff;
+      white-space: nowrap;
+    }
+    .platform-badge--movistar { background: #019a37; }
+    .platform-badge--netflix  { background: #E50914; }
+    .platform-badge--disney   { background: #113CCF; }
+    .platform-badge svg { width: 12px; height: 12px; fill: #fff; flex-shrink: 0; }
+
     .coverage-box {
       background: var(--navy);
       color: #fff;
@@ -595,10 +619,13 @@
             <h3>Fibra 600Mb + Móvil 60GB + TV</h3>
             <p class="price"><sup>€</sup>47<sub>/mes</sub></p>
             <p class="price-note">Precio final con IVA</p>
+            <div class="platform-badges" aria-label="Plataformas incluidas">
+              <span class="platform-badge platform-badge--movistar">▶ Movistar Plus</span>
+              <span class="platform-badge platform-badge--netflix">N Netflix</span>
+            </div>
             <ul>
               <li>600Mb fibra simétrica</li>
               <li>60GB en móvil con 5G+</li>
-              <li>Movistar Plus + Netflix Estándar</li>
               <li>Llamadas ilimitadas fijo y móvil</li>
               <li>Sin permanencia</li>
             </ul>
@@ -609,10 +636,14 @@
             <h3>Fibra 600Mb + Móvil 60GB + TV+</h3>
             <p class="price"><sup>€</sup>52<sub>/mes</sub></p>
             <p class="price-note">Precio final con IVA</p>
+            <div class="platform-badges" aria-label="Plataformas incluidas">
+              <span class="platform-badge platform-badge--movistar">▶ Movistar Plus</span>
+              <span class="platform-badge platform-badge--netflix">N Netflix</span>
+              <span class="platform-badge platform-badge--disney">✦ Disney+</span>
+            </div>
             <ul>
               <li>600Mb fibra simétrica</li>
               <li>60GB en móvil con 5G+</li>
-              <li>Movistar Plus + Netflix + Disney+</li>
               <li>Llamadas ilimitadas fijo y móvil</li>
               <li>Sin permanencia</li>
             </ul>
@@ -622,10 +653,13 @@
             <h3>Fibra 1Gb + Móvil 375GB + TV</h3>
             <p class="price"><sup>€</sup>58<sub>/mes</sub></p>
             <p class="price-note">Precio final con IVA</p>
+            <div class="platform-badges" aria-label="Plataformas incluidas">
+              <span class="platform-badge platform-badge--movistar">▶ Movistar Plus</span>
+              <span class="platform-badge platform-badge--netflix">N Netflix</span>
+            </div>
             <ul>
               <li>1Gb fibra simétrica</li>
               <li>375GB en móvil con 5G+</li>
-              <li>Movistar Plus + Netflix Estándar</li>
               <li>Llamadas ilimitadas fijo y móvil</li>
               <li>Sin permanencia</li>
             </ul>
@@ -635,10 +669,14 @@
             <h3>Fibra 1Gb + Móvil 375GB + TV+</h3>
             <p class="price"><sup>€</sup>62<sub>/mes</sub></p>
             <p class="price-note">Precio final con IVA</p>
+            <div class="platform-badges" aria-label="Plataformas incluidas">
+              <span class="platform-badge platform-badge--movistar">▶ Movistar Plus</span>
+              <span class="platform-badge platform-badge--netflix">N Netflix</span>
+              <span class="platform-badge platform-badge--disney">✦ Disney+</span>
+            </div>
             <ul>
               <li>1Gb fibra simétrica</li>
               <li>375GB en móvil con 5G+</li>
-              <li>Movistar Plus + Netflix + Disney+</li>
               <li>Llamadas ilimitadas fijo y móvil</li>
               <li>Sin permanencia</li>
             </ul>
