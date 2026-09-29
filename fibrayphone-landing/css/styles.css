@@ -139,9 +139,9 @@ a {
 }
 
 .btn--primary {
-  background: var(--brand);
+  background: var(--brand-darker);
   color: var(--white);
-  box-shadow: 0 4px 14px rgba(0, 169, 198, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 111, 132, 0.35);
 }
 
 .btn--primary:hover {
@@ -160,12 +160,12 @@ a {
 }
 
 .btn--whatsapp {
-  background: #25d366;
+  background: #1a7a3f;
   color: var(--white);
 }
 
 .btn--whatsapp:hover {
-  background: #1fb855;
+  background: #155f31;
 }
 
 .btn--lg {
@@ -957,6 +957,24 @@ a {
   box-shadow: var(--shadow);
 }
 
+.brand-chip--other {
+  opacity: 0.6;
+  border-style: dashed;
+  font-weight: 500;
+}
+
+.brand-chip--other:hover {
+  opacity: 1;
+}
+
+.brands-other-label {
+  width: 100%;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin: 0.25rem 0 0;
+  font-style: italic;
+}
+
 /* Ofertas ejemplo */
 .offers-grid {
   display: grid;
@@ -1739,22 +1757,34 @@ a {
 .promo-bar__dots {
   display: flex;
   justify-content: center;
-  gap: 0.4rem;
-  margin-top: 0.3rem;
+  gap: 0;
+  margin-top: 0.1rem;
 }
 
 .promo-bar__dot {
-  width: 5px;
-  height: 5px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
+  background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: none;
+}
+
+.promo-bar__dot::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
   transition: background 0.2s;
 }
 
-.promo-bar__dot.active {
+.promo-bar__dot.active::before {
   background: var(--white);
 }
 
