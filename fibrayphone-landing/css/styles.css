@@ -1712,10 +1712,16 @@ a {
   line-height: 1.55;
 }
 
-/* Grid de tarifas 2 columnas a partir de 560px */
+/* Grid de tarifas: 2 columnas desde 560px, 3 desde 900px */
 @media (min-width: 560px) {
   .tarifas-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .tarifas-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
