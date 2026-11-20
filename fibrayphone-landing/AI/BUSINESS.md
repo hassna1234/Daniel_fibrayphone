@@ -34,7 +34,7 @@ El negocio parte de la observación de que en Córdoba, como en muchas ciudades 
 
 Daniel y Hassna abren la tienda en C/ Diego Serrano 13 con un modelo sencillo: atender a cada persona como lo haría un familiar que sabe de tarifas. Sin comisiones escondidas al cliente, sin presión para contratar y con seguimiento real después de la firma.
 
-Desde 2022 han atendido a más de 900 clientes y acumulado más de 200 reseñas de 5 estrellas en Google. Este dato no es decorativo: en un negocio de reputación local, la valoración media de 5,0 es el activo más valioso y el resultado directo de no anteponer la comisión a la honestidad.
+Desde 2022 atienden en la tienda de C/ Diego Serrano 13. La cifra de clientes atendidos y la nota de Google están pendientes de confirmar: no deben publicarse hasta verificarlas.
 
 ### 1.2 Filosofía
 
@@ -187,46 +187,32 @@ Fibrayphone no tiene operadora propia. Trabaja con todas simultáneamente. Su in
 
 ## 4. Qué comercializa Fibrayphone
 
-> **Aviso:** Esta tabla refleja el catálogo vigente en julio de 2026. Los acuerdos con operadoras pueden cambiar. Antes de publicar contenido específico de una compañía, verificar que sigue en el catálogo activo.
+> **Aviso:** Catálogo confirmado por el negocio el 19 de noviembre de 2026. No publicar otras compañías como contratables sin una confirmación nueva.
 
 ### Telecomunicaciones (fibra y móvil)
 
-> **Actualización septiembre 2026:** Fibrayphone trabaja con las operadoras listadas a continuación. No trabaja directamente con Movistar, Orange, Yoigo ni Llamaya. Esta distinción es importante para no generar expectativas falsas en clientes.
-
 | Operadora | Tipo | Notas |
 |---|---|---|
-| O2 | Fibra, móvil | Activa. Red Telefónica. Sin permanencia. |
-| Lowi | Fibra, móvil | Activa. Red Vodafone. |
-| PTV Telecom | Fibra, móvil | Activa. |
-| Jazztel | Fibra, móvil, packs | Activa. Red Orange. |
-| MásMóvil | Fibra, móvil, packs | Activa. |
-| Pepephone | Fibra, móvil | Activa. Red Movistar/Vodafone. |
-| Digi | Fibra, móvil | Activa. |
-| Simyo | Móvil | Activa. Solo móvil. |
-| Vodafone | Fibra, móvil, packs | Ocasionalmente. Verificar disponibilidad. |
+| O2 | Fibra, móvil | Contratable. Distribuidor oficial. Landing propia en `/tarifas-o2-cordoba/`. |
+| Lowi | Fibra, móvil | Contratable. |
+| PTV Telecom | Fibra, móvil | Contratable. |
+| Jazztel | Fibra, móvil | Contratable. |
+| MásMóvil | Fibra, móvil | Contratable. |
+| Pepephone | Fibra, móvil | Contratable. |
+| Digi | Fibra, móvil | Contratable. |
 
 ### Energía (luz y gas)
 
-| Comercializadora | Tipo |
-|---|---|
-| Iberdrola | Luz, gas |
-| Endesa | Luz, gas |
-| Naturgy | Luz, gas |
-| Repsol | Luz, gas |
-| TotalEnergies | Luz, gas |
-| Holaluz | Luz |
-| Octopus Energy | Luz |
-| Gana Energía | Luz |
-| Lucera | Luz |
-| CHC Energía | Luz |
+| Comercializadora | Suministros | Cómo está confirmado |
+|---|---|---|
+| Naturgy | Luz y gas | Confirmado por el negocio el 19 de noviembre de 2026. |
+| Gana Energía | Luz y gas | Luz, confirmada por el negocio. Gas, confirmado el 19 de noviembre de 2026 en su web: [comparar factura de gas](https://ganaenergia.com/comparativa-gas) y [cómo funciona su tarifa de gas](https://ganaenergia.com/blog/como-funciona-tarifa-gas-gana-energia/). |
 
 ### Seguridad y alarmas
 
 | Empresa | Tipo |
 |---|---|
-| Segurma | Alarma con CRA |
-| Movistar Prosegur | Alarma con CRA |
-| Verisure | Alarma con CRA |
+| Segurma | Alarmas |
 
 ---
 
@@ -686,7 +672,7 @@ Sin esta variable, el formulario sigue funcionando (abre WhatsApp con los datos 
 
 Fibrayphone es una asesoría de tarifas con tienda física en C/ Diego Serrano 13, Córdoba. Desde 2022, Daniel y Hassna ayudan a familias, particulares y autónomos a comparar y contratar fibra, móvil, luz, gas y alarmas sin ningún coste para el cliente. Los ingresos vienen de comisiones que pagan las compañías cuando hay contratación, no del cliente.
 
-El modelo funciona porque la honestidad es más rentable que la presión comercial. Un cliente que siente que le han tratado bien vuelve, recomienda a su familia y deja una reseña de 5 estrellas. Con 900+ clientes atendidos y una valoración de 5,0 en Google, este modelo está funcionando.
+El modelo funciona porque la honestidad es más rentable que la presión comercial. Un cliente que siente que le han tratado bien vuelve y recomienda a su familia. Las cifras de clientes y de reseñas no se publican hasta confirmarlas.
 
 La web de Fibrayphone tiene un propósito concreto: que un visitante de Córdoba contacte con la asesoría por WhatsApp, teléfono o formulario. Todo lo que facilite ese contacto es valioso. Todo lo que lo dificulte es un problema, independientemente de cómo quede visualmente.
 
@@ -704,9 +690,9 @@ La ventaja competitiva de Fibrayphone no es tecnológica ni de escala. Es la con
 
 | Dato | Valor actual | Fuente en el repo | Nota |
 |---|---|---|---|
-| Clientes atendidos | 900+ | `index.html` (sección #nosotros) | Actualizar manualmente |
-| Reseñas en Google | 200+ según `config.js` / 250+ según HTML fallback | `js/config.js → googleReviewCount` y `index.html` línea ~145 | **Inconsistencia detectada:** hay tres valores distintos en el repositorio (`"200"` en Schema.org, `"200+"` en config.js, `"250+"` en el HTML fallback del hero). Pendiente de unificar. |
-| Valoración media | 5,0 ★ | `js/config.js → googleRating` | |
+| Clientes atendidos | Pendiente de confirmar | No publicar «900+» hasta que el negocio lo confirme | Retirado de la web el 19 de noviembre de 2026 |
+| Reseñas en Google | Pendiente de verificar | La ficha de C/ Diego Serrano 13 no quedó contrastada con una cifra única ni un enlace directo | La web enlaza una búsqueda de Google, sin nota ni número |
+| Valoración media | Pendiente de verificar | No rellenar `googleRating` sin comprobar la ficha | |
 | Año de apertura | 2022 | `index.html` (sección #nosotros) | |
 
 ### Equipo
@@ -737,10 +723,12 @@ La ventaja competitiva de Fibrayphone no es tecnológica ni de escala. Es la con
 
 | Servicio | Precio orientativo | Fuente |
 |---|---|---|
-| Fibra (básica) | Desde 20 €/mes | `index.html` sección #ofertas |
-| Pack fibra + 2 móviles + TV | ~59 €/mes | `index.html` sección #ofertas |
-| Alarma con CRA | Desde 19,90 €/mes | `index.html` sección #ofertas |
-| Ahorro típico en luz (cambio comercializadora) | 20–30 €/mes | `index.html` hero y sección #servicios |
+| Fibra O2 300 / 600 / 1 Gb | 23 / 27 / 31 €/mes | o2online.es, comprobado el 19 de noviembre de 2026 |
+| Fibra + móvil O2 | Desde 35 €/mes | o2online.es, misma fecha |
+| Packs O2 con TV | Desde 38 €/mes | o2online.es, misma fecha. Detalle en `/tarifas-o2-cordoba/` |
+| Fibra estudiantes | No publicar precio | La campaña de 20 €/mes terminó |
+| Pack deporte | No publicar 78,90 € | Vigencia pendiente de confirmar |
+| Ahorro en luz | No publicar una cifra genérica | La revisión dice si se puede ahorrar o si la tarifa ya está bien |
 
 ### Catálogo de operadores
 

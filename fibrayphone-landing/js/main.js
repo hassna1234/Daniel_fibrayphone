@@ -42,17 +42,11 @@
     const comparativaBtn = document.getElementById("wa-hero-comparativa");
     if (comparativaBtn) {
       comparativaBtn.href = buildWhatsAppUrl({ text: textComparativa });
-      comparativaBtn.addEventListener("click", () => {
-        track("clic_whatsapp", { punto: "hero_comparativa" });
-      });
     }
 
     const asesorBtn = document.getElementById("wa-hero-asesor");
     if (asesorBtn) {
       asesorBtn.href = buildWhatsAppUrl({ text: textAsesor });
-      asesorBtn.addEventListener("click", () => {
-        track("clic_whatsapp", { punto: "hero_asesor" });
-      });
     }
   }
 
@@ -103,7 +97,6 @@
       .map(
         (r) => `
       <blockquote class="review">
-        <div class="review__stars" aria-label="5 estrellas">★★★★★</div>
         <p>«${r.text}»</p>
         <cite>— ${r.author}${r.date ? ` · ${r.date}` : ""}</cite>
       </blockquote>`
@@ -143,16 +136,67 @@
     history.replaceState({}, "", next);
   }
 
-  function initAnalytics() {
-    if (!gaId || !/^G-/i.test(gaId)) return;
-    const campaign = campaignFromUrl();
+  const CONSENT_KEY = "fibrayphone-analytics";
+
+  function consentChoice() {
+    try {
+      return localStorage.getItem(CONSENT_KEY);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function setConsentChoice(value) {
+    try {
+      localStorage.setItem(CONSENT_KEY, value);
+    } catch (_) {}
+  }
+
+  const ADS_DENIED = {
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+  };
+
+  function measurementEnabled() {
+    return cfg.analyticsEnabled === true;
+  }
+
+  function gtagPush() {
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () {
       window.dataLayer.push(arguments);
     };
+  }
+
+  function initAnalytics() {
+    if (!measurementEnabled()) return;
+    if (consentChoice() !== "accepted") return;
+    if (!gaId || !/^G-/i.test(gaId)) return;
+    window["ga-disable-" + gaId] = false;
+    if (window.__fpGaLoaded) {
+      gtagPush();
+      window.gtag("set", "ads_data_redaction", true);
+      window.gtag("set", "url_passthrough", false);
+      window.gtag("consent", "update", Object.assign({ analytics_storage: "granted" }, ADS_DENIED));
+      return;
+    }
+    window.__fpGaLoaded = true;
+    const campaign = campaignFromUrl();
+    gtagPush();
+    window.gtag("set", "ads_data_redaction", true);
+    window.gtag("set", "url_passthrough", false);
+    window.gtag("consent", "default", Object.assign({
+      analytics_storage: "granted",
+      functionality_storage: "denied",
+      personalization_storage: "denied",
+      security_storage: "granted",
+    }, ADS_DENIED));
     gtag("js", new Date());
     gtag("config", gaId, {
       send_page_view: true,
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false,
       cookie_flags: "SameSite=None;Secure",
       ...campaign,
     });
@@ -164,41 +208,132 @@
   }
 
   function track(eventName, params) {
-    if (typeof gtag !== "function" || !gaId) return;
-    gtag("event", eventName, params || {});
+    if (!measurementEnabled() || consentChoice() !== "accepted" || typeof gtag !== "function" || !gaId) return;
+    gtag("event", eventName, Object.assign({ transport_type: "beacon" }, params || {}));
   }
 
   function trackClick(id, el) {
     const context = {};
+    const href = el?.getAttribute("href") || "";
     if (el?.dataset?.landing) context.landing = el.dataset.landing;
+    else if (document.body.dataset.landing) context.landing = document.body.dataset.landing;
     if (el?.dataset?.position) context.position = el.dataset.position;
     if (el?.dataset?.action) context.action = el.dataset.action;
-    if (id.startsWith("wa-")) {
+    const isWa = id.startsWith("wa-") || el?.hasAttribute("data-wa-service") || href.includes("wa.me");
+    const isCall = id.startsWith("call-") || href.startsWith("tel:");
+    if (isWa) {
       track("clic_whatsapp", { punto: id, ...context });
       return;
     }
-    if (id.startsWith("call-")) {
+    if (isCall) {
       track("clic_llamar", { punto: id, ...context });
       return;
     }
-    if (id === "maps-hero") {
-      track("clic_como_llegar", { punto: "hero" });
+    if (id.startsWith("maps-") || id === "google-reviews") {
+      track("clic_como_llegar", { punto: id });
       return;
     }
-    if (id === "google-reviews") {
-      track("clic_ver_reseñas", { punto: "opiniones" });
-      return;
-    }
-    if (id.startsWith("cta-")) {
+    if (id.startsWith("cta-") || id.startsWith("footer-")) {
       track("clic_cta", { cta_id: id, ...context });
     }
+  }
+
+  function removeConsentBanner() {
+    document.getElementById("consent-banner")?.remove();
+  }
+
+  function updateConsentStatus() {
+    const status = document.getElementById("consent-status");
+    if (!status) return;
+    const choice = consentChoice();
+    status.textContent = choice === "accepted"
+      ? "Analítica aceptada. No incluye publicidad ni remarketing, ni enviamos nombre, teléfono o mensajes."
+      : choice === "rejected"
+        ? "Analítica rechazada. Google Analytics no está cargado."
+        : "Aún no has elegido.";
+  }
+
+  function showConsentBanner() {
+    if (document.getElementById("consent-banner")) return;
+    const banner = document.createElement("div");
+    banner.className = "consent";
+    banner.id = "consent-banner";
+    banner.setAttribute("role", "dialog");
+    banner.setAttribute("aria-modal", "true");
+    banner.setAttribute("aria-labelledby", "consent-title");
+    banner.innerHTML = `
+      <div class="consent__box">
+        <h2 id="consent-title" tabindex="-1">Analítica de la web</h2>
+        <p>Si aceptas, Google Analytics cuenta visitas y clics en WhatsApp, llamada y formulario. Eso no autoriza publicidad ni remarketing. No enviamos tu nombre, teléfono ni el texto de los mensajes. Aceptar y rechazar hacen lo mismo de fácil, y puedes cambiarlo cuando quieras.</p>
+        <div class="consent__actions">
+          <button type="button" class="btn btn--outline" id="consent-reject">Rechazar</button>
+          <button type="button" class="btn btn--primary" id="consent-accept">Aceptar</button>
+        </div>
+      </div>`;
+    document.body.appendChild(banner);
+    banner.querySelector("#consent-reject").addEventListener("click", () => applyConsent("rejected"));
+    banner.querySelector("#consent-accept").addEventListener("click", () => applyConsent("accepted"));
+    banner.querySelector("#consent-title").focus();
+  }
+
+  function applyConsent(value) {
+    if (!measurementEnabled()) return;
+    setConsentChoice(value);
+    if (gaId) window["ga-disable-" + gaId] = value !== "accepted";
+    if (value !== "accepted" && window.__fpGaLoaded && typeof window.gtag === "function") {
+      window.gtag("consent", "update", Object.assign({ analytics_storage: "denied" }, ADS_DENIED));
+      window.gtag = function () {};
+    }
+    removeConsentBanner();
+    updateConsentStatus();
+    if (value === "accepted") initAnalytics();
+  }
+
+  function setupConsent() {
+    if (!measurementEnabled()) {
+      document.getElementById("open-analytics")?.setAttribute("hidden", "");
+      return;
+    }
+    if (consentChoice() === "rejected" && gaId) window["ga-disable-" + gaId] = true;
+    const privacyBox = document.querySelector("#privacy-modal .modal__box");
+    if (privacyBox && !document.getElementById("consent-status")) {
+      const controls = document.createElement("div");
+      controls.className = "consent-controls";
+      controls.innerHTML = `
+        <p id="consent-status"></p>
+        <div class="consent__actions">
+          <button type="button" class="btn btn--outline" id="privacy-reject">Rechazar analítica</button>
+          <button type="button" class="btn btn--primary" id="privacy-accept">Aceptar analítica</button>
+        </div>`;
+      privacyBox.appendChild(controls);
+      controls.querySelector("#privacy-reject").addEventListener("click", () => applyConsent("rejected"));
+      controls.querySelector("#privacy-accept").addEventListener("click", () => applyConsent("accepted"));
+    }
+
+    let analyticsBtn = document.getElementById("open-analytics");
+    if (!analyticsBtn) {
+      const privacyLink = document.getElementById("open-privacy-footer");
+      analyticsBtn = document.createElement("button");
+      analyticsBtn.type = "button";
+      analyticsBtn.id = "open-analytics";
+      analyticsBtn.className = "link-button";
+      analyticsBtn.textContent = "Analítica";
+      if (privacyLink) privacyLink.before(analyticsBtn);
+      else document.querySelector(".footer__inner")?.appendChild(analyticsBtn);
+    }
+    analyticsBtn.hidden = false;
+    analyticsBtn.addEventListener("click", () => showConsentBanner());
+
+    updateConsentStatus();
+    if (consentChoice() === "accepted") initAnalytics();
+    else if (!consentChoice()) showConsentBanner();
   }
 
   function setupExtraTracking() {
     // Email links
     document.querySelectorAll('a[href^="mailto:"]').forEach((el) => {
       el.addEventListener("click", () => {
-        track("clic_email", { destino: el.href.replace("mailto:", "") });
+        track("clic_email", { punto: "mailto" });
       });
     });
 
@@ -212,7 +347,7 @@
     });
   }
 
-  initAnalytics();
+  setupConsent();
 
   document.querySelectorAll("[data-track]").forEach((el) => {
     el.addEventListener("click", () => {
@@ -220,7 +355,8 @@
     });
   });
 
-  document.getElementById("year").textContent = new Date().getFullYear();
+  const yearEl = document.getElementById("year") || document.getElementById("year-o2");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   const modal = document.getElementById("privacy-modal");
   const openers = [
@@ -281,7 +417,7 @@
     })
       .then((r) => r.json())
       .then((body) => {
-        if (!body.ok) throw new Error(body.error || "Error del servidor");
+        if (!body.ok) throw new Error("formulario");
         return body;
       });
   }
@@ -339,6 +475,8 @@
     }
     if (hasError) return;
 
+    if (form.dataset.sending === "1") return;
+    form.dataset.sending = "1";
     const data = { nombre, telefono, servicio, mensaje };
     const submitBtn = form.querySelector('button[type="submit"]');
     submitBtn.disabled = true;
@@ -348,24 +486,23 @@
     const waSuccess = document.getElementById("wa-success");
     if (waSuccess) waSuccess.href = waUrl;
 
-    track("clic_whatsapp", { punto: "formulario", servicio });
-    track("generate_lead", { method: "whatsapp", service: servicio });
-
     sendLeadEmail(data)
       .then(() => {
-        // Confirmación de que la copia por email llegó — NO equivale a lead confirmado
-        // El lead se confirma cuando el usuario envía el mensaje en WhatsApp
-        track("email_copia_enviada", { servicio });
-        showFormStatus("✓ Abriendo WhatsApp… pulsa Enviar en la app para completar tu solicitud.", false);
+        track("solicitud_formulario", { servicio });
+        showFormStatus("Hemos recibido tu solicitud. Si quieres, continúa por WhatsApp. El mensaje solo nos llega cuando lo envías.", false);
       })
-      .catch((err) => {
-        console.warn("Email error:", err);
-        showFormStatus("Se abre WhatsApp. No se pudo enviar copia interna por email.", true);
+      .catch(() => {
+        showFormStatus("No hemos podido recibir la solicitud. Si quieres, puedes continuarla por WhatsApp.", true);
       })
       .finally(() => {
+        form.dataset.sending = "0";
         submitBtn.disabled = false;
-        submitBtn.textContent = "Enviar por WhatsApp";
-        window.location.href = waUrl;
+        submitBtn.textContent = "Enviar solicitud";
+        const box = document.getElementById("form-success");
+        if (box) {
+          box.hidden = false;
+          box.classList.add("visible");
+        }
       });
   });
 
@@ -467,9 +604,9 @@
   const WA_SERVICE_TEXTS = {
     fibra:       "Hola, me interesa comparar tarifas de fibra e internet en Córdoba. ¿Podéis ayudarme?",
     pack:        "Hola, me interesa el pack de fibra + móvil + TV. ¿Podéis hacer una comparativa para mi caso?",
-    deportes:    "Hola, quiero información sobre el Pack Deporte de 78,90 €/mes: fibra 600 Mb, fijo, 2 líneas ilimitadas, fútbol y baloncesto. ¿Podéis ayudarme?",
-    estudiantes: "Hola, me interesa la oferta de fibra para estudiantes desde 20 €/mes. ¿Podéis ayudarme?",
-    luz:         "Hola, he visto la página de luz y gas de Fibrayphone y quiero que reviséis gratuitamente mi factura para saber si puedo ahorrar.",
+    deportes:    "Hola, quiero consultar las opciones actuales de fibra y móvil con deporte para mi dirección. ¿Podéis decirme qué hay vigente?",
+    estudiantes: "Hola, necesito fibra para un piso de estudiantes o compartido en Córdoba. ¿Podéis decirme las opciones vigentes para esa dirección?",
+    luz:         "Hola, quiero enviaros mi factura de luz o gas para que reviséis consumo, potencia, precios y servicios. ¿Podéis comprobar si puedo ahorrar?",
     alarma:      "Hola, he visto la página de alarmas de Fibrayphone y quiero solicitar un estudio gratuito para mi vivienda o negocio",
   };
 
@@ -478,15 +615,13 @@
       e.preventDefault();
       const service = el.getAttribute("data-wa-service");
       const text = WA_SERVICE_TEXTS[service] || defaultWaText();
-      track("clic_whatsapp", { punto: "oferta_" + service });
-      track("generate_lead", { method: "whatsapp_offer", service });
       window.location.href = buildWhatsAppUrl({ text });
     });
   });
 
   function updateStoreStatus() {
-    const el = document.getElementById("store-status");
-    if (!el) return;
+    const nodes = document.querySelectorAll("#store-status, .store-status");
+    if (!nodes.length) return;
     try {
       const now = new Date();
       const spain = new Date(now.toLocaleString("en-US", { timeZone: "Europe/Madrid" }));
@@ -501,9 +636,11 @@
       } else if (day === 6) {
         open = t >= T(10, 0) && t < T(13, 30);
       }
-      el.textContent = open ? "Abierto ahora" : "Ahora cerrado";
-      el.className = "store-status " + (open ? "store-status--open" : "store-status--closed");
-      el.hidden = false;
+      nodes.forEach((el) => {
+        el.textContent = open ? "Abierto ahora" : "Ahora cerrado";
+        el.className = "store-status " + (open ? "store-status--open" : "store-status--closed");
+        el.hidden = false;
+      });
     } catch (_) {}
   }
 

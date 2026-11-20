@@ -22,11 +22,14 @@ window.FIBRAYPHONE = {
 
 
 
-  /** Resumen Google (actualizad si cambia) */
+  /**
+   * Nota y número de reseñas: no rellenar sin comprobar la ficha de Google
+   * de Fibrayphone en C/ Diego Serrano 13. En noviembre de 2026 no se pudo
+   * verificar una cifra única ni un enlace directo de esa ficha.
+   */
+  googleRating: "",
 
-  googleRating: "5,0",
-
-  googleReviewCount: "200+",
+  googleReviewCount: "",
 
 
 
@@ -100,6 +103,13 @@ window.FIBRAYPHONE = {
   gaId: "G-MGWELKXBFS",
 
   /**
+   * Medición apagada. G-MGWELKXBFS lleva en Google el destino de anuncios
+   * AW-18315686788, y el consentimiento no lo separa. No cargar la etiqueta
+   * hasta quitar ese destino en la configuración de Google. Entonces poner true.
+   */
+  analyticsEnabled: false,
+
+  /**
    * Fotos de la tienda (solo el nombre del archivo dentro de assets/)
    * Si Windows te duplica la extensión, pon aquí el nombre EXACTO que ves en el Explorador.
    */
@@ -116,17 +126,17 @@ window.FIBRAYPHONE = {
   brands: {
 
     telecom: {
-      confirmed: ["O2", "Lowi", "PTV Telecom", "Jazztel", "MásMóvil", "Pepephone"],
-      other: ["Digi", "Simyo", "Vodafone"],
+      confirmed: ["O2", "Lowi", "PTV Telecom", "Jazztel", "MásMóvil", "Pepephone", "Digi"],
+      other: [],
     },
 
     energia: {
-      confirmed: ["Iberdrola", "Endesa", "Naturgy", "Repsol", "TotalEnergies"],
-      other: ["Holaluz", "Octopus Energy", "Gana Energía", "Lucera", "CHC Energía"],
+      confirmed: ["Naturgy", "Gana Energía"],
+      other: [],
     },
 
     seguridad: {
-      confirmed: ["Segurma", "Movistar Prosegur", "Verisure"],
+      confirmed: ["Segurma"],
       other: [],
     },
 
