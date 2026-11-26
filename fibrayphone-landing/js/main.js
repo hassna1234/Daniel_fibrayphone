@@ -36,7 +36,7 @@
   }
 
   function setupHeroCTAs() {
-    const textComparativa = "Hola, quiero saber qué fibra hay disponible en mi dirección y cuál es el precio real. ¿Podéis ayudarme?";
+    const textComparativa = "Hola, quiero comparar opciones de fibra y móvil para mi dirección. ¿Me podéis ayudar?";
     const textAsesor = "Hola, quiero hablar con un asesor sobre mis opciones de fibra y móvil en Córdoba.";
 
     const comparativaBtn = document.getElementById("wa-hero-comparativa");

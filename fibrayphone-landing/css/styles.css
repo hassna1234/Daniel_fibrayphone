@@ -2564,6 +2564,147 @@ a {
   }
 }
 
+/* ——— Ofertas en la cabecera de la portada ——— */
+.hero--simple .hero-offers {
+  max-width: var(--max);
+  margin-top: 1.25rem;
+}
+
+.hero-offers__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+@media (min-width: 800px) {
+  .hero-offers__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+.hero-offer {
+  padding: 1rem 1.1rem;
+  border-top: 4px solid var(--brand);
+}
+
+.hero-offer__operator {
+  align-self: flex-start;
+  margin: 0 0 0.4rem;
+  padding: 0.2rem 0.7rem;
+  background: var(--brand-darker);
+  color: var(--white);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.hero-offer__title {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  color: var(--navy);
+}
+
+.hero-offer__list {
+  margin: 0 0 0.6rem;
+  padding: 0;
+  list-style: none;
+  font-size: 0.92rem;
+  color: var(--text);
+  flex: 1;
+}
+
+.hero-offer__price {
+  margin: 0 0 0.75rem;
+}
+
+.hero-offer__price strong {
+  font-size: 2.1rem;
+}
+
+.hero-offer__note {
+  margin: -0.55rem 0 0.75rem;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+.hero-offers__fixed {
+  margin: 0.9rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--brand-darker);
+}
+
+.hero-offers__ctas {
+  justify-content: center;
+  margin: 1rem 0 0;
+}
+
+.hero-offers__trust {
+  margin-top: 0.85rem;
+}
+
+@media (max-width: 767px) {
+  .hero--simple .hero-offers {
+    margin-top: 0.75rem;
+  }
+
+  .hero--ofertas .hero__lead {
+    margin-bottom: 0;
+  }
+
+  .hero-offer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 0.75rem;
+    align-items: center;
+    padding: 0.85rem 0.95rem;
+  }
+
+  .hero-offer__operator,
+  .hero-offer__note,
+  .hero-offer .btn {
+    grid-column: 1 / -1;
+  }
+
+  .hero-offer__operator {
+    justify-self: start;
+  }
+
+  .hero-offer__title,
+  .hero-offer__list {
+    grid-column: 1;
+  }
+
+  .hero-offer__list {
+    margin: 0;
+  }
+
+  .hero-offer__price {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+    margin: 0;
+    text-align: right;
+  }
+
+  .hero-offer__price strong {
+    font-size: 1.75rem;
+  }
+
+  .hero-offer__note {
+    margin: 0.35rem 0 0;
+  }
+
+  .hero-offer .btn {
+    margin-top: 0.65rem;
+    min-height: 46px;
+  }
+}
+
 @media (max-width: 767px) {
   .header__actions,
   .student-page .header__actions {
