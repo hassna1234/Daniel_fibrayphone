@@ -122,71 +122,51 @@
   <main>
 
     <!-- HERO — primera pantalla -->
-    <section class="hero hero--simple" id="inicio">
+    <section class="hero hero--simple hero--ofertas" id="inicio">
       <div class="container">
-        <h1>Te ayudamos a elegir fibra y móvil, luz, gas y alarmas en Córdoba</h1>
-        <p class="hero__lead">En la tienda comparamos por ti y te acompañamos si decides contratar.</p>
-        <div class="hero__ctas">
-          <a class="btn btn--whatsapp btn--lg" href="#" id="wa-hero-comparativa" data-track="wa-hero">Escribir por WhatsApp</a>
+        <h1>Compara ofertas de fibra y móvil en Córdoba</h1>
+        <p class="hero__lead">Comprobamos la cobertura en tu dirección y te ayudamos a elegir la tarifa que encaja contigo. Gratis y sin compromiso.</p>
+      </div>
+      <div class="container hero-offers" id="ofertas" role="region" aria-label="Ofertas de fibra y móvil">
+        <div class="hero-offers__grid">
+          <article class="offer-card hero-offer">
+            <p class="hero-offer__operator">DIGI</p>
+            <h2 class="hero-offer__title">Solo fibra</h2>
+            <ul class="hero-offer__list">
+              <li>Fibra 500 Mb</li>
+            </ul>
+            <p class="offer-card__price hero-offer__price">Desde <strong>10 €</strong> <span>/mes</span></p>
+            <p class="hero-offer__note">Oferta sujeta a disponibilidad geográfica</p>
+            <a class="btn btn--whatsapp btn--block" href="https://wa.me/34696785471?text=Hola%2C%20he%20visto%20la%20fibra%20DIGI%20de%20500%20Mb%20desde%2010%20%E2%82%AC%2Fmes%20en%20vuestra%20web.%20%C2%BFPod%C3%A9is%20comprobar%20si%20est%C3%A1%20disponible%20en%20mi%20direcci%C3%B3n%3F" data-track="wa-oferta-digi-fibra-500">Comprobar cobertura DIGI</a>
+          </article>
+          <article class="offer-card hero-offer">
+            <p class="hero-offer__operator">PTV Telecom</p>
+            <h2 class="hero-offer__title">Fibra + móvil + TV Zapi</h2>
+            <ul class="hero-offer__list">
+              <li>Fibra 600 Mb + móvil 100 GB + TV Zapi</li>
+            </ul>
+            <p class="offer-card__price hero-offer__price"><strong>28,40 €</strong> <span>/mes</span></p>
+            <a class="btn btn--whatsapp btn--block" href="https://wa.me/34696785471?text=Hola%2C%20me%20interesa%20la%20oferta%20de%20PTV%20Telecom%20de%20fibra%20600%20Mb%2C%20m%C3%B3vil%20100%20GB%20y%20TV%20Zapi%20por%2028%2C40%20%E2%82%AC%2Fmes.%20%C2%BFPod%C3%A9is%20comprobar%20si%20est%C3%A1%20disponible%20en%20mi%20direcci%C3%B3n%3F" data-track="wa-oferta-ptv-600-100-zapi">Consultar oferta PTV</a>
+          </article>
+          <article class="offer-card hero-offer">
+            <p class="hero-offer__operator">O2</p>
+            <h2 class="hero-offer__title">Fibra + móvil + Movistar Plus+</h2>
+            <ul class="hero-offer__list">
+              <li>Fibra 600 Mb + móvil 35 GB + Movistar Plus+</li>
+            </ul>
+            <p class="offer-card__price hero-offer__price"><strong>38 €</strong> <span>/mes</span></p>
+            <a class="btn btn--whatsapp btn--block" href="https://wa.me/34696785471?text=Hola%2C%20me%20interesa%20la%20oferta%20de%20O2%20de%20fibra%20600%20Mb%2C%20m%C3%B3vil%2035%20GB%20y%20Movistar%20Plus%2B%20por%2038%20%E2%82%AC%2Fmes.%20%C2%BFPod%C3%A9is%20comprobar%20si%20est%C3%A1%20disponible%20en%20mi%20direcci%C3%B3n%3F" data-track="wa-oferta-o2-600-35-movistar">Consultar oferta O2</a>
+          </article>
+        </div>
+        <p class="hero-offers__fixed">Precios fijos, sin subida al terminar una promoción</p>
+        <div class="hero__ctas hero-offers__ctas">
+          <a class="btn btn--whatsapp btn--lg" href="https://wa.me/34696785471?text=Hola%2C%20quiero%20comparar%20opciones%20de%20fibra%20y%20m%C3%B3vil%20para%20mi%20direcci%C3%B3n.%20%C2%BFMe%20pod%C3%A9is%20ayudar%3F" id="wa-hero-comparativa" data-track="wa-hero">Comparar opciones para mi dirección</a>
           <a class="btn btn--outline btn--lg" href="tel:+34696785471" data-tel data-track="call-hero">Llamar a la tienda</a>
         </div>
-        <div class="hero-trust">
-          <img src="assets/tienda-fachada.webp" alt="Fachada de la tienda Fibrayphone en C/ Diego Serrano 13, Córdoba" width="800" height="600">
-          <p>
-            <span id="store-status" class="store-status" hidden></span>
-            Tienda en C/ Diego Serrano 13. Lun–jue 9:30–14:00 y 17:00–20:30, vie 9:30–14:00, sáb 10:00–13:30.
-            <a href="https://www.google.com/maps/search/?api=1&query=Fibrayphone+Calle+Diego+Serrano+13+Cordoba" target="_blank" rel="noopener" data-track="google-reviews">Ver opiniones en Google</a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--alt" id="ofertas" aria-labelledby="h2-ofertas">
-      <div class="container">
-        <p class="section__label">Ofertas</p>
-        <h2 id="h2-ofertas">Ofertas de fibra y móvil</h2>
-        <div class="path-grid">
-          <article class="offer-card">
-            <h3>Solo fibra</h3>
-            <p class="offer-card__brand">Operador: O2</p>
-            <p class="offer-card__price"><strong>23 €</strong> <span>/mes</span></p>
-            <ul class="offer-card__list">
-              <li>300 Mb simétricos</li>
-              <li>Llamadas ilimitadas desde el fijo</li>
-              <li>Instalación y router incluidos</li>
-            </ul>
-            <a class="btn btn--whatsapp btn--block" href="https://wa.me/34696785471?text=Hola%2C+me+interesa+la+fibra+de+300+Mb+a+23+%E2%82%AC%2Fmes.+%C2%BFPod%C3%A9is+comprobar+la+disponibilidad+en+mi+direcci%C3%B3n%3F" data-track="wa-oferta-fibra-300">Me interesa</a>
-            <p class="offer-card__conditions">IVA incluido · Sin permanencia</p>
-            <a class="offer-card__more" href="/tarifas-o2-cordoba/#solo-fibra">Condiciones completas</a>
-          </article>
-          <article class="offer-card">
-            <h3>Fibra + móvil</h3>
-            <p class="offer-card__brand">Operador: O2</p>
-            <p class="offer-card__price"><strong>35 €</strong> <span>/mes</span></p>
-            <ul class="offer-card__list">
-              <li>600 Mb de fibra simétrica</li>
-              <li>60 GB en el móvil, con 5G+</li>
-              <li>Llamadas ilimitadas en fijo y móvil</li>
-            </ul>
-            <a class="btn btn--whatsapp btn--block" href="https://wa.me/34696785471?text=Hola%2C+me+interesa+la+fibra+de+600+Mb+con+m%C3%B3vil+de+60+GB+a+35+%E2%82%AC%2Fmes.+%C2%BFPod%C3%A9is+comprobar+la+disponibilidad+en+mi+direcci%C3%B3n%3F" data-track="wa-oferta-600-60">Me interesa</a>
-            <p class="offer-card__conditions">IVA incluido · Sin permanencia</p>
-            <a class="offer-card__more" href="/tarifas-o2-cordoba/#fibra-movil">Condiciones completas</a>
-          </article>
-          <article class="offer-card">
-            <h3>Fibra + móvil + TV</h3>
-            <p class="offer-card__brand">Operador: O2</p>
-            <p class="offer-card__price"><strong>38 €</strong> <span>/mes</span></p>
-            <ul class="offer-card__list">
-              <li>600 Mb de fibra simétrica</li>
-              <li>35 GB en el móvil, con 5G+</li>
-              <li><strong class="offer-card__tv">Movistar Plus</strong> y llamadas ilimitadas</li>
-            </ul>
-            <a class="btn btn--whatsapp btn--block" href="https://wa.me/34696785471?text=Hola%2C+me+interesa+la+fibra+de+600+Mb+con+m%C3%B3vil+de+35+GB+y+Movistar+Plus+a+38+%E2%82%AC%2Fmes.+%C2%BFPod%C3%A9is+comprobar+la+disponibilidad+en+mi+direcci%C3%B3n%3F" data-track="wa-oferta-tv-38">Me interesa</a>
-            <p class="offer-card__conditions">IVA incluido · Sin permanencia</p>
-            <a class="offer-card__more" href="/tarifas-o2-cordoba/#fibra-movil-tv">Condiciones completas</a>
-          </article>
-        </div>
-        <p class="disclaimer">Ofertas sujetas a cobertura y condiciones de contratación. Comprobamos la disponibilidad en tu dirección. <span class="disclaimer__date">Precios comprobados el 19 de noviembre de 2026.</span></p>
+        <p class="hero__trust-compact hero-offers__trust">
+          <span id="store-status" class="store-status" hidden></span>
+          <span>Tienda física en C/ Diego Serrano 13, Córdoba · <a href="https://www.google.com/maps/search/?api=1&query=Fibrayphone+Calle+Diego+Serrano+13+Cordoba" target="_blank" rel="noopener" data-track="google-reviews">Ver reseñas en Google</a></span>
+        </p>
       </div>
     </section>
 
